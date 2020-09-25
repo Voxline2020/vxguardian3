@@ -825,3 +825,5 @@ rectorio temporal C:\Users\Nuevo\Documents\VoxLine\101004 a la carpeta raiz C:\F
 09-25-2020 13:49:58 : 890 - Cierra Coneccion con BD ya termino de descargar a las temporales
 
 09-25-2020 13:49:58 : Se sincronizo archivos
+
+09-25-2020 14:10:08 : --- Inicio VxGuardian --- 
