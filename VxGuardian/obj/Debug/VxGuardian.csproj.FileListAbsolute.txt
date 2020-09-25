@@ -80,3 +80,4 @@ C:\Users\Nuevo\Desktop\proyectos\vxguardian3\VxGuardian\obj\Debug\VxGuardian.app
 C:\Users\Nuevo\Desktop\proyectos\vxguardian3\VxGuardian\obj\Debug\VxGuardian.csproj.CopyComplete
 C:\Users\Nuevo\Desktop\proyectos\vxguardian3\VxGuardian\obj\Debug\VxGuardian.exe
 C:\Users\Nuevo\Desktop\proyectos\vxguardian3\VxGuardian\obj\Debug\VxGuardian.pdb
+C:\Users\Nuevo\Desktop\proyectos\vxguardian3\VxGuardian\obj\Debug\VxGuardian.csprojAssemblyReference.cache
