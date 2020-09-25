@@ -1,0 +1,827 @@
+
+09-25-2020 12:10:18 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:10:51 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:11:04 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:11:06 : --- Modo FTP ---
+
+09-25-2020 12:11:18 : No se logro conexion con el servidor ftp -- Home directory does not exist
+
+09-25-2020 12:11:35 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:11:36 : --- Modo FTP ---
+
+09-25-2020 12:12:08 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:12:10 : --- Modo FTP ---
+
+09-25-2020 12:12:35 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:12:37 : --- Modo FTP ---
+
+09-25-2020 12:12:54 : No se logro conexion con el servidor ftp -- Home directory does not exist
+
+09-25-2020 12:13:05 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:13:06 : --- Modo FTP ---
+
+09-25-2020 12:13:41 : DESCARGADO v35.txt
+
+09-25-2020 12:13:41 : DESCARGADO 1299-spot-compromiso-960x576.mp4
+
+09-25-2020 12:13:42 : DESCARGADO 1199-precaucion-960x576.mp4
+
+09-25-2020 12:13:42 : DESCARGADO 1165-index-mujer-960x576.mp4
+
+09-25-2020 12:13:42 : Se sincronizo archivos
+
+09-25-2020 12:13:42 : 329 - Cierra el reproductor
+
+09-25-2020 12:13:42 : 330 - Pausa por 3000
+
+09-25-2020 12:13:45 : 330 - Fin pausa
+
+09-25-2020 12:13:45 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:13:45 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:13:45 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:13:45 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:13:45 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:13:45 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:13:45 : 339 - Copia el directorio temporal C:\Users\Nuevo\Documents\VoxLine\101004 a la carpeta raiz C:\FTP\Voxline\Pivotes\
+
+09-25-2020 12:14:30 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:14:33 : --- Modo FTP ---
+
+09-25-2020 12:14:48 : DESCARGADO v35.txt
+
+09-25-2020 12:14:48 : DESCARGADO 1299-spot-compromiso-960x576.mp4
+
+09-25-2020 12:14:49 : DESCARGADO 1199-precaucion-960x576.mp4
+
+09-25-2020 12:14:49 : DESCARGADO 1165-index-mujer-960x576.mp4
+
+09-25-2020 12:14:49 : Se sincronizo archivos
+
+09-25-2020 12:14:49 : 329 - Cierra el reproductor
+
+09-25-2020 12:14:49 : 330 - Pausa por 3000
+
+09-25-2020 12:14:52 : 330 - Fin pausa
+
+09-25-2020 12:14:52 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:14:52 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:14:52 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:14:52 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:14:52 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:14:52 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:14:52 : 339 - Copia el directorio temporal C:\Users\Nuevo\Documents\VoxLine\101004 a la carpeta raiz C:\FTP\Voxline\Pivotes\
+
+09-25-2020 12:15:52 : Se sincronizo archivos
+
+09-25-2020 12:16:54 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:16:55 : --- Modo FTP ---
+
+09-25-2020 12:17:23 : DESCARGADO v35.txt
+
+09-25-2020 12:17:23 : DESCARGADO 1299-spot-compromiso-960x576.mp4
+
+09-25-2020 12:17:23 : DESCARGADO 1199-precaucion-960x576.mp4
+
+09-25-2020 12:17:24 : DESCARGADO 1165-index-mujer-960x576.mp4
+
+09-25-2020 12:18:16 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:18:18 : --- Modo FTP ---
+
+09-25-2020 12:19:08 : DESCARGADO v35.txt
+
+09-25-2020 12:19:08 : DESCARGADO 1299-spot-compromiso-960x576.mp4
+
+09-25-2020 12:19:09 : DESCARGADO 1199-precaucion-960x576.mp4
+
+09-25-2020 12:19:09 : DESCARGADO 1165-index-mujer-960x576.mp4
+
+09-25-2020 12:19:18 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:19:22 : --- Modo FTP ---
+
+09-25-2020 12:19:42 : No se logro conexion con el servidor ftp -- Login or password incorrect!
+
+09-25-2020 12:19:58 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:20:05 : --- Modo FTP ---
+
+09-25-2020 12:22:29 : No se logro sincronizar --Referencia a objeto no establecida como instancia de un objeto.
+
+09-25-2020 12:22:52 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:22:54 : --- Modo FTP ---
+
+09-25-2020 12:23:28 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 12:23:31 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 12:26:42 : DESCARGADO v35.txt
+
+09-25-2020 12:26:50 : DESCARGADO 1299-spot-compromiso-960x576.mp4
+
+09-25-2020 12:26:58 : DESCARGADO 1199-precaucion-960x576.mp4
+
+09-25-2020 12:27:04 : DESCARGADO 1165-index-mujer-960x576.mp4
+
+09-25-2020 12:27:11 : Se sincronizo archivos
+
+09-25-2020 12:27:15 : 329 - Cierra el reproductor
+
+09-25-2020 12:27:15 : 330 - Pausa por 3000
+
+09-25-2020 12:27:21 : 330 - Fin pausa
+
+09-25-2020 12:27:21 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:27:21 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:27:21 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:27:21 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:27:21 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:27:21 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:27:34 : 339 - Copia el directorio temporal C:\Users\Nuevo\Documents\VoxLine\101004 a la carpeta raiz C:\FTP\Voxline\Pivotes\
+
+09-25-2020 12:28:48 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:29:09 : --- Modo FTP ---
+
+09-25-2020 12:30:19 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 12:30:23 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 12:34:07 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:34:11 : --- Modo FTP ---
+
+09-25-2020 12:35:06 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 12:35:10 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 12:35:46 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:35:48 : --- Modo FTP ---
+
+09-25-2020 12:36:17 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:36:19 : --- Modo FTP ---
+
+09-25-2020 12:36:48 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 12:36:48 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 12:37:45 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:37:47 : --- Modo FTP ---
+
+09-25-2020 12:38:01 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 12:38:01 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 12:38:47 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:38:49 : --- Modo FTP ---
+
+09-25-2020 12:38:54 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 12:38:55 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 12:39:52 : 669 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-25-2020 12:39:53 : DESCARGADO v35.txt
+
+09-25-2020 12:39:53 : DESCARGADO 1299-spot-compromiso-960x576.mp4
+
+09-25-2020 12:39:54 : DESCARGADO 1199-precaucion-960x576.mp4
+
+09-25-2020 12:39:54 : DESCARGADO 1165-index-mujer-960x576.mp4
+
+09-25-2020 12:39:54 : Se sincronizo archivos
+
+09-25-2020 12:39:54 : 329 - Cierra el reproductor
+
+09-25-2020 12:39:54 : 330 - Pausa por 3000
+
+09-25-2020 12:39:58 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:39:59 : --- Modo FTP ---
+
+09-25-2020 12:40:03 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 12:40:04 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 12:40:23 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:40:25 : --- Modo FTP ---
+
+09-25-2020 12:40:32 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 12:40:34 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 12:41:07 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:41:08 : --- Modo FTP ---
+
+09-25-2020 12:41:13 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 12:41:13 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 12:41:46 : 669 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-25-2020 12:43:21 : DESCARGADO v35.txt
+
+09-25-2020 12:43:37 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:43:39 : --- Modo FTP ---
+
+09-25-2020 12:45:46 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 12:45:48 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 12:46:44 : 669 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-25-2020 12:50:59 : 730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : p759
+
+09-25-2020 12:51:52 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:51:55 : --- Modo FTP ---
+
+09-25-2020 12:52:00 : Directorio temporal creado Documentos/Voxline/numerComputador
+
+09-25-2020 12:52:15 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 12:52:15 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 12:52:39 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:52:41 : --- Modo FTP ---
+
+09-25-2020 12:52:47 : Directorio temporal creado Documentos/Voxline/numerComputador
+
+09-25-2020 12:52:54 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 12:52:54 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 12:52:59 : 669 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-25-2020 12:52:59 : 727 - CREA DIRECTORIO TEMPORAL : p759_TMP
+
+09-25-2020 12:52:59 : 730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : p759_TMP
+
+09-25-2020 12:52:59 : 727 - CREA DIRECTORIO TEMPORAL : p759
+
+09-25-2020 12:52:59 : 730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : p759
+
+09-25-2020 12:52:59 : DESCARGADO v35.txt
+
+09-25-2020 12:52:59 : DESCARGADO 1299-spot-compromiso-960x576.mp4
+
+09-25-2020 12:52:59 : DESCARGADO 1199-precaucion-960x576.mp4
+
+09-25-2020 12:53:00 : DESCARGADO 1165-index-mujer-960x576.mp4
+
+09-25-2020 12:53:00 : Se sincronizo archivos
+
+09-25-2020 12:53:00 : 329 - Cierra el reproductor
+
+09-25-2020 12:53:00 : 330 - Pausa por 3000
+
+09-25-2020 12:53:03 : 330 - Fin pausa
+
+09-25-2020 12:53:03 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:53:03 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:53:03 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:53:03 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:53:03 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:53:03 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:53:03 : 339 - Copia el directorio temporal C:\Users\Nuevo\Documents\VoxLine\101004 a la carpeta raiz C:\FTP\Voxline\Pivotes\
+
+09-25-2020 12:53:13 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:53:16 : --- Modo FTP ---
+
+09-25-2020 12:53:40 : Directorio temporal creado Documentos/Voxline/numerComputador
+
+09-25-2020 12:53:49 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 12:53:51 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 12:54:13 : 669 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-25-2020 12:54:29 : 727 - CREA DIRECTORIO TEMPORAL : p759_TMP
+
+09-25-2020 12:54:36 : 730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : p759_TMP
+
+09-25-2020 12:56:27 : 727 - CREA DIRECTORIO TEMPORAL : p759
+
+09-25-2020 12:56:31 : 730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : p759
+
+09-25-2020 12:56:39 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 12:57:11 : DESCARGADO v35.txt
+
+09-25-2020 12:57:41 : DESCARGADO 1299-spot-compromiso-960x576.mp4
+
+09-25-2020 12:57:45 : DESCARGADO 1199-precaucion-960x576.mp4
+
+09-25-2020 12:57:50 : DESCARGADO 1165-index-mujer-960x576.mp4
+
+09-25-2020 12:57:55 : Se sincronizo archivos
+
+09-25-2020 12:58:00 : 329 - Cierra el reproductor
+
+09-25-2020 12:58:00 : 330 - Pausa por 3000
+
+09-25-2020 12:58:05 : 330 - Fin pausa
+
+09-25-2020 12:58:05 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:58:05 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:58:05 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:58:05 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:58:05 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:58:06 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:58:29 : 339 - Copia el directorio temporal C:\Users\Nuevo\Documents\VoxLine\101004 a la carpeta raiz C:\FTP\Voxline\Pivotes\
+
+09-25-2020 12:58:56 : --- Inicio VxGuardian --- 
+
+09-25-2020 12:58:59 : --- Modo FTP ---
+
+09-25-2020 12:59:04 : Directorio temporal creado Documentos/Voxline/numerComputador
+
+09-25-2020 12:59:15 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 12:59:15 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 12:59:18 : 669 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-25-2020 12:59:24 : 727 - CREA DIRECTORIO TEMPORAL : p759_TMP
+
+09-25-2020 12:59:24 : 730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : p759_TMP
+
+09-25-2020 12:59:24 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 12:59:24 : 727 - CREA DIRECTORIO TEMPORAL : p759
+
+09-25-2020 12:59:24 : 730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : p759
+
+09-25-2020 12:59:24 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 12:59:24 : DESCARGADO v35.txt
+
+09-25-2020 12:59:24 : DESCARGADO 1299-spot-compromiso-960x576.mp4
+
+09-25-2020 12:59:24 : DESCARGADO 1199-precaucion-960x576.mp4
+
+09-25-2020 12:59:25 : DESCARGADO 1165-index-mujer-960x576.mp4
+
+09-25-2020 12:59:25 : Se sincronizo archivos
+
+09-25-2020 12:59:25 : 329 - Cierra el reproductor
+
+09-25-2020 12:59:25 : 330 - Pausa por 3000
+
+09-25-2020 12:59:32 : 330 - Fin pausa
+
+09-25-2020 12:59:32 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:59:32 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:59:32 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:59:32 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:59:38 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:59:38 : No se encontro el archvio (Version).txt
+
+09-25-2020 12:59:39 : 339 - Copia el directorio temporal C:\Users\Nuevo\Documents\VoxLine\101004 a la carpeta raiz C:\FTP\Voxline\Pivotes\
+
+09-25-2020 13:00:21 : --- Inicio VxGuardian --- 
+
+09-25-2020 13:00:23 : --- Modo FTP ---
+
+09-25-2020 13:00:30 : Directorio temporal creado Documentos/Voxline/numerComputador
+
+09-25-2020 13:00:40 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 13:00:41 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 13:00:46 : 669 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-25-2020 13:01:28 : 727 - CREA DIRECTORIO TEMPORAL : p759_TMP
+
+09-25-2020 13:01:29 : 730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : p759_TMP
+
+09-25-2020 13:01:30 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 13:01:51 : 727 - CREA DIRECTORIO TEMPORAL : p759
+
+09-25-2020 13:01:56 : 730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : p759
+
+09-25-2020 13:04:03 : --- Inicio VxGuardian --- 
+
+09-25-2020 13:04:08 : --- Modo FTP ---
+
+09-25-2020 13:04:11 : Directorio temporal creado Documentos/Voxline/numerComputador
+
+09-25-2020 13:04:16 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 13:04:16 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 13:04:18 : 669 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-25-2020 13:04:22 : 730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : p759_TMP
+
+09-25-2020 13:04:23 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 13:04:34 : --- Inicio VxGuardian --- 
+
+09-25-2020 13:04:36 : --- Modo FTP ---
+
+09-25-2020 13:04:42 : Directorio temporal creado Documentos/Voxline/numerComputador
+
+09-25-2020 13:04:47 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 13:04:47 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 13:04:55 : 669 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-25-2020 13:05:04 : 727 - CREA DIRECTORIO TEMPORAL : p759_TMP
+
+09-25-2020 13:05:08 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 13:05:14 : 727 - CREA DIRECTORIO TEMPORAL : p759
+
+09-25-2020 13:05:19 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 13:05:26 : DESCARGADO v35.txt
+
+09-25-2020 13:05:44 : DESCARGADO 1299-spot-compromiso-960x576.mp4
+
+09-25-2020 13:05:47 : DESCARGADO 1199-precaucion-960x576.mp4
+
+09-25-2020 13:05:49 : DESCARGADO 1165-index-mujer-960x576.mp4
+
+09-25-2020 13:07:10 : Se sincronizo archivos
+
+09-25-2020 13:07:15 : 329 - Cierra el reproductor
+
+09-25-2020 13:07:19 : 330 - Pausa por 3000
+
+09-25-2020 13:07:43 : 330 - Fin pausa
+
+09-25-2020 13:09:51 : 459 - LEE EL JSON  - Computadores 
+
+09-25-2020 13:09:58 : 459 - Ciclo Pantallas por computador 
+
+09-25-2020 13:28:31 : --- Inicio VxGuardian --- 
+
+09-25-2020 13:28:36 : --- Modo FTP ---
+
+09-25-2020 13:29:24 : --- Inicio VxGuardian --- 
+
+09-25-2020 13:29:27 : --- Modo FTP ---
+
+09-25-2020 13:29:33 : Directorio temporal creado Documentos/Voxline/numerComputador
+
+09-25-2020 13:29:35 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 13:29:35 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 13:29:37 : 669 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-25-2020 13:29:37 : 727 - CREA DIRECTORIO TEMPORAL : p759_TMP
+
+09-25-2020 13:29:37 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 13:29:37 : 727 - CREA DIRECTORIO TEMPORAL : p759
+
+09-25-2020 13:29:37 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 13:29:38 : DESCARGADO v35.txt
+
+09-25-2020 13:29:38 : DESCARGADO 1299-spot-compromiso-960x576.mp4
+
+09-25-2020 13:29:38 : DESCARGADO 1199-precaucion-960x576.mp4
+
+09-25-2020 13:29:38 : DESCARGADO 1165-index-mujer-960x576.mp4
+
+09-25-2020 13:29:38 : 890 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+09-25-2020 13:29:38 : Se sincronizo archivos
+
+09-25-2020 13:29:38 : 329 - Cierra el reproductor
+
+09-25-2020 13:29:38 : 330 - Pausa por 3000
+
+09-25-2020 13:29:44 : 330 - Fin pausa
+rectorio temporal C:\Users\Nuevo\Documents\VoxLine\101004 a la carpeta raiz C:\FTP\Voxline\Pivotes\
+
+09-25-2020 13:29:47 : 459 - LEE EL JSON  - Computadores 
+
+09-25-2020 13:30:34 : ERROR COPY PlayList.json No se puede encontrar una parte de la ruta de acceso 'C:\FTP\Voxline\Pivotes\\PlayList.json'.
+
+09-25-2020 13:30:46 : --- Inicio VxGuardian --- 
+
+09-25-2020 13:30:48 : --- Modo FTP ---
+
+09-25-2020 13:30:54 : Directorio temporal creado Documentos/Voxline/numerComputador
+
+09-25-2020 13:30:56 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 13:30:56 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 13:30:57 : 669 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-25-2020 13:30:57 : 730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : p759_TMP
+
+09-25-2020 13:30:57 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 13:30:58 : 730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : p759
+
+09-25-2020 13:30:58 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 13:30:58 : DESCARGADO v35.txt
+
+09-25-2020 13:30:58 : DESCARGADO 1299-spot-compromiso-960x576.mp4
+
+09-25-2020 13:30:58 : DESCARGADO 1199-precaucion-960x576.mp4
+
+09-25-2020 13:30:58 : DESCARGADO 1165-index-mujer-960x576.mp4
+
+09-25-2020 13:30:58 : 890 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+09-25-2020 13:30:58 : Se sincronizo archivos
+
+09-25-2020 13:30:58 : 329 - Cierra el reproductor
+
+09-25-2020 13:30:58 : 330 - Pausa por 3000
+
+09-25-2020 13:31:01 : 330 - Fin pausa
+
+09-25-2020 13:31:02 : 339 - Copia el directorio temporal C:\Users\Nuevo\Documents\VoxLine\101004 a la carpeta raiz C:\FTP\Voxline\Pivotes\
+
+09-25-2020 13:31:10 : 459 - LEE EL JSON  - Computadores 
+
+09-25-2020 13:32:01 : --- Inicio VxGuardian --- 
+
+09-25-2020 13:32:17 : --- Inicio VxGuardian --- 
+
+09-25-2020 13:32:19 : --- Modo FTP ---
+
+09-25-2020 13:32:24 : Directorio temporal creado Documentos/Voxline/numerComputador
+
+09-25-2020 13:32:25 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 13:32:25 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 13:32:26 : 669 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-25-2020 13:32:26 : 727 - CREA DIRECTORIO TEMPORAL : p759_TMP
+
+09-25-2020 13:32:26 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 13:32:27 : 727 - CREA DIRECTORIO TEMPORAL : p759
+
+09-25-2020 13:32:27 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 13:32:27 : DESCARGADO v35.txt
+
+09-25-2020 13:32:27 : DESCARGADO 1299-spot-compromiso-960x576.mp4
+
+09-25-2020 13:32:27 : DESCARGADO 1199-precaucion-960x576.mp4
+
+09-25-2020 13:32:27 : DESCARGADO 1165-index-mujer-960x576.mp4
+
+09-25-2020 13:32:27 : 890 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+09-25-2020 13:32:27 : Se sincronizo archivos
+
+09-25-2020 13:32:27 : 329 - Cierra el reproductor
+
+09-25-2020 13:32:27 : 330 - Pausa por 3000
+
+09-25-2020 13:32:32 : 339 - Copia el directorio temporal C:\Users\Nuevo\Documents\VoxLine\101004 a la carpeta raiz C:\FTP\Voxline\Pivotes\
+
+09-25-2020 13:32:32 : 330 - Fin pausa
+
+09-25-2020 13:32:35 : 459 - LEE EL JSON  - Computadores 
+
+09-25-2020 13:32:54 : --- Inicio VxGuardian --- 
+
+09-25-2020 13:32:56 : --- Modo FTP ---
+
+09-25-2020 13:33:00 : Directorio temporal creado Documentos/Voxline/numerComputador
+
+09-25-2020 13:33:00 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 13:33:00 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 13:33:02 : 669 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-25-2020 13:33:02 : 730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : p759_TMP
+
+09-25-2020 13:33:02 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 13:33:02 : 730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : p759
+
+09-25-2020 13:33:02 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 13:33:02 : DESCARGADO v35.txt
+
+09-25-2020 13:33:02 : DESCARGADO 1299-spot-compromiso-960x576.mp4
+
+09-25-2020 13:33:02 : DESCARGADO 1199-precaucion-960x576.mp4
+
+09-25-2020 13:33:03 : DESCARGADO 1165-index-mujer-960x576.mp4
+
+09-25-2020 13:33:03 : 890 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+09-25-2020 13:33:03 : Se sincronizo archivos
+
+09-25-2020 13:33:03 : 329 - Cierra el reproductor
+
+09-25-2020 13:33:03 : 330 - Pausa por 3000
+
+09-25-2020 13:33:06 : 330 - Fin pausa
+
+09-25-2020 13:33:06 : 339 - Copia el directorio temporal C:\Users\Nuevo\Documents\VoxLine\101004 a la carpeta raiz C:\FTP\Voxline\Pivotes\
+
+09-25-2020 13:33:14 : 459 - LEE EL JSON  - Computadores 
+
+09-25-2020 13:33:52 : --- Inicio VxGuardian --- 
+
+09-25-2020 13:33:54 : --- Modo FTP ---
+
+09-25-2020 13:33:56 : Directorio temporal creado Documentos/Voxline/numerComputador
+
+09-25-2020 13:33:57 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 13:33:57 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 13:34:00 : 669 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-25-2020 13:34:05 : 730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : p759_TMP
+
+09-25-2020 13:34:05 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 13:34:06 : 730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : p759
+
+09-25-2020 13:34:06 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 13:34:07 : DESCARGADO v35.txt
+
+09-25-2020 13:34:07 : DESCARGADO 1299-spot-compromiso-960x576.mp4
+
+09-25-2020 13:34:07 : DESCARGADO 1199-precaucion-960x576.mp4
+
+09-25-2020 13:34:07 : DESCARGADO 1165-index-mujer-960x576.mp4
+
+09-25-2020 13:34:07 : 890 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+09-25-2020 13:34:07 : Se sincronizo archivos
+
+09-25-2020 13:34:07 : 329 - Cierra el reproductor
+
+09-25-2020 13:34:07 : 330 - Pausa por 3000
+
+09-25-2020 13:34:10 : 330 - Fin pausa
+
+09-25-2020 13:35:02 : 339 - Copia el directorio temporal C:\Users\Nuevo\Documents\VoxLine\101004 a la carpeta raiz C:\FTP\Voxline\Pivotes\
+
+09-25-2020 13:35:14 : 459 - LEE EL JSON  - Computadores 
+
+09-25-2020 13:37:07 : --- Inicio VxGuardian --- 
+
+09-25-2020 13:37:09 : --- Modo FTP ---
+
+09-25-2020 13:37:13 : Directorio temporal creado Documentos/Voxline/numerComputador
+
+09-25-2020 13:37:18 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 13:37:18 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 13:37:20 : 669 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-25-2020 13:37:20 : 730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : p759_TMP
+
+09-25-2020 13:37:20 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 13:37:20 : 730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : p759
+
+09-25-2020 13:37:20 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 13:37:21 : DESCARGADO v35.txt
+
+09-25-2020 13:37:21 : DESCARGADO 1299-spot-compromiso-960x576.mp4
+
+09-25-2020 13:37:21 : DESCARGADO 1199-precaucion-960x576.mp4
+
+09-25-2020 13:37:21 : DESCARGADO 1165-index-mujer-960x576.mp4
+
+09-25-2020 13:37:21 : 890 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+09-25-2020 13:37:21 : Se sincronizo archivos
+
+09-25-2020 13:37:22 : 329 - Cierra el reproductor
+
+09-25-2020 13:37:22 : 330 - Pausa por 3000
+
+09-25-2020 13:37:25 : 330 - Fin pausa
+
+09-25-2020 13:37:26 : 339 - Copia el directorio temporal C:\Users\Nuevo\Documents\VoxLine\101004 a la carpeta raiz C:\FTP\Voxline\Pivotes\
+
+09-25-2020 13:37:30 : 459 - LEE EL JSON  - Computadores 
+
+09-25-2020 13:37:47 : 459 - Ciclo Pantallas por computador 
+
+09-25-2020 13:38:14 : 472 - Crea el directorio definitivo :  p759
+
+09-25-2020 13:40:54 : 491 - Copia la version de la temporal a la definitiva
+
+09-25-2020 13:40:54 : 484 - Ciclo Playlist , copia el cotenido de la temporal a la definitiva siguiendo el playlist.json 
+
+09-25-2020 13:42:17 : 514 - Copia el contenido temporal a la carpeta definitiva
+
+09-25-2020 13:42:21 : 514 - Copia el contenido temporal a la carpeta definitiva
+
+09-25-2020 13:42:25 : 514 - Copia el contenido temporal a la carpeta definitiva
+
+09-25-2020 13:47:38 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 13:47:38 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 13:47:41 : 669 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-25-2020 13:47:41 : 730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : p759_TMP
+
+09-25-2020 13:47:41 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 13:47:41 : 890 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+09-25-2020 13:47:41 : Se sincronizo archivos
+
+09-25-2020 13:48:40 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 13:48:40 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 13:48:44 : 669 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-25-2020 13:48:46 : 730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : p759_TMP
+
+09-25-2020 13:48:52 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 13:48:53 : 890 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+09-25-2020 13:48:53 : Se sincronizo archivos
+
+09-25-2020 13:49:47 : 669 - Ciclo for para guardar las pantallas en memoria
+
+09-25-2020 13:49:47 : 660 - PLAYLIST. JSON descargado
+
+09-25-2020 13:49:50 : 669 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-25-2020 13:49:56 : 730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : p759_TMP
+
+09-25-2020 13:49:56 : 741 - Ciclo para descargar los archivos a la temporal
+
+09-25-2020 13:49:58 : 890 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+09-25-2020 13:49:58 : Se sincronizo archivos

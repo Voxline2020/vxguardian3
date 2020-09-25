@@ -69,10 +69,12 @@ namespace VxGuardian.View
 				syncingOff();
 				TemporalStorage = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\VoxLine\\" + ini.config.CodePc;
 				Etc.CreateDir(TemporalStorage);
+				gLog.SaveLog("Directorio temporal creado Documentos/Voxline/numerComputador");
 				CreateFTP();
 				initiated = true;
 				if (CheckConexionFTP())
 				{
+					
 					SyncAsync(ini.config.CodePc);
 					if (!time.Enabled)
 					{
@@ -334,8 +336,9 @@ namespace VxGuardian.View
 						//CopyTemporalToDirAsync(TemporalStorage, ini.config.CarpetaRaiz); //Copia el directorio temporal a la carpeta raiz
 
 						//GUSTAVO
+						gLog.SaveLog("339 - Copia el directorio temporal " + TemporalStorage + " a la carpeta raiz " + ini.config.CarpetaRaiz);
 						CopyTemporalToDirAsync2(TemporalStorage, ini.config.CarpetaRaiz); //Copia el directorio temporal a la carpeta raiz 
-						gLog.SaveLog("339 - Copia el directorio temporal " + TemporalStorage + " a la carpeta raiz " + ini.config.CarpetaRaiz );
+						
 
 						//OpenApp(ini.config.Reproductor);
 						//CloseBS();
@@ -353,11 +356,12 @@ namespace VxGuardian.View
 					try
 					{
 						CopyJsonPlayList(TemporalStorage, ini.config.CarpetaRaiz);//Copia el json PLayList del directorio temporal a la carpeta raiz
+						gLog.SaveLog("358 - Copia el json de la carpeta temporal a la definitiva");
 					}
 					catch (Exception ex)
 					{
 
-						gLog.SaveLog("ERROR COPY PlayList.json " + ex.Message);
+						gLog.SaveLog("363 - ERROR COPY PlayList.json " + ex.Message);
 					}
 					//cambio gonzalo
 					try
@@ -452,32 +456,44 @@ namespace VxGuardian.View
 							JObject jsondata = (JObject)JToken.ReadFrom(reader);
 							
 							var computers = jsondata["computers"];
-							
-							//recorre la lista de computadores en el JSON
-							foreach (var computer in computers)
-							{
-								//No se crea una carpeta por computador SOLO PANTALLAS
 
+						//recorre la lista de computadores en el JSON
+							gLog.SaveLog("459 - LEE EL JSON  - Computadores ");
+						foreach (var computer in computers)
+						{
+							string pccode = computer["code"].ToString();
+							//No se crea una carpeta por computador SOLO PANTALLAS
+							if (pccode.Equals(ini.config.CodePc.ToString())) 
+							{
 								//Recorre la lista de pantallas por computador en el JSON
+								gLog.SaveLog("459 - Ciclo Pantallas por computador ");
 								foreach (var screen in computer["screens"])
 								{
+
 									//nombre de la carpetas
 									string screen_folder_name = "p" + screen["code"];
 									//crea el directorio definitivo
 									Directory.CreateDirectory(_destinyFolder + "\\" + screen_folder_name);
+									gLog.SaveLog("472 - Crea el directorio definitivo :  " + screen_folder_name);
+
 									//extrae la version de la pantalla
 									var screen_version = screen["version"];
+
 									//url del archivo de version temporal
-									string version_temp_path = _temporalFolder + "\\" + screen_folder_name + "\\" +"v"+ screen_version + ".txt";
+									string version_temp_path = _temporalFolder + "\\" + screen_folder_name + "\\" + "v" + screen_version + ".txt";
+
 									//url del archivo de version definitivo
 									string version_destiny_path = _destinyFolder + "\\" + screen_folder_name + "\\" + "v" + screen_version + ".txt";
+
 									//comprueba si existe el archivo de version temporal
 									if (File.Exists(version_temp_path))
 									{
 										//copia el archivo de version temporal a la carpeta definitiva
 										File.Copy(version_temp_path, version_destiny_path);
-										
+										gLog.SaveLog("491 - Copia la version de la temporal a la definitiva");
+
 										//recorre los contenido de la playlist en el json 
+										gLog.SaveLog("484 - Ciclo Playlist , copia el cotenido de la temporal a la definitiva siguiendo el playlist.json ");
 										foreach (var content in screen["playlist"])
 										{
 											//nombre del contenido
@@ -487,26 +503,30 @@ namespace VxGuardian.View
 											//posicion del contenido
 											string content_position = content["defOrder"].ToString();
 
-										//url del contenido temporal id-nombre-nombre.mp4
-										string content_temp_path = _temporalFolder + "\\" + screen_folder_name + "\\" + content_original_id + "-" + content_name + ".mp4";
+											//url del contenido temporal id-nombre-nombre.mp4
+											string content_temp_path = _temporalFolder + "\\" + screen_folder_name + "\\" + content_original_id + "-" + content_name + ".mp4";
 											//url del contenido definitivo orden-id-nombre.mp4
 											string content_destiny_path = _destinyFolder + "\\" + screen_folder_name + "\\" + content_position + "-" + content_original_id + "-" + content_name + ".mp4";
-											
+
 											//Comprueba si existe el contenido temporal
 											if (File.Exists(content_temp_path))
 											{
 												//Copia el contenido temporal a la carpeta definitiva
 												File.Copy(content_temp_path, content_destiny_path);
+												gLog.SaveLog("514 - Copia el contenido temporal a la carpeta definitiva");
 											}
 										}//end foreach playlist
 
-									}else
+									}
+									else
 									{
 										gLog.SaveLog("No se encontro el archvio (Version).txt");
-								}
-									
+									}
+
 								}//end foreach screens
-							}//end foreach computers
+							}
+						}//end foreach computers
+
 						
 
 
@@ -657,6 +677,7 @@ namespace VxGuardian.View
 
 			//Descargar el json 
 			ftpClient.DownloadFile(TemporalLocalFolder+ "\\PLayList.json", "PlayList.json", FtpLocalExists.Overwrite, FtpVerify.Retry);
+			gLog.SaveLog("660 - PLAYLIST. JSON descargado");
 
 			//Etc.CreateDir(TemporalLocalFolder);
 
@@ -664,6 +685,11 @@ namespace VxGuardian.View
 
 			//ini.config.Screens.Clear();
 			//getScreens
+			gLog.SaveLog("669 - Ciclo for para guardar las pantallas en memoria");
+			///Gustavo 
+			//var directorioftp = _ftpclient.GetListing(Path+ "p759");
+			var directorioftp2 = _ftpclient.GetListing(Path);
+			//
 			foreach (FtpListItem item in _ftpclient.GetListing(Path).OrderByDescending(item => item.Name))
 			{
 				//if the folder is the player folder, enter and download
@@ -697,6 +723,7 @@ namespace VxGuardian.View
 
 			var _screens = ini.config.Screens.ToArray();
 
+			gLog.SaveLog("669 - Ciclo for para recorrer las pantallas guardadas en memoria");
 			int aux = 0;
 			foreach (ScreensGuardian screen in _screens)
 			{
@@ -708,25 +735,38 @@ namespace VxGuardian.View
 				//----------------------------------------------------------
 				//
 				
-				
+				//Si No existe el directorio  o la version remota es mayor a la actual
 				if (!Etc.CheckDir(screen.LocalPath) || screen.VersionRemota > Int32.Parse(screen.VersionActual))
 				{
 					//Gustavo guarda en memoria la version actual de la pantalla
 					screen.VersionActual = screen.VersionRemota.ToString();
 
 					string ScreenTemporal = TemporalLocalFolder + '\\' + screen.Nombre;
-					Etc.CreateDir(ScreenTemporal);
+
 					try
 					{
-						Etc.ClearDir(ScreenTemporal);
+						if (!Directory.Exists(ScreenTemporal))
+						{
+							Etc.CreateDir(ScreenTemporal);
+							gLog.SaveLog("727 - CREA DIRECTORIO TEMPORAL : " + screen.Nombre);
+						}
+						else
+						{
+								Etc.ClearDir(ScreenTemporal);
+								gLog.SaveLog("730 - CLEARDIR (ELIMINA Y CREA NUEVAMENTE EL DIRECTORIO) : " + screen.Nombre);							
+						}
 					}
 					catch (Exception ex)
 					{
 
-						gLog.SaveLog("ERROR CLEAR DOWNLOAD " + ex.Message);
+						gLog.SaveLog("743 - ERROR Create or Clear Directory " + ex.Message);
 					}
-					
+
+
+
+
 					//Descarga los dentro de la carpeta correspondiendte a la pantalla en el ftp 
+					gLog.SaveLog("741 - Ciclo para descargar los archivos a la temporal");
 					foreach (FtpListItem item in _ftpclient.GetListing(screen.Path).OrderByDescending(item => item.Name))
 					{
 						 if (item.Type == FtpFileSystemObjectType.File)
@@ -866,7 +906,8 @@ namespace VxGuardian.View
 			}
 
 			CloseConnection();
-
+			gLog.SaveLog("890 - Cierra Coneccion con BD ya termino de descargar a las temporales");
+				
 
 		}
 
