@@ -332,7 +332,7 @@ namespace VxGuardian.View
 						Etc.KillApp(ini.config.Reproductor); //Cierra el reproductor 
 						gLog.SaveLog("333 - Cierra el reproductor");
 						gLog.SaveLog("334 - Pausa por 3000");
-						System.Threading.Thread.Sleep(3000);
+						//System.Threading.Thread.Sleep(3000);
 						gLog.SaveLog("336 - Fin pausa");
 
 						//CopyTemporalToDirAsync(TemporalStorage, ini.config.CarpetaRaiz); //Copia el directorio temporal a la carpeta raiz
@@ -451,19 +451,23 @@ namespace VxGuardian.View
 						//Crear directorio definitivo
 
 						// leer json desde un archivo
-						StreamReader file = File.OpenText(_temporalFolder + "\\" + "PlayList.json");
-						JsonTextReader reader = new JsonTextReader(file);
-						
+						//StreamReader file = File.OpenText(_temporalFolder + "\\" + "PlayList.json");
+						//JsonTextReader reader = new JsonTextReader(file);
 
-							//json object para trabajar
-						JObject jsondata = (JObject)JToken.ReadFrom(reader);
-							
-							var computers = jsondata["computers"];
 
+						//json object para trabajar
+						//JObject jsondata = (JObject)JToken.ReadFrom(reader);
+
+						//var computers = jsondata["computers"];
+
+						//////////////Funcio leer json 
+						///Lee un archivo json 
+						gLog.SaveLog("464 Lee el json ");
+						var computers = Etc.ReadJson(_temporalFolder);
 						
 
 						//recorre la lista de computadores en el JSON
-							gLog.SaveLog("466 - LEE EL JSON  - Computadores ");
+						//gLog.SaveLog("466 - LEE EL JSON  - Computadores ");
 						foreach (var computer in computers)
 						{
 							string pccode = computer["code"].ToString();
@@ -524,7 +528,7 @@ namespace VxGuardian.View
 
 										//GUSTAVO 
 										//Cierra el text reader
-										file.Close();
+										//file.Close();
 										gLog.SaveLog("528 - Cierra el textreader de playlist.json");
 									}
 									else

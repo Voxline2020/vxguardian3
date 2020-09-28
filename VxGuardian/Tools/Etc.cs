@@ -1,4 +1,6 @@
 ﻿using FluentFTP;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -268,6 +270,23 @@ namespace VxGuardian.EtcClass
 			}
 			catch
 			{ }
+		}
+
+		//Read json file
+		public static JToken ReadJson(string _temporalFolder)
+		{
+			StreamReader file = File.OpenText(_temporalFolder + "\\" + "PlayList.json");
+			JsonTextReader reader = new JsonTextReader(file);
+
+			//json object para trabajar
+			JObject jsondata = (JObject)JToken.ReadFrom(reader);
+
+			//cierra el json
+			file.Close();			
+
+			var json = jsondata["computers"];
+
+			return json;
 		}
 
 
