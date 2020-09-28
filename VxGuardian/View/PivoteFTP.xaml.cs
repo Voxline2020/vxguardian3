@@ -122,10 +122,21 @@ namespace VxGuardian.View
 				SaveNewConfig();
 				TemporalStorage = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\VoxLine\\" + ini.config.CodePc;
 				Etc.CreateDir(TemporalStorage);
+				if (initiated)
+				{
+					StopTime();
+					initiated = false;
+				}
 				Sync();
-			
-				
-				
+				if (!initiated)
+				{
+					InitTime();
+					initiated = true;
+				}
+
+
+
+
 			}
 			else
 			{
@@ -153,21 +164,34 @@ namespace VxGuardian.View
 			ini.db.Save(ini.config);
 
 			
-			if(!initiated)
+			/*if(!initiated)
 			{
 				InitTime();
 				initiated = true;
-			}
+			}*/
 
 		}
 
 		private void Timer_Elapsed(object sender, ElapsedEventArgs e)
 		{
+			
 
-			if(ini.config.Syncing == 0)
+			if (ini.config.Syncing == 0)
 			{
+				if (initiated)
+				{
+					StopTime();
+					initiated = false;					
+				}
+
 				Sync();
+				if (!initiated)
+				{
+					InitTime();
+					initiated = true;
+				}
 			}
+
 			//Application.Current.Dispatcher.Invoke(delegate
 			//{
 			//	//btn_sync.RaiseEvent(new RoutedEventArgs(ButtonBase.ClickEvent));
@@ -300,11 +324,11 @@ namespace VxGuardian.View
 		private void Sync()
 		{
 
-			if(initiated)
+			/*if(initiated)
 			{
 				StopTime();
 				initiated = false;
-			}
+			}*/
 			
 
 			var dictionary = new Dictionary<int, int>();
