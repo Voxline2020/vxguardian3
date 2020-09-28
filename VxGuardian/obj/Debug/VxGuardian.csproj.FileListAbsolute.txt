@@ -246,3 +246,4 @@ C:\Users\Nuevo\Desktop\vxguardian3\VxGuardian\obj\Debug\VxGuardian.application
 C:\Users\Nuevo\Desktop\vxguardian3\VxGuardian\obj\Debug\VxGuardian.csproj.CopyComplete
 C:\Users\Nuevo\Desktop\vxguardian3\VxGuardian\obj\Debug\VxGuardian.exe
 C:\Users\Nuevo\Desktop\vxguardian3\VxGuardian\obj\Debug\VxGuardian.pdb
+C:\Users\Nuevo\Desktop\vxguardian3\VxGuardian\obj\Debug\VxGuardian.csprojAssemblyReference.cache

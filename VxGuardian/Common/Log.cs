@@ -13,11 +13,13 @@ namespace VxGuardian.Common
 	{
 
 		private static string DateLog;
+		private static string Today;
 
 		public Log()
 		{
 			//Toma la fecha de la maquina al crear clase
 			DateLog = DateTime.Now.ToString("MM-dd-yyyy HH-mm-ss");
+			Today = DateTime.Now.ToString("MM-dd-yyyy");
 		}
 
 
@@ -80,7 +82,7 @@ namespace VxGuardian.Common
 
 			try
 			{
-				var fileFull = path + fileName;
+				var fileFull = path + Today+ fileName;
 
 				if (!System.IO.File.Exists(fileFull))
 				{

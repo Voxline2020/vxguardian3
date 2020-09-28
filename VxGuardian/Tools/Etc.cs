@@ -202,7 +202,8 @@ namespace VxGuardian.EtcClass
 			return false;
 		}
 
-		public static void KillApp(string _dir)
+		//GUSTAVO
+		public static bool KillApp(string _dir)
 		{
 			string NameExe = _dir.Split('\\').Last().Split('.').First();
 			Process[] pname = Process.GetProcessesByName(NameExe);
@@ -211,11 +212,14 @@ namespace VxGuardian.EtcClass
 				foreach (Process process in pname)
 				{
 					process.Kill();
+					
 				}
+			return true;
 				//&MessageBox.Show("Process Running");
 			}
 			else
 			{
+				return false;
 				//MessageBox.Show("Process Not running");
 			}
 
@@ -284,6 +288,7 @@ namespace VxGuardian.EtcClass
 			//cierra el json
 			file.Close();			
 
+			//GUSTAVO ARREGLAR
 			var json = jsondata["computers"];
 
 			return json;
