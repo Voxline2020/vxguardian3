@@ -398,9 +398,14 @@ namespace VxGuardian.View
 							if (!Etc.CheckLock(screenFolder_TMP))
 							{
 								//crear carpeta pantalla
-								Etc.CreateDir(screenFolder);
-								Etc.CreateDir(screenFolder_TMP);
-								gLog.SaveLog("375 - Etc.CreateDir " + screenFolder_TMP);
+								if(!(Directory.Exists(screenFolder)))
+								{
+									//Si el diecotrio principal no existe lo crea
+									Etc.CreateDir(screenFolder);
+									gLog.SaveLog("405 Crea carpetas definitvas " + screenFolder_TMP);
+								}								
+								/*Etc.CreateDir(screenFolder_TMP);
+								gLog.SaveLog("375 - Etc.CreateDir " + screenFolder_TMP); */
 
 								//crear localmente la variable de la pantalla
 								ScreensGuardian _screen = new ScreensGuardian();
@@ -444,7 +449,25 @@ namespace VxGuardian.View
 								if (first)
 								{
 									//Etc.ClearDir(screenFolder_TMP);
-									gLog.SaveLog("421 - Etc.ClearDir " + screenFolder_TMP);
+									//gLog.SaveLog("421 - Etc.ClearDir " + screenFolder_TMP);
+									//crear carpeta pantalla
+
+									if (Directory.Exists(screenFolder_TMP))
+									{
+										//SI existe la carpeta temporal la limpia
+										Etc.ClearDir(screenFolder_TMP);
+										gLog.SaveLog("459 - Limpia temporal " + screenFolder_TMP);
+									}
+									else
+									{
+										//Crear carpeta temporal									
+										Etc.CreateDir(screenFolder_TMP);
+										gLog.SaveLog("465 - Crea temporal " + screenFolder_TMP);
+									}
+
+
+
+
 									Etc.CreateLock(screenFolder_TMP);
 									//Etc.CreateLock(screenFolder);
 									int auxI = 0;
@@ -557,7 +580,22 @@ namespace VxGuardian.View
 									//Etc.ClearDir(screenFolder);
 									//Etc.CreateLock(screenFolder_TMP);
 									// Daniel
-									Etc.ClearDir(screenFolder_TMP);
+									if (Directory.Exists(screenFolder_TMP))
+									{
+										//SI existe la carpeta temporal la limpia
+										Etc.ClearDir(screenFolder_TMP);
+										gLog.SaveLog("585 - Limpia temporal " + screenFolder_TMP);
+									}
+									else
+									{
+										//Crear carpeta temporal									
+										Etc.CreateDir(screenFolder_TMP);
+										gLog.SaveLog("590 - Crea temporal " + screenFolder_TMP);
+									}
+
+
+
+						//	Etc.ClearDir(screenFolder_TMP);
 									gLog.SaveLog("523 - Etc.ClearDir" + screenFolder_TMP);
 									Etc.CreateLock(screenFolder_TMP);
 									gLog.SaveLog("525 - CreateLock" + screenFolder_TMP);

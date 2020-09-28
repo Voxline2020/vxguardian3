@@ -80,7 +80,6 @@ C:\Users\Nuevo\Desktop\proyectos\vxguardian3\VxGuardian\obj\Debug\VxGuardian.app
 C:\Users\Nuevo\Desktop\proyectos\vxguardian3\VxGuardian\obj\Debug\VxGuardian.csproj.CopyComplete
 C:\Users\Nuevo\Desktop\proyectos\vxguardian3\VxGuardian\obj\Debug\VxGuardian.exe
 C:\Users\Nuevo\Desktop\proyectos\vxguardian3\VxGuardian\obj\Debug\VxGuardian.pdb
-C:\Users\Nuevo\Desktop\proyectos\vxguardian3\VxGuardian\obj\Debug\VxGuardian.csprojAssemblyReference.cache
 \\192.168.1.33\compartido\Programas\Voxline\vxguardian3\VxGuardian\bin\Debug\db.json
 \\192.168.1.33\compartido\Programas\Voxline\vxguardian3\VxGuardian\bin\Debug\VxGuardian.exe.config
 \\192.168.1.33\compartido\Programas\Voxline\vxguardian3\VxGuardian\bin\Debug\VxGuardian.exe.manifest
@@ -142,7 +141,6 @@ C:\Users\Nuevo\Desktop\proyectos\vxguardian3\VxGuardian\obj\Debug\VxGuardian.csp
 \\192.168.1.33\compartido\Programas\Voxline\vxguardian3\VxGuardian\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 \\192.168.1.33\compartido\Programas\Voxline\vxguardian3\VxGuardian\bin\Debug\System.Threading.Channels.xml
 \\192.168.1.33\compartido\Programas\Voxline\vxguardian3\VxGuardian\bin\Debug\System.Threading.Tasks.Extensions.xml
-\\192.168.1.33\compartido\Programas\Voxline\vxguardian3\VxGuardian\obj\Debug\VxGuardian.csprojAssemblyReference.cache
 \\192.168.1.33\compartido\Programas\Voxline\vxguardian3\VxGuardian\obj\Debug\MainWindow.g.cs
 \\192.168.1.33\compartido\Programas\Voxline\vxguardian3\VxGuardian\obj\Debug\View\PivoteFTP.g.cs
 \\192.168.1.33\compartido\Programas\Voxline\vxguardian3\VxGuardian\obj\Debug\View\ConfiguracionFTP.g.cs
