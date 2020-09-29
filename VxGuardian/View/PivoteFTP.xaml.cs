@@ -615,8 +615,9 @@ namespace VxGuardian.View
 									Etc.CreateVersion(screenFolder_TMP, screen.Version.ToString()); //Daniel								
 									Etc.DeleteLock(screenFolder_TMP); // Daniel
 									gLog.SaveLog("500 - FIRST : Etc.DeleteLock " + screenFolder_TMP);
+									Etc.DeleteLock(screenFolder);
+									gLog.SaveLog("619 - FIRST Borra el lock de la pantalla antes de mover la temporal a la definitiva Etc.DeleteLock" + screenFolder);
 									Etc.MoveDir(screenFolder_TMP, screenFolder);
-									gLog.SaveLog("620 - FIRST : Borra la carpeta definitiva con el lock antes de moverlo");
 									gLog.SaveLog("620 - FIRST : Contenido movido de la temporal " + screenFolder_TMP +" a la definitiva " + screenFolder);
 
 									first = false;
@@ -728,6 +729,10 @@ namespace VxGuardian.View
 									gLog.SaveLog("592 - Etc.CreateVersion" + screenFolder_TMP + " " + screen.Version.ToString());
 									Etc.DeleteLock(screenFolder_TMP); // Daniel
 									gLog.SaveLog("594 - Etc.DeleteLock" + screenFolder_TMP);
+									Etc.DeleteLock(screenFolder);
+									gLog.SaveLog("732 - Borra el lock de la pantalla antes de mover la temporal a la definitiva Etc.DeleteLock" + screenFolder);
+
+
 									Etc.MoveDir(screenFolder_TMP, screenFolder);
 									gLog.SaveLog("597 - Contenido movido de latemporal a la definitiva");
 									///////////////////

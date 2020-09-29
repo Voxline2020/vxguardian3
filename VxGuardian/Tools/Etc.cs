@@ -245,12 +245,10 @@ namespace VxGuardian.EtcClass
 
 		public static void MoveDir(String path, string pathDes)
         {
-            try
-            {
                 if (Directory.Exists(pathDes))
                 {
-					Etc.ClearDir(pathDes);
-					
+
+					Directory.Delete(pathDes , true);
                     Directory.Move(path, pathDes); // Daniel
                                                    //Directory.Delete(path, true); // Daniel
                 }
@@ -261,9 +259,6 @@ namespace VxGuardian.EtcClass
                                                    //Directory.Delete(path, true); // Daniel
                 }
 
-            }
-			catch
-			{ }
         }
 
 		//Gustavo 
