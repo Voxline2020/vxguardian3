@@ -1,0 +1,326 @@
+
+09-29-2020 09:16:29 : --- Inicio VxGuardian --- 
+
+09-29-2020 09:18:12 : --- Inicio VxGuardian --- 
+
+09-29-2020 09:18:20 : --- Modo FTP ---
+
+09-29-2020 09:19:04 : --- Inicio VxGuardian --- 
+
+09-29-2020 09:19:05 : --- Modo FTP ---
+
+09-29-2020 09:19:10 : --- Modo FTP ---
+
+09-29-2020 09:21:39 : --- Inicio VxGuardian --- 
+
+09-29-2020 09:21:40 : --- Modo FTP ---
+
+09-29-2020 09:21:57 : 141 - crea carpeta  definitiva pivote
+
+09-29-2020 09:21:59 : 141 - create lock en la definitiva pivote
+
+09-29-2020 09:22:00 : 315 - Genera string downloadLink
+
+09-29-2020 09:22:00 : 321 - Se conecta y lee Json CMS
+
+09-29-2020 09:22:00 : Conexion DBCMS Correcta
+
+09-29-2020 09:22:00 : 324 - Genera BD.Json
+
+09-29-2020 09:22:00 : 405 Crea carpetas definitvas C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:22:00 : 414 - Etc.ClearDir C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 09:22:00 : 465 - Crea temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:22:01 : First: Se descargo a la temporal1199-precaucion-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:22:01 : First: Se descargo a la temporal1299-spot-compromiso-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:22:02 : First: Se descargo a la temporal1165-index-mujer-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:22:02 : First: Se descargo a la temporal1199-precaucion-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:22:02 : 500 - FIRST : Etc.DeleteLock C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:22:02 : FIRST : Contenido movido de la temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP a la definitiva C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 09:22:05 : TIMER :: START 
+
+09-29-2020 09:23:25 : --- Inicio VxGuardian --- 
+
+09-29-2020 09:23:51 : 141 - crea carpeta  definitiva pivote
+
+09-29-2020 09:23:57 : 141 - create lock en la definitiva pivote
+
+09-29-2020 09:23:58 : 315 - Genera string downloadLink
+
+09-29-2020 09:23:58 : 321 - Se conecta y lee Json CMS
+
+09-29-2020 09:23:58 : Conexion DBCMS Correcta
+
+09-29-2020 09:23:58 : 324 - Genera BD.Json
+
+09-29-2020 09:23:58 : 405 Crea carpetas definitvas C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:23:58 : 414 - Etc.ClearDir C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 09:23:58 : 465 - Crea temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:23:58 : First: Se descargo a la temporal1199-precaucion-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:23:59 : First: Se descargo a la temporal1299-spot-compromiso-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:24:00 : First: Se descargo a la temporal1165-index-mujer-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:24:00 : First: Se descargo a la temporal1199-precaucion-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:24:00 : 500 - FIRST : Etc.DeleteLock C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:24:00 : FIRST : Contenido movido de la temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP a la definitiva C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 09:24:06 : TIMER :: START 
+
+09-29-2020 09:24:18 : 142 - borra el lock de la definitva pivote
+
+09-29-2020 09:26:39 : 202 - create lock en la definitiva pivote
+
+09-29-2020 09:26:39 : TIMER :: Stop 
+
+09-29-2020 09:26:40 : 315 - Genera string downloadLink
+
+09-29-2020 09:26:43 : 321 - Se conecta y lee Json CMS
+
+09-29-2020 09:26:43 : Conexion DBCMS Correcta
+
+09-29-2020 09:26:44 : 324 - Genera BD.Json
+
+09-29-2020 09:27:07 : 202 - create lock en la definitiva pivote
+
+09-29-2020 09:27:07 : 342 - File.Delete C:\FTP\Voxline\Pivotes\10999\PlayList.json
+
+09-29-2020 09:27:07 : 142 - borra el lock de la definitva pivote
+
+09-29-2020 09:27:10 : 315 - Genera string downloadLink
+
+09-29-2020 09:27:10 : 321 - Se conecta y lee Json CMS
+
+09-29-2020 09:27:10 : Conexion DBCMS Correcta
+
+09-29-2020 09:27:10 : 324 - Genera BD.Json
+
+09-29-2020 09:27:10 : 342 - File.Delete C:\FTP\Voxline\Pivotes\10999\PlayList.json
+
+09-29-2020 09:27:24 : 142 - borra el lock de la definitva pivote
+
+09-29-2020 09:30:28 : TIMER :: Stop 
+
+09-29-2020 09:30:28 : TIMER :: Stop 
+
+09-29-2020 09:30:36 : 134 - create lock en la definitiva pivote
+
+09-29-2020 09:30:36 : 315 - Genera string downloadLink
+
+09-29-2020 09:30:36 : 321 - Se conecta y lee Json CMS
+
+09-29-2020 09:30:36 : Conexion DBCMS Correcta
+
+09-29-2020 09:30:36 : 324 - Genera BD.Json
+
+09-29-2020 09:30:36 : 342 - File.Delete C:\FTP\Voxline\Pivotes\10999\PlayList.json
+
+09-29-2020 09:30:37 : TIMER :: START 
+
+09-29-2020 09:30:37 : 142 - borra el lock de la definitva pivote
+
+09-29-2020 09:31:40 : 202 - create lock en la definitiva pivote
+
+09-29-2020 09:31:40 : TIMER :: Stop 
+
+09-29-2020 09:31:40 : 315 - Genera string downloadLink
+
+09-29-2020 09:31:40 : 321 - Se conecta y lee Json CMS
+
+09-29-2020 09:31:40 : Conexion DBCMS Correcta
+
+09-29-2020 09:31:40 : 324 - Genera BD.Json
+
+09-29-2020 09:31:40 : 342 - File.Delete C:\FTP\Voxline\Pivotes\10999\PlayList.json
+
+09-29-2020 09:31:40 : 142 - borra el lock de la definitva pivote
+
+09-29-2020 09:34:06 : --- Inicio VxGuardian --- 
+
+09-29-2020 09:34:23 : 134 - create lock en la definitiva pivote
+
+09-29-2020 09:34:23 : 315 - Genera string downloadLink
+
+09-29-2020 09:34:23 : 321 - Se conecta y lee Json CMS
+
+09-29-2020 09:34:24 : Conexion DBCMS Correcta
+
+09-29-2020 09:34:24 : 324 - Genera BD.Json
+
+09-29-2020 09:34:24 : 342 - File.Delete C:\FTP\Voxline\Pivotes\10999\PlayList.json
+
+09-29-2020 09:34:24 : 414 - Etc.ClearDir C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 09:34:24 : 465 - Crea temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:34:24 : First: Se descargo a la temporal1199-precaucion-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:34:25 : First: Se descargo a la temporal1299-spot-compromiso-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:34:25 : First: Se descargo a la temporal1165-index-mujer-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:34:26 : First: Se descargo a la temporal1199-precaucion-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:34:26 : 500 - FIRST : Etc.DeleteLock C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:34:26 : FIRST : Contenido movido de la temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP a la definitiva C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 09:34:28 : TIMER :: START 
+
+09-29-2020 09:34:29 : 142 - borra el lock de la definitva pivote
+
+09-29-2020 09:35:28 : 202 - create lock en la definitiva pivote
+
+09-29-2020 09:35:28 : TIMER :: Stop 
+
+09-29-2020 09:35:28 : 315 - Genera string downloadLink
+
+09-29-2020 09:35:28 : 321 - Se conecta y lee Json CMS
+
+09-29-2020 09:35:28 : Conexion DBCMS Correcta
+
+09-29-2020 09:35:28 : 324 - Genera BD.Json
+
+09-29-2020 09:35:28 : 342 - File.Delete C:\FTP\Voxline\Pivotes\10999\PlayList.json
+
+09-29-2020 09:35:28 : TIMER :: START 
+
+09-29-2020 09:35:28 : 142 - borra el lock de la definitva pivote
+
+09-29-2020 09:36:28 : 202 - create lock en la definitiva pivote
+
+09-29-2020 09:36:28 : TIMER :: Stop 
+
+09-29-2020 09:36:28 : 315 - Genera string downloadLink
+
+09-29-2020 09:36:28 : 321 - Se conecta y lee Json CMS
+
+09-29-2020 09:36:28 : Conexion DBCMS Correcta
+
+09-29-2020 09:36:28 : 324 - Genera BD.Json
+
+09-29-2020 09:36:28 : 342 - File.Delete C:\FTP\Voxline\Pivotes\10999\PlayList.json
+
+09-29-2020 09:36:28 : TIMER :: START 
+
+09-29-2020 09:36:28 : 142 - borra el lock de la definitva pivote
+
+09-29-2020 09:37:03 : --- Inicio VxGuardian --- 
+
+09-29-2020 09:37:21 : 134 - create lock en la definitiva pivote
+
+09-29-2020 09:37:25 : 315 - Genera string downloadLink
+
+09-29-2020 09:37:25 : 321 - Se conecta y lee Json CMS
+
+09-29-2020 09:37:25 : Conexion DBCMS Correcta
+
+09-29-2020 09:37:25 : 324 - Genera BD.Json
+
+09-29-2020 09:37:25 : 342 - File.Delete C:\FTP\Voxline\Pivotes\10999\PlayList.json
+
+09-29-2020 09:37:25 : 414 - Etc.ClearDir C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 09:37:25 : 465 - Crea temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:37:26 : First: Se descargo a la temporal1199-precaucion-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:37:27 : First: Se descargo a la temporal1299-spot-compromiso-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:37:27 : First: Se descargo a la temporal1165-index-mujer-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:37:28 : First: Se descargo a la temporal1199-precaucion-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:37:28 : 500 - FIRST : Etc.DeleteLock C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:37:28 : FIRST : Contenido movido de la temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP a la definitiva C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 09:37:34 : 142 - borra el lock de la definitva pivote
+
+09-29-2020 09:37:37 : TIMER :: START 
+
+09-29-2020 09:38:42 : 202 - create lock en la definitiva pivote
+
+09-29-2020 09:38:45 : TIMER :: Stop 
+
+09-29-2020 09:38:47 : 315 - Genera string downloadLink
+
+09-29-2020 09:38:47 : 321 - Se conecta y lee Json CMS
+
+09-29-2020 09:38:47 : Conexion DBCMS Correcta
+
+09-29-2020 09:38:47 : 324 - Genera BD.Json
+
+09-29-2020 09:38:47 : 342 - File.Delete C:\FTP\Voxline\Pivotes\10999\PlayList.json
+
+09-29-2020 09:38:57 : TIMER :: START 
+
+09-29-2020 09:38:59 : 142 - borra el lock de la definitva pivote
+
+09-29-2020 09:39:18 : --- Inicio VxGuardian --- 
+
+09-29-2020 09:39:25 : --- Inicio VxGuardian --- 
+
+09-29-2020 09:39:34 : 134 - create lock en la definitiva pivote
+
+09-29-2020 09:39:35 : 315 - Genera string downloadLink
+
+09-29-2020 09:39:35 : 321 - Se conecta y lee Json CMS
+
+09-29-2020 09:39:35 : Conexion DBCMS Correcta
+
+09-29-2020 09:39:35 : 324 - Genera BD.Json
+
+09-29-2020 09:39:35 : 342 - File.Delete C:\FTP\Voxline\Pivotes\10999\PlayList.json
+
+09-29-2020 09:39:35 : 414 - Etc.ClearDir C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 09:39:35 : 465 - Crea temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:39:35 : First: Se descargo a la temporal1199-precaucion-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:39:36 : First: Se descargo a la temporal1299-spot-compromiso-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:39:36 : First: Se descargo a la temporal1165-index-mujer-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:39:37 : First: Se descargo a la temporal1199-precaucion-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:39:37 : 500 - FIRST : Etc.DeleteLock C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 09:39:37 : FIRST : Contenido movido de la temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP a la definitiva C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 09:39:39 : 142 - borra el lock de la definitva pivote
+
+09-29-2020 09:39:39 : TIMER :: START 
+
+09-29-2020 09:40:41 : 202 - create lock en la definitiva pivote
+
+09-29-2020 09:40:41 : TIMER :: Stop 
+
+09-29-2020 09:40:41 : 315 - Genera string downloadLink
+
+09-29-2020 09:40:41 : 321 - Se conecta y lee Json CMS
+
+09-29-2020 09:40:41 : Conexion DBCMS Correcta
+
+09-29-2020 09:40:41 : 324 - Genera BD.Json
+
+09-29-2020 09:40:41 : 342 - File.Delete C:\FTP\Voxline\Pivotes\10999\PlayList.json
+
+09-29-2020 09:40:41 : 142 - borra el lock de la definitva pivote
+
+09-29-2020 09:40:41 : TIMER :: START 

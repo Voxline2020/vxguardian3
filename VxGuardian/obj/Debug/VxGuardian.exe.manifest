@@ -354,14 +354,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VxGuardian.exe" size="212496">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VxGuardian.exe" size="213520">
       <assemblyIdentity name="VxGuardian" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fdrC7zIgJJX2YjHLM0lZDWkjytRR6kgctwi5jWoHRZU=</dsig:DigestValue>
+        <dsig:DigestValue>qpmREj1+mrsQD9vUvJaagihqaUIEF5z252PYQWRN84s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

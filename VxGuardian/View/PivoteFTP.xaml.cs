@@ -127,12 +127,31 @@ namespace VxGuardian.View
 					StopTime();
 					initiated = false;
 				}
+
+				//GUstavo 
+				//Crear lock para que nadie mas pueda interactuar.
+				if (Directory.Exists(ini.config.CarpetaRaiz + ini.config.CodePc))
+				{
+					Etc.CreateLock(ini.config.CarpetaRaiz + ini.config.CodePc);
+					gLog.SaveLog("134 - create lock en la definitiva pivote");
+				}else
+				{
+					Directory.CreateDirectory(ini.config.CarpetaRaiz + ini.config.CodePc);
+					gLog.SaveLog("141 - crea carpeta  definitiva pivote");
+					Etc.CreateLock(ini.config.CarpetaRaiz + ini.config.CodePc);
+					gLog.SaveLog("141 - create lock en la definitiva pivote");
+				}
+								
 				Sync();
+				Etc.DeleteLock(ini.config.CarpetaRaiz + ini.config.CodePc);
+				gLog.SaveLog("142 - borra el lock de la definitva pivote");
+
 				if (!initiated)
 				{
 					InitTime();
 					initiated = true;
 				}
+			
 
 
 
@@ -178,6 +197,20 @@ namespace VxGuardian.View
 
 			if (ini.config.Syncing == 0)
 			{
+
+				if (Directory.Exists(ini.config.CarpetaRaiz + ini.config.CodePc))
+				{
+					Etc.CreateLock(ini.config.CarpetaRaiz + ini.config.CodePc);
+					gLog.SaveLog("202 - create lock en la definitiva pivote");
+				}
+				else
+				{
+					Directory.CreateDirectory(ini.config.CarpetaRaiz + ini.config.CodePc);
+					gLog.SaveLog("207 - crea carpeta  definitiva pivote");
+					Etc.CreateLock(ini.config.CarpetaRaiz + ini.config.CodePc);
+					gLog.SaveLog("209 - create lock en la definitiva pivote");
+				}
+
 				if (initiated)
 				{
 					StopTime();
@@ -185,11 +218,17 @@ namespace VxGuardian.View
 				}
 
 				Sync();
+
+				Etc.DeleteLock(ini.config.CarpetaRaiz + ini.config.CodePc);
+				gLog.SaveLog("142 - borra el lock de la definitva pivote");
+
 				if (!initiated)
 				{
 					InitTime();
 					initiated = true;
 				}
+
+
 			}
 
 			//Application.Current.Dispatcher.Invoke(delegate
