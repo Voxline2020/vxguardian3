@@ -320,8 +320,8 @@ namespace VxGuardian.View
 
 			if (checkRemoteFolder(Path, ftpClient))
 			{
-				if(!(Etc.CheckRemoteLock(ftpClient , Path)))
-				{
+				//if(!(Etc.CheckRemoteLock(ftpClient , Path)))
+				//{
 					gLog.SaveLog("325 - LOCK No existe procede a descargar : " + Path);
 				
 					try
@@ -416,11 +416,11 @@ namespace VxGuardian.View
 
 					gLog.SaveLog("394 - Open App ");
 					Etc.OpenApp(ini.config.Reproductor);
-				}
-				else
-				{
-					gLog.SaveLog("422 - LOCK encontrado : " + Path);
-				}
+				//}				
+				//else
+				//{
+					//gLog.SaveLog("422 - LOCK encontrado : " + Path);
+				//}
 			} // fin check remote folder
 
 
@@ -780,193 +780,214 @@ namespace VxGuardian.View
 			int aux = 0;
 			foreach (ScreensGuardian screen in _screens)
 			{
-				gLog.SaveLog(" 740 GETREmote version antes");
-				int _versionRemota = GetRemoteVersion(_ftpclient, screen.Path);
-				gLog.SaveLog(" 742 GETREmote version despues " );
+				if(!(Etc.CheckRemoteLock(_ftpclient , screen.Path)))
 
-
-				screen.VersionRemota = _versionRemota;
-				ini.config.Screens[aux] = screen;
-				ini.db.Save(ini.config);
-
-				//----------------------------------------------------------
-				//
-
-				//Si No existe el directorio  o la version remota es mayor a la actual
-				gLog.SaveLog(" 753 ANTES del if de comprueva version ");
-				if (!Etc.CheckDir(screen.LocalPath) || screen.VersionRemota > Int32.Parse(screen.VersionActual))
 				{
-					gLog.SaveLog(" 756 En el if de comprueva version ");
-					//Gustavo guarda en memoria la version actual de la pantalla
-					screen.VersionActual = screen.VersionRemota.ToString();
+					gLog.SaveLog("786 - NO existe el lock procede a descargar pantalla : " + screen.Path);
+				
+					gLog.SaveLog(" 740 GETREmote version antes");
+					int _versionRemota = GetRemoteVersion(_ftpclient, screen.Path);
+					gLog.SaveLog(" 742 GETREmote version despues " );
 
-					string ScreenTemporal = TemporalLocalFolder + '\\' + screen.Nombre;
 
-					try
+					screen.VersionRemota = _versionRemota;
+					ini.config.Screens[aux] = screen;
+					ini.db.Save(ini.config);
+
+					//----------------------------------------------------------
+					//
+
+					//Si No existe el directorio  o la version remota es mayor a la actual
+					gLog.SaveLog(" 753 ANTES del if de comprueva version ");
+					if (!Etc.CheckDir(screen.LocalPath) || screen.VersionRemota > Int32.Parse(screen.VersionActual))
 					{
-						if (!Directory.Exists(ScreenTemporal))
+						gLog.SaveLog(" 756 En el if de comprueva version ");
+						//Gustavo guarda en memoria la version actual de la pantalla
+						screen.VersionActual = screen.VersionRemota.ToString();
+
+						string ScreenTemporal = TemporalLocalFolder + '\\' + screen.Nombre;
+
+						try
 						{
-							Etc.CreateDir(ScreenTemporal);
-							gLog.SaveLog("767 - CREA DIRECTORIO TEMPORAL : " + screen.Nombre);
+							if (!Directory.Exists(ScreenTemporal))
+							{
+								Etc.CreateDir(ScreenTemporal);
+								gLog.SaveLog("767 - CREA DIRECTORIO TEMPORAL : " + screen.Nombre);
+							}
+							else
+							{
+									Etc.ClearDir(ScreenTemporal);
+									gLog.SaveLog("772 - CLEARDIR (Limpia EL DIRECTORIO) : " + screen.Nombre);							
+							}
 						}
-						else
+						catch (Exception ex)
 						{
-								Etc.ClearDir(ScreenTemporal);
-								gLog.SaveLog("772 - CLEARDIR (Limpia EL DIRECTORIO) : " + screen.Nombre);							
+
+							gLog.SaveLog("778 - ERROR Create or Clear Directory " + ex.Message);
 						}
-					}
-					catch (Exception ex)
-					{
-
-						gLog.SaveLog("778 - ERROR Create or Clear Directory " + ex.Message);
-					}
 
 
 
 
-					//Descarga los dentro de la carpeta correspondiendte a la pantalla en el ftp 
-					gLog.SaveLog("785 - Ciclo para descargar los archivos a la temporal");
-					foreach (FtpListItem item in _ftpclient.GetListing(screen.Path).OrderByDescending(item => item.Name))
-					{ 
-						 if (item.Type == FtpFileSystemObjectType.File)
-						  {
-							  string downloadFileName = ScreenTemporal + "\\" + item.Name;
-							FileInfo f = new FileInfo(downloadFileName);
-							try
-							 {
-								//GUSTAVO
-								string rutaarchivoftp = screen.LocalPath + "\\" + item.Name; //Ruta del archivo en la carpeta definitiva		
-								var directorio = Directory.Exists(rutaarchivoftp);
-								string new_video_name = "";
-								string extencion = "";
-								var encontro = false;
-								var orderdef = "";
-
-
-								if (Directory.Exists(screen.LocalPath))
-								{
+						//Descarga los dentro de la carpeta correspondiendte a la pantalla en el ftp 
+						gLog.SaveLog("785 - Ciclo para descargar los archivos a la temporal");
+						foreach (FtpListItem item in _ftpclient.GetListing(screen.Path).OrderByDescending(item => item.Name))
+						{ 
+							 if (item.Type == FtpFileSystemObjectType.File)
+							  {
+								  string downloadFileName = ScreenTemporal + "\\" + item.Name;
+								FileInfo f = new FileInfo(downloadFileName);
+								try
+								 {
 									//GUSTAVO
-									//Extraer lae extencion
+									string rutaarchivoftp = screen.LocalPath + "\\" + item.Name; //Ruta del archivo en la carpeta definitiva		
+									var directorio = Directory.Exists(rutaarchivoftp);
+									string new_video_name = "";
+									string extencion = "";
+									var encontro = false;
+									var orderdef = "";
 
-									var item_separated = (item.Name).Split('.');
-									if (item_separated.Length > 0)
+
+									if (Directory.Exists(screen.LocalPath))
 									{
-										extencion = item_separated[item_separated.Length - 1];
+										//GUSTAVO
+										//Extraer lae extencion
 
-									}
-
-									//Si lae extencion es txt , corresponde a la version y lo copia sin necesidad de modificar el nombre.
-									if(extencion != "txt")
-									{
-										//MODIFICAR LA RUTA PARA SABER QUE ARCHIVO COPIAR									
-										var archivos = Directory.GetFiles(screen.LocalPath);
-										foreach (var archivo in archivos)
+										var item_separated = (item.Name).Split('.');
+										if (item_separated.Length > 0)
 										{
-											new_video_name = archivo.Remove(0, (screen.LocalPath + "\\").Length);
-											var separated_video_name = new_video_name.Split('-');
-											
-											new_video_name = "";
-											for (int i = 0; i < separated_video_name.Length; i++)
-											{
-												//omite la primera posicion
-												if(i==0)
-												{
-													orderdef = separated_video_name[i];
-												}
-												//agrega - para volver a unir las partes
-												if (i > 0 && i < separated_video_name.Length - 1)
-												{
-													new_video_name = new_video_name + separated_video_name[i] + "-";
-												}
-												//evita poner - en la ultima posicion del arreglo
-												if (i == separated_video_name.Length - 1)
-												{
-													new_video_name = new_video_name + separated_video_name[i];
-												}
-											}
-
-											//Comparacion de nombres 
-											string ruta_video_name = rutaarchivoftp.Remove(0, (screen.LocalPath + "\\").Length);
-											if(ruta_video_name == new_video_name)
-											{
-												encontro = true;
-												rutaarchivoftp = screen.LocalPath + "\\" + orderdef + "-" + ruta_video_name;
-												break;
-											}
-											
-
-
+											extencion = item_separated[item_separated.Length - 1];
 
 										}
 
-										//----------------------------
-									}
+										//Si lae extencion es txt , corresponde a la version y lo copia sin necesidad de modificar el nombre.
+										if(extencion != "txt")
+										{
+											//MODIFICAR LA RUTA PARA SABER QUE ARCHIVO COPIAR									
+											var archivos = Directory.GetFiles(screen.LocalPath);
+											foreach (var archivo in archivos)
+											{
+												new_video_name = archivo.Remove(0, (screen.LocalPath + "\\").Length);
+												var separated_video_name = new_video_name.Split('-');
+											
+												new_video_name = "";
+												for (int i = 0; i < separated_video_name.Length; i++)
+												{
+													//omite la primera posicion
+													if(i==0)
+													{
+														orderdef = separated_video_name[i];
+													}
+													//agrega - para volver a unir las partes
+													if (i > 0 && i < separated_video_name.Length - 1)
+													{
+														new_video_name = new_video_name + separated_video_name[i] + "-";
+													}
+													//evita poner - en la ultima posicion del arreglo
+													if (i == separated_video_name.Length - 1)
+													{
+														new_video_name = new_video_name + separated_video_name[i];
+													}
+												}
+
+												//Comparacion de nombres 
+												string ruta_video_name = rutaarchivoftp.Remove(0, (screen.LocalPath + "\\").Length);
+												if(ruta_video_name == new_video_name)
+												{
+													encontro = true;
+													rutaarchivoftp = screen.LocalPath + "\\" + orderdef + "-" + ruta_video_name;
+													break;
+												}
+											
 
 
 
-									if (File.Exists(rutaarchivoftp))
-									{										
-										Etc.CopyFile(rutaarchivoftp , ScreenTemporal + "\\" + item.Name);
-										gLog.SaveLog("867 - COPIADO " + item.Name);
-										Downloaded = true;
-									}
-									else
+											}
+
+											//----------------------------
+										}
+
+
+
+										if (File.Exists(rutaarchivoftp))
+										{										
+											Etc.CopyFile(rutaarchivoftp , ScreenTemporal + "\\" + item.Name);
+											gLog.SaveLog("867 - COPIADO " + item.Name);
+											Downloaded = true;
+										}
+										else
+										{
+											if (ftpClient.DownloadFile(downloadFileName, item.FullName, FtpLocalExists.Overwrite, FtpVerify.Retry))
+											{
+												Downloaded = true;
+												gLog.SaveLog("875 - DESCARGADO " + item.Name);
+											}
+											else
+											{
+												gLog.SaveLog("879 - ERROR EN " + item.Name);
+											}
+										
+										}
+
+									}else
 									{
 										if (ftpClient.DownloadFile(downloadFileName, item.FullName, FtpLocalExists.Overwrite, FtpVerify.Retry))
 										{
 											Downloaded = true;
-											gLog.SaveLog("875 - DESCARGADO " + item.Name);
+											gLog.SaveLog("889 - DESCARGADO " + item.Name);
 										}
 										else
 										{
-											gLog.SaveLog("879 - ERROR EN " + item.Name);
+											gLog.SaveLog("893 - ERROR EN " + item.Name);
 										}
-										
 									}
-
-								}else
-								{
-									if (ftpClient.DownloadFile(downloadFileName, item.FullName, FtpLocalExists.Overwrite, FtpVerify.Retry))
-									{
-										Downloaded = true;
-										gLog.SaveLog("889 - DESCARGADO " + item.Name);
-									}
+								
+								
+									/* ANTES
+										if (ftpClient.DownloadFile(downloadFileName, item.FullName, FtpLocalExists.Overwrite, FtpVerify.Retry))
+									 {
+										 Downloaded = true;
+										 gLog.SaveLog("DESCARGADO " + item.Name);
+									 }
 									else
 									{
-										gLog.SaveLog("893 - ERROR EN " + item.Name);
-									}
+										gLog.SaveLog("ERROR EN " + item.Name);
+									}*/
+
 								}
-								
-								
-								/* ANTES
-								    if (ftpClient.DownloadFile(downloadFileName, item.FullName, FtpLocalExists.Overwrite, FtpVerify.Retry))
-								 {
-									 Downloaded = true;
-									 gLog.SaveLog("DESCARGADO " + item.Name);
-								 }
-								else
+								catch (Exception ex)
 								{
-									gLog.SaveLog("ERROR EN " + item.Name);
-								}*/
-
+									gLog.SaveLog(ex.Message);
+									//throw;
+								}
 							}
-							catch (Exception ex)
-							{
-								gLog.SaveLog(ex.Message);
-								//throw;
-							}
-						}
-					  }//Fin del foreach comprueba version
-					gLog.SaveLog("918 -  Fin del cliclo que comprueba version");
+						  }//Fin del foreach comprueba version
+						gLog.SaveLog("918 -  Fin del cliclo que comprueba version");
 
+					}
+					else
+					{
+						gLog.SaveLog(" 921 no hay version nueva");
+					}
+					aux++;
 				}
 				else
 				{
-					gLog.SaveLog(" 921 no hay version nueva");
-				}
-				aux++;
+					gLog.SaveLog(" 976 - Existe el lock por pantalla : " + screen.Path);
+					gLog.SaveLog(" 977 - Guarda la pantalla en un arreglo y pasa a la siguiente : " + screen.Path);
 
-			}
+				}
+			} //Fin foreach descarga contenido de pantallas
+
+
+
+			//Pantallas resagadas
+			/////////////////////////////////////
+			/////////////////////////////
+			//////////////////////////
+			////////////////////////////
+
+
 
 			CloseConnection();
 			gLog.SaveLog("928 - Cierra Coneccion con BD ya termino de descargar a las temporales");

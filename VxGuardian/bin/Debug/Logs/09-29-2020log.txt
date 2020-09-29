@@ -458,3 +458,247 @@
 09-29-2020 13:47:48 : 620 - FIRST : Contenido movido de la temporal C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP a la definitiva C:\FTP\Voxline\Pivotes\10999\101005\p905
 
 09-29-2020 13:47:51 : TIMER :: START 
+
+09-29-2020 13:55:15 : --- Inicio VxGuardian --- 
+
+09-29-2020 13:55:19 : --- Modo FTP ---
+
+09-29-2020 13:55:37 : Directorio temporal creado Documentos/Voxline/numerComputador
+
+09-29-2020 13:55:39 : 325 - LOCK No existe procede a descargar : 101004
+
+09-29-2020 13:55:40 :  313 - DOWNLOAD FILE ASYNC
+
+09-29-2020 13:55:40 :  313 - REMOTE PAD = 101004
+
+09-29-2020 13:55:42 :  676 download asinc PATH :  101004
+
+09-29-2020 13:55:42 : 688 - PLAYLIST. Antes de descargar el JSON 
+
+09-29-2020 13:55:43 : 690 - PLAYLIST. JSON descargado
+
+09-29-2020 13:55:43 : 698 - Ciclo for para guardar las pantallas en memoria
+
+09-29-2020 13:56:06 : 736 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-29-2020 13:58:56 : --- Inicio VxGuardian --- 
+
+09-29-2020 13:58:58 : --- Modo FTP ---
+
+09-29-2020 13:59:21 : Directorio temporal creado Documentos/Voxline/numerComputador
+
+09-29-2020 13:59:24 : 278 - TIME START
+
+09-29-2020 13:59:35 : --- Inicio VxGuardian --- 
+
+09-29-2020 13:59:38 : --- Modo FTP ---
+
+09-29-2020 13:59:55 : Directorio temporal creado Documentos/Voxline/numerComputador
+
+09-29-2020 13:59:59 : 325 - LOCK No existe procede a descargar : 101004
+
+09-29-2020 14:00:00 :  313 - DOWNLOAD FILE ASYNC
+
+09-29-2020 14:00:00 :  313 - REMOTE PAD = 101004
+
+09-29-2020 14:00:01 :  676 download asinc PATH :  101004
+
+09-29-2020 14:00:01 : 688 - PLAYLIST. Antes de descargar el JSON 
+
+09-29-2020 14:00:02 : 690 - PLAYLIST. JSON descargado
+
+09-29-2020 14:00:03 : 698 - Ciclo for para guardar las pantallas en memoria
+
+09-29-2020 14:00:16 : 736 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-29-2020 14:00:20 : existe el lock pantalla : /101004/p759
+
+09-29-2020 14:00:20 :  740 GETREmote version antes
+
+09-29-2020 14:00:21 :  742 GETREmote version despues 
+
+09-29-2020 14:00:55 : --- Inicio VxGuardian --- 
+
+09-29-2020 14:00:57 : --- Modo FTP ---
+
+09-29-2020 14:01:18 : Directorio temporal creado Documentos/Voxline/numerComputador
+
+09-29-2020 14:01:19 : 325 - LOCK No existe procede a descargar : 101004
+
+09-29-2020 14:01:19 :  313 - DOWNLOAD FILE ASYNC
+
+09-29-2020 14:01:19 :  313 - REMOTE PAD = 101004
+
+09-29-2020 14:01:20 :  676 download asinc PATH :  101004
+
+09-29-2020 14:01:20 : 688 - PLAYLIST. Antes de descargar el JSON 
+
+09-29-2020 14:01:22 : 690 - PLAYLIST. JSON descargado
+
+09-29-2020 14:01:22 : 698 - Ciclo for para guardar las pantallas en memoria
+
+09-29-2020 14:01:29 : 736 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-29-2020 14:03:08 : --- Inicio VxGuardian --- 
+
+09-29-2020 14:03:15 : --- Modo FTP ---
+
+09-29-2020 14:03:32 : Directorio temporal creado Documentos/Voxline/numerComputador
+
+09-29-2020 14:03:34 :  313 - DOWNLOAD FILE ASYNC
+
+09-29-2020 14:03:34 : 325 - LOCK No existe procede a descargar : 101004
+
+09-29-2020 14:03:34 :  313 - REMOTE PAD = 101004
+
+09-29-2020 14:03:36 :  676 download asinc PATH :  101004
+
+09-29-2020 14:03:36 : 688 - PLAYLIST. Antes de descargar el JSON 
+
+09-29-2020 14:03:37 : 690 - PLAYLIST. JSON descargado
+
+09-29-2020 14:03:38 : 698 - Ciclo for para guardar las pantallas en memoria
+
+09-29-2020 14:03:49 : 736 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-29-2020 14:03:53 :  976 - Existe el lock por pantalla : /101004/p759
+
+09-29-2020 14:03:54 :  977 - Guarda la pantalla en un arreglo y pasa a la siguiente : /101004/p759
+
+09-29-2020 14:03:56 : 928 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+09-29-2020 14:03:57 : Se sincronizo archivos
+
+09-29-2020 14:03:58 : 394 - Open App 
+
+09-29-2020 14:03:58 : 278 - TIME START
+
+09-29-2020 14:05:10 : 325 - LOCK No existe procede a descargar : 101004
+
+09-29-2020 14:05:11 :  313 - DOWNLOAD FILE ASYNC
+
+09-29-2020 14:05:11 :  313 - REMOTE PAD = 101004
+
+09-29-2020 14:05:12 :  676 download asinc PATH :  101004
+
+09-29-2020 14:05:13 : 688 - PLAYLIST. Antes de descargar el JSON 
+
+09-29-2020 14:05:13 : 690 - PLAYLIST. JSON descargado
+
+09-29-2020 14:05:13 : 698 - Ciclo for para guardar las pantallas en memoria
+
+09-29-2020 14:05:16 : 736 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-29-2020 14:05:16 :  976 - Existe el lock por pantalla : /101004/p759
+
+09-29-2020 14:05:16 :  977 - Guarda la pantalla en un arreglo y pasa a la siguiente : /101004/p759
+
+09-29-2020 14:05:16 : 928 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+09-29-2020 14:05:16 : Se sincronizo archivos
+
+09-29-2020 14:05:16 : 394 - Open App 
+
+09-29-2020 14:06:16 : 325 - LOCK No existe procede a descargar : 101004
+
+09-29-2020 14:06:17 :  313 - DOWNLOAD FILE ASYNC
+
+09-29-2020 14:06:17 :  313 - REMOTE PAD = 101004
+
+09-29-2020 14:06:18 :  676 download asinc PATH :  101004
+
+09-29-2020 14:06:19 : 688 - PLAYLIST. Antes de descargar el JSON 
+
+09-29-2020 14:06:21 : 690 - PLAYLIST. JSON descargado
+
+09-29-2020 14:06:23 : 698 - Ciclo for para guardar las pantallas en memoria
+
+09-29-2020 14:06:25 : 736 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-29-2020 14:06:36 :  976 - Existe el lock por pantalla : /101004/p759
+
+09-29-2020 14:06:37 :  977 - Guarda la pantalla en un arreglo y pasa a la siguiente : /101004/p759
+
+09-29-2020 14:06:38 : 928 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+09-29-2020 14:06:39 : Se sincronizo archivos
+
+09-29-2020 14:06:40 : 394 - Open App 
+
+09-29-2020 14:07:07 : 325 - LOCK No existe procede a descargar : 101004
+
+09-29-2020 14:07:07 :  313 - DOWNLOAD FILE ASYNC
+
+09-29-2020 14:07:08 :  313 - REMOTE PAD = 101004
+
+09-29-2020 14:07:08 :  676 download asinc PATH :  101004
+
+09-29-2020 14:07:09 : 688 - PLAYLIST. Antes de descargar el JSON 
+
+09-29-2020 14:07:09 : 690 - PLAYLIST. JSON descargado
+
+09-29-2020 14:07:10 : 698 - Ciclo for para guardar las pantallas en memoria
+
+09-29-2020 14:07:15 : 736 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-29-2020 14:07:17 : 786 - NO existe el lock procede a descargar pantalla : /101004/p759
+
+09-29-2020 14:07:17 :  740 GETREmote version antes
+
+09-29-2020 14:07:18 :  742 GETREmote version despues 
+
+09-29-2020 14:07:19 :  753 ANTES del if de comprueva version 
+
+09-29-2020 14:07:20 :  756 En el if de comprueva version 
+
+09-29-2020 14:07:23 : 767 - CREA DIRECTORIO TEMPORAL : p759
+
+09-29-2020 14:07:24 : 785 - Ciclo para descargar los archivos a la temporal
+
+09-29-2020 14:07:27 : 889 - DESCARGADO v77.txt
+
+09-29-2020 14:07:29 : 889 - DESCARGADO 1299-spot-compromiso-960x576.mp4
+
+09-29-2020 14:07:30 : 889 - DESCARGADO 1199-precaucion-960x576.mp4
+
+09-29-2020 14:07:31 : 889 - DESCARGADO 1165-index-mujer-960x576.mp4
+
+09-29-2020 14:07:31 : 918 -  Fin del cliclo que comprueba version
+
+09-29-2020 14:07:31 : 928 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+09-29-2020 14:07:31 : Se sincronizo archivos
+
+09-29-2020 14:07:32 : 333 - KILL APP FALSE
+
+09-29-2020 14:07:32 : 333 - Cierra el reproductor
+
+09-29-2020 14:07:32 : 334 - Pausa por 3000
+
+09-29-2020 14:07:32 : 336 - Fin pausa
+
+09-29-2020 14:07:32 : 341 - Entra al metodo copiar  directorio temporal C:\Users\Nuevo\Documents\VoxLine\101004 a la carpeta raiz C:\FTP\Voxline\Pivotes\
+
+09-29-2020 14:07:32 : 464 Lee el json 
+
+09-29-2020 14:07:33 : 473 - Ciclo Pantallas por computador 
+
+09-29-2020 14:07:33 : 482 - Crea el directorio definitivo :  p759
+
+09-29-2020 14:07:33 : 498 -Copia la version de la temporal a la definitiva
+
+09-29-2020 14:07:33 : 501 - Ciclo Playlist , copia el cotenido de la temporal a la definitiva siguiendo el playlist.json 
+
+09-29-2020 14:07:34 : 520 - Copia el contenido temporal a la carpeta definitiva
+
+09-29-2020 14:07:34 : 520 - Copia el contenido temporal a la carpeta definitiva
+
+09-29-2020 14:07:35 : 520 - Copia el contenido temporal a la carpeta definitiva
+
+09-29-2020 14:07:35 : 528 - Cierra el textreader de playlist.json
+
+09-29-2020 14:07:36 : 358 - Copia el json de la carpeta temporal a la definitiva
+
+09-29-2020 14:07:36 : 374 - Borra archivos de la carpeta temporal.
+
+09-29-2020 14:07:36 : 394 - Open App 
