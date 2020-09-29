@@ -37,6 +37,9 @@ namespace VxGuardian.View
 		bool initiated = false;
 		private Etc tools;
 
+		//GUSTAVO
+		private List<ScreensGuardian> screenlist = new List<ScreensGuardian>();
+
 
 		public ConfiguracionFTP(Inicio _inicio)
 		{
@@ -715,6 +718,7 @@ namespace VxGuardian.View
 		//DESCARGA
 		private void DownloadFilesAsync(FtpClient _ftpclient, string _remotePath)
 		{
+
 			string Path = _remotePath;
 			gLog.SaveLog(" 676 download asinc PATH :  " + Path);
 			string TemporalLocalFolder = TemporalStorage;
@@ -727,10 +731,24 @@ namespace VxGuardian.View
 			//var directorio = _ftpclient.GetListing(Path + "\\p859");
 			//var pantalla = directorio[0];
 
-			//Descargar el json 
-			gLog.SaveLog("688 - PLAYLIST. Antes de descargar el JSON ");
-			ftpClient.DownloadFile(TemporalLocalFolder+ "\\PLayList.json", "PlayList.json", FtpLocalExists.Overwrite, FtpVerify.Retry);
-			gLog.SaveLog("690 - PLAYLIST. JSON descargado");
+
+			//GUSTAVO
+			var existlist = false;
+			if (screenlist.Count() == 0)
+			{
+				//Descargar el json 
+				gLog.SaveLog("740 - PLAYLIST. Antes de descargar el JSON ");
+				ftpClient.DownloadFile(TemporalLocalFolder + "\\PLayList.json", "PlayList.json", FtpLocalExists.Overwrite, FtpVerify.Retry);
+				gLog.SaveLog("742 - PLAYLIST. JSON descargado");
+				existlist = false;
+
+			}
+			else
+			{
+				gLog.SaveLog("746 no descarga el json ");
+				existlist = true;
+			}
+			
 
 			//Etc.CreateDir(TemporalLocalFolder);
 
@@ -775,9 +793,18 @@ namespace VxGuardian.View
 			}
 
 			var _screens = ini.config.Screens.ToArray();
+			//GUSTAVO
+			if(existlist)
+			{
+				gLog.SaveLog("797 - Descarga pantallas resagadas");
+				_screens = screenlist.ToArray();
+			}
 
 			gLog.SaveLog("736 - Ciclo for para recorrer las pantallas guardadas en memoria");
 			int aux = 0;
+
+			
+
 			foreach (ScreensGuardian screen in _screens)
 			{
 				if(!(Etc.CheckRemoteLock(_ftpclient , screen.Path)))
@@ -803,6 +830,7 @@ namespace VxGuardian.View
 						gLog.SaveLog(" 756 En el if de comprueva version ");
 						//Gustavo guarda en memoria la version actual de la pantalla
 						screen.VersionActual = screen.VersionRemota.ToString();
+
 
 						string ScreenTemporal = TemporalLocalFolder + '\\' + screen.Nombre;
 
@@ -960,7 +988,16 @@ namespace VxGuardian.View
 									//throw;
 								}
 							}
-						  }//Fin del foreach comprueba version
+							//Gustavo
+							if (existlist)
+							{
+								if(screenlist.Contains(screen))
+								{
+									screenlist.Remove(screen);
+								}
+							}
+
+						}//Fin del foreach comprueba version
 						gLog.SaveLog("918 -  Fin del cliclo que comprueba version");
 
 					}
@@ -975,6 +1012,17 @@ namespace VxGuardian.View
 					gLog.SaveLog(" 976 - Existe el lock por pantalla : " + screen.Path);
 					gLog.SaveLog(" 977 - Guarda la pantalla en un arreglo y pasa a la siguiente : " + screen.Path);
 
+					if(!(screenlist.Contains(screen)))
+					{
+						screenlist.Add(screen);
+					}else
+					{
+						gLog.SaveLog(" 1010 -La pantalla ya se encuentra agregada a lista de pantallas faltantes : " + screen.Path);
+					}
+					
+
+					//Guardar pantallas en un arreglo.
+
 				}
 			} //Fin foreach descarga contenido de pantallas
 
@@ -985,6 +1033,12 @@ namespace VxGuardian.View
 			/////////////////////////////
 			//////////////////////////
 			////////////////////////////
+			///
+			/*foreach(var screen in screenlist)
+			{
+
+			}*/
+
 
 
 
