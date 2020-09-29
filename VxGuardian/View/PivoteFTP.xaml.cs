@@ -442,10 +442,12 @@ namespace VxGuardian.View
 
 
 							//chequear si existe archivo lock
+							gLog.SaveLog("445 - antes del etc.checklock(screenfolder_tmp)");
 							if (!Etc.CheckLock(screenFolder_TMP))
 							{
+								gLog.SaveLog("448 - despues del etc.checklock(screenfolder_tmp)");
 								//crear carpeta pantalla
-								if(!(Directory.Exists(screenFolder)))
+								if (!(Directory.Exists(screenFolder)))
 								{
 									//Si el diecotrio principal no existe lo crea
 									Etc.CreateDir(screenFolder);

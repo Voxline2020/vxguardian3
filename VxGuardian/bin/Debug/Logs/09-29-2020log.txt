@@ -120,3 +120,53 @@
 09-29-2020 13:18:00 : TIMER :: START 
 
 09-29-2020 13:18:11 : --- Inicio VxGuardian --- 
+
+09-29-2020 13:22:41 : --- Inicio VxGuardian --- 
+
+09-29-2020 13:22:56 : 141 - crea carpeta  definitiva pivote
+
+09-29-2020 13:22:56 : 141 - create lock en la definitiva pivote
+
+09-29-2020 13:22:57 : 315 - Genera string downloadLink
+
+09-29-2020 13:22:57 : 321 - Se conecta y lee Json CMS
+
+09-29-2020 13:22:57 : Conexion DBCMS Correcta
+
+09-29-2020 13:22:57 : 324 - Genera BD.Json
+
+09-29-2020 13:22:57 : 432 - Creando lock en computer folder : C:\FTP\Voxline\Pivotes\10999\101004
+
+09-29-2020 13:22:57 : 405 Crea carpetas definitvas C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:22:57 : 414 - Etc.ClearDir C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 13:22:57 : 465 - Crea temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:22:57 : First: Se descargo a la temporal1199-precaucion-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:22:58 : First: Se descargo a la temporal1165-index-mujer-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:22:59 : First: Se descargo a la temporal1299-spot-compromiso-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:22:59 : 500 - FIRST : Etc.DeleteLock C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:22:59 : FIRST : Contenido movido de la temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP a la definitiva C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 13:22:59 : 432 - Creando lock en computer folder : C:\FTP\Voxline\Pivotes\10999\101005
+
+09-29-2020 13:22:59 : 405 Crea carpetas definitvas C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:22:59 : 414 - Etc.ClearDir C:\FTP\Voxline\Pivotes\10999\101005\p905
+
+09-29-2020 13:22:59 : 465 - Crea temporal C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:22:59 : First: Se descargo a la temporal1057-precaucion-384x960.mp4 en C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:23:00 : First: Se descargo a la temporal1149-covid19-384x960.mp4 en C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:23:00 : First: Se descargo a la temporal1170-compromisoled-384x960.mp4 en C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:23:00 : 500 - FIRST : Etc.DeleteLock C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:23:00 : FIRST : Contenido movido de la temporal C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP a la definitiva C:\FTP\Voxline\Pivotes\10999\101005\p905
