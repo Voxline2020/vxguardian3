@@ -74,17 +74,24 @@ namespace VxGuardian.View
 				initiated = true;
 				if (CheckConexionFTP())
 				{
-					var ftp_directory = ftpClient.GetListing("101004");
-					SyncAsync(ini.config.CodePc);
+					//var ftp_directory = ftpClient.FileExists("lock.txt");
+					if(!(ftpClient.FileExists("lock.txt")))
+					{
+						gLog.SaveLog("80 - lock no existe , procede a sincronisar ");
+						SyncAsync(ini.config.CodePc);
+						
+					}
+					else
+					{
+						gLog.SaveLog("85 - lock encontrado ");
+					}
 					if (!time.Enabled)
 					{
 						InitTime();
 					}
+
 				}
 
-				else
-				{
-				}
 			}
 			else
 			{
@@ -268,12 +275,14 @@ namespace VxGuardian.View
 			time.Elapsed += Timer_Elapsed;
 			time.AutoReset = true;
 			time.Start();
+			gLog.SaveLog("278 - TIME START");
 
 		}
 
 		public void StopTime()
 		{
 			time.Stop();
+			gLog.SaveLog("285 - TIME STOP");
 		}
 		
 		//Gustavo modificacion antes : != 0 Desactivado , ahora == 0  activado
@@ -281,7 +290,17 @@ namespace VxGuardian.View
 		{
 			if(ini.config.Syncing == 0)
 			{
-				SyncAsync(ini.config.CodePc);
+				//var ftp_directory = ftpClient.FileExists("lock.txt");
+				if (!(ftpClient.FileExists("lock.txt")))
+				{
+					gLog.SaveLog("80 - lock no existe , procede a sincronisar ");
+					SyncAsync(ini.config.CodePc);
+
+				}
+				else
+				{
+					gLog.SaveLog("85 - lock encontrado ");
+				}
 			}
 			//Application.Current.Dispatcher.Invoke(delegate
 			//{
@@ -713,7 +732,7 @@ namespace VxGuardian.View
 			gLog.SaveLog("698 - Ciclo for para guardar las pantallas en memoria");
 			///Gustavo 
 			//var directorioftp = _ftpclient.GetListing(Path+ "p759");
-			var directorioftp2 = _ftpclient.GetListing(Path+"\\p759");
+			var directorioftp2 = _ftpclient.GetListing(Path);
 			//
 			foreach (FtpListItem item in _ftpclient.GetListing(Path).OrderByDescending(item => item.Name))
 			{
