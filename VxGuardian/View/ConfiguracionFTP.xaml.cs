@@ -75,16 +75,16 @@ namespace VxGuardian.View
 				if (CheckConexionFTP())
 				{
 					//var ftp_directory = ftpClient.FileExists("lock.txt");
-					if(!(ftpClient.FileExists("lock.txt")))
-					{
-						gLog.SaveLog("80 - lock no existe , procede a sincronisar ");
+					//if(!(ftpClient.FileExists("lock.txt")))
+					//{
+						//gLog.SaveLog("80 - lock no existe , procede a sincronisar ");
 						SyncAsync(ini.config.CodePc);
 						
-					}
-					else
-					{
-						gLog.SaveLog("85 - lock encontrado ");
-					}
+					//}
+					//else
+					//{
+						//gLog.SaveLog("85 - lock encontrado ");
+					//}
 					if (!time.Enabled)
 					{
 						InitTime();
@@ -291,16 +291,16 @@ namespace VxGuardian.View
 			if(ini.config.Syncing == 0)
 			{
 				//var ftp_directory = ftpClient.FileExists("lock.txt");
-				if (!(ftpClient.FileExists("lock.txt")))
-				{
-					gLog.SaveLog("80 - lock no existe , procede a sincronisar ");
+				//if (!(ftpClient.FileExists("lock.txt")))
+				//{
+					//gLog.SaveLog("80 - lock no existe , procede a sincronisar ");
 					SyncAsync(ini.config.CodePc);
 
-				}
-				else
-				{
-					gLog.SaveLog("85 - lock encontrado ");
-				}
+				//}
+				//else
+				//{
+					//gLog.SaveLog("85 - lock encontrado ");
+				//}
 			}
 			//Application.Current.Dispatcher.Invoke(delegate
 			//{
@@ -320,102 +320,111 @@ namespace VxGuardian.View
 
 			if (checkRemoteFolder(Path, ftpClient))
 			{
-				try
+				if(!(Etc.CheckRemoteLock(ftpClient , Path)))
 				{
-					//GUSTAVO
-					//archivos en el ftp
-					//var archivos_ftp = ftpClient.GetListing();
-
-					gLog.SaveLog(" 313 - DOWNLOAD FILE ASYNC");
-					gLog.SaveLog(" 313 - REMOTE PAD = "+ Path);
-					DownloadFilesAsync(ftpClient, Path);
-
-
-					CloseConnection();
-					gLog.SaveLog("Se sincronizo archivos");
-				}
-				catch (Exception ex)
-				{
-					gLog.SaveLog("320 No se logro sincronizar --" + ex.Message);
-					//throw;
-				}
-
-				//si hubo descargas
-				//Falta descargar JSON
-				if (Downloaded)
-				{
+					gLog.SaveLog("325 - LOCK No existe procede a descargar : " + Path);
+				
 					try
 					{
-
-						//CreateBS();
-						if (Etc.KillApp(ini.config.Reproductor))
-						{
-							gLog.SaveLog("333 - KILL APP TRUE");
-						}
-						else
-						{
-							gLog.SaveLog("333 - KILL APP FALSE");
-						}
-							 //Cierra el reproductor 
-						gLog.SaveLog("333 - Cierra el reproductor");
-						gLog.SaveLog("334 - Pausa por 3000");
-						//System.Threading.Thread.Sleep(3000);
-						gLog.SaveLog("336 - Fin pausa");
-
-						//CopyTemporalToDirAsync(TemporalStorage, ini.config.CarpetaRaiz); //Copia el directorio temporal a la carpeta raiz
-
 						//GUSTAVO
-						gLog.SaveLog("341 - Entra al metodo copiar  directorio temporal " + TemporalStorage + " a la carpeta raiz " + ini.config.CarpetaRaiz);
-						CopyTemporalToDirAsync2(TemporalStorage, ini.config.CarpetaRaiz); //Copia el directorio temporal a la carpeta raiz 
-						
+						//archivos en el ftp
+						//var archivos_ftp = ftpClient.GetListing();
 
-						//OpenApp(ini.config.Reproductor);
-						//CloseBS();
-						Downloaded = false;
-						syncingOff();
+						gLog.SaveLog(" 313 - DOWNLOAD FILE ASYNC");
+						gLog.SaveLog(" 313 - REMOTE PAD = "+ Path);
+						DownloadFilesAsync(ftpClient, Path);
+
+
+						CloseConnection();
+						gLog.SaveLog("Se sincronizo archivos");
 					}
 					catch (Exception ex)
 					{
-						gLog.SaveLog(ex.Message);
-						//Debug.WriteLine(ex.Message);
+						gLog.SaveLog("320 No se logro sincronizar --" + ex.Message);
 						//throw;
 					}
 
-					//gustavo copya el json a la carpeta final antes de borrar la temporal
-					try
+					//si hubo descargas
+					//Falta descargar JSON
+					if (Downloaded)
 					{
-						CopyJsonPlayList(TemporalStorage, ini.config.CarpetaRaiz);//Copia el json PLayList del directorio temporal a la carpeta raiz
-						gLog.SaveLog("358 - Copia el json de la carpeta temporal a la definitiva");
-					}
-					catch (Exception ex)
-					{
-
-						gLog.SaveLog("363 - ERROR COPY PlayList.json " + ex.Message);
-					}
-					//cambio gonzalo
-					try
-					{
-						//gustavo
-						if(Directory.Exists(TemporalStorage))
+						try
 						{
-							gLog.SaveLog("374 - Borra archivos de la carpeta temporal.");
-							Etc.DeleteFiles(TemporalStorage);
-						}
+
+							//CreateBS();
+							if (Etc.KillApp(ini.config.Reproductor))
+							{
+								gLog.SaveLog("333 - KILL APP TRUE");
+							}
+							else
+							{
+								gLog.SaveLog("333 - KILL APP FALSE");
+							}
+								 //Cierra el reproductor 
+							gLog.SaveLog("333 - Cierra el reproductor");
+							gLog.SaveLog("334 - Pausa por 3000");
+							//System.Threading.Thread.Sleep(3000);
+							gLog.SaveLog("336 - Fin pausa");
+
+							//CopyTemporalToDirAsync(TemporalStorage, ini.config.CarpetaRaiz); //Copia el directorio temporal a la carpeta raiz
+
+							//GUSTAVO
+							gLog.SaveLog("341 - Entra al metodo copiar  directorio temporal " + TemporalStorage + " a la carpeta raiz " + ini.config.CarpetaRaiz);
+							CopyTemporalToDirAsync2(TemporalStorage, ini.config.CarpetaRaiz); //Copia el directorio temporal a la carpeta raiz 
 						
-					}
-					catch (Exception ex)
-					{
 
-						gLog.SaveLog("ERROR CLEAR TEMPORAL " + ex.Message);
+							//OpenApp(ini.config.Reproductor);
+							//CloseBS();
+							Downloaded = false;
+							syncingOff();
+						}
+						catch (Exception ex)
+						{
+							gLog.SaveLog(ex.Message);
+							//Debug.WriteLine(ex.Message);
+							//throw;
+						}
+
+						//gustavo copya el json a la carpeta final antes de borrar la temporal
+						try
+						{
+							CopyJsonPlayList(TemporalStorage, ini.config.CarpetaRaiz);//Copia el json PLayList del directorio temporal a la carpeta raiz
+							gLog.SaveLog("358 - Copia el json de la carpeta temporal a la definitiva");
+						}
+						catch (Exception ex)
+						{
+
+							gLog.SaveLog("363 - ERROR COPY PlayList.json " + ex.Message);
+						}
+						//cambio gonzalo
+						try
+						{
+							//gustavo
+							if(Directory.Exists(TemporalStorage))
+							{
+								gLog.SaveLog("374 - Borra archivos de la carpeta temporal.");
+								Etc.DeleteFiles(TemporalStorage);
+							}
+						
+						}
+						catch (Exception ex)
+						{
+
+							gLog.SaveLog("ERROR CLEAR TEMPORAL " + ex.Message);
+						}
 					}
+
+					gLog.SaveLog("394 - Open App ");
+					Etc.OpenApp(ini.config.Reproductor);
 				}
+				else
+				{
+					gLog.SaveLog("422 - LOCK encontrado : " + Path);
+				}
+			} // fin check remote folder
 
-				gLog.SaveLog("394 - Open App ");
-				Etc.OpenApp(ini.config.Reproductor);
-			}
-			else
-			{
-			}
+
+			
 		}
 
 		private void CreateBS()

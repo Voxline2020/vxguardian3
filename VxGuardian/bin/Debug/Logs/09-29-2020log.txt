@@ -1,4 +1,122 @@
 
-09-29-2020 11:58:17 : 85 - lock encontrado 
+09-29-2020 12:56:51 : Directorio temporal creado Documentos/Voxline/numerComputador
 
-09-29-2020 11:59:15 : 85 - lock encontrado 
+09-29-2020 12:56:51 : 422 - LOCK encontrado : 101004
+
+09-29-2020 12:56:51 : 278 - TIME START
+
+09-29-2020 12:57:55 : 422 - LOCK encontrado : 101004
+
+09-29-2020 12:58:57 : 422 - LOCK encontrado : 101004
+
+09-29-2020 12:59:55 : 325 - LOCK No existe procede a descargar : 101004
+
+09-29-2020 12:59:56 :  313 - REMOTE PAD = 101004
+
+09-29-2020 12:59:57 :  676 download asinc PATH :  101004
+
+09-29-2020 12:59:57 : 688 - PLAYLIST. Antes de descargar el JSON 
+
+09-29-2020 12:59:57 : 690 - PLAYLIST. JSON descargado
+
+09-29-2020 12:59:57 : 698 - Ciclo for para guardar las pantallas en memoria
+
+09-29-2020 12:59:58 : 736 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-29-2020 12:59:58 :  740 GETREmote version antes
+
+09-29-2020 12:59:58 :  742 GETREmote version despues 
+
+09-29-2020 12:59:58 :  753 ANTES del if de comprueva version 
+
+09-29-2020 12:59:58 :  756 En el if de comprueva version 
+
+09-29-2020 12:59:58 : 772 - CLEARDIR (Limpia EL DIRECTORIO) : p759
+
+09-29-2020 12:59:58 : 785 - Ciclo para descargar los archivos a la temporal
+
+09-29-2020 12:59:58 : 918 -  Fin del cliclo que comprueba version
+
+09-29-2020 12:59:58 : 928 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+09-29-2020 12:59:58 : Se sincronizo archivos
+
+09-29-2020 12:59:58 : 394 - Open App 
+
+09-29-2020 13:01:00 : 325 - LOCK No existe procede a descargar : 101004
+
+09-29-2020 13:01:01 :  313 - DOWNLOAD FILE ASYNC
+
+09-29-2020 13:01:02 :  313 - REMOTE PAD = 101004
+
+09-29-2020 13:01:06 :  676 download asinc PATH :  101004
+
+09-29-2020 13:01:10 : 688 - PLAYLIST. Antes de descargar el JSON 
+
+09-29-2020 13:01:31 : 690 - PLAYLIST. JSON descargado
+
+09-29-2020 13:01:31 : 698 - Ciclo for para guardar las pantallas en memoria
+
+09-29-2020 13:01:36 : 736 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-29-2020 13:01:38 :  740 GETREmote version antes
+
+09-29-2020 13:01:41 :  742 GETREmote version despues 
+
+09-29-2020 13:02:07 :  753 ANTES del if de comprueva version 
+
+09-29-2020 13:02:08 :  756 En el if de comprueva version 
+
+09-29-2020 13:14:58 : --- Inicio VxGuardian --- 
+
+09-29-2020 13:15:14 : 141 - crea carpeta  definitiva pivote
+
+09-29-2020 13:15:24 : 141 - create lock en la definitiva pivote
+
+09-29-2020 13:15:28 : 315 - Genera string downloadLink
+
+09-29-2020 13:15:29 : 321 - Se conecta y lee Json CMS
+
+09-29-2020 13:15:30 : Conexion DBCMS Correcta
+
+09-29-2020 13:15:30 : 324 - Genera BD.Json
+
+09-29-2020 13:15:40 : 432 - Creando lock en computer folder : C:\FTP\Voxline\Pivotes\10999\101004
+
+09-29-2020 13:16:02 : 405 Crea carpetas definitvas C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:16:29 : 414 - Etc.ClearDir C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 13:16:32 : 465 - Crea temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:17:21 : First: Se descargo a la temporal1199-precaucion-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:17:26 : First: Se descargo a la temporal1165-index-mujer-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:17:29 : First: Se descargo a la temporal1299-spot-compromiso-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:17:35 : 500 - FIRST : Etc.DeleteLock C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:17:38 : FIRST : Contenido movido de la temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP a la definitiva C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 13:17:49 : 432 - Creando lock en computer folder : C:\FTP\Voxline\Pivotes\10999\101005
+
+09-29-2020 13:17:54 : 405 Crea carpetas definitvas C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:17:55 : 414 - Etc.ClearDir C:\FTP\Voxline\Pivotes\10999\101005\p905
+
+09-29-2020 13:17:56 : 465 - Crea temporal C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:17:57 : First: Se descargo a la temporal1057-precaucion-384x960.mp4 en C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:17:58 : First: Se descargo a la temporal1149-covid19-384x960.mp4 en C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:17:59 : First: Se descargo a la temporal1170-compromisoled-384x960.mp4 en C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:17:59 : 500 - FIRST : Etc.DeleteLock C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:17:59 : FIRST : Contenido movido de la temporal C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP a la definitiva C:\FTP\Voxline\Pivotes\10999\101005\p905
+
+09-29-2020 13:18:00 : TIMER :: START 
+
+09-29-2020 13:18:11 : --- Inicio VxGuardian --- 

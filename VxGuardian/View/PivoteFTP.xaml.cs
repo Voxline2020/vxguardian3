@@ -197,6 +197,12 @@ namespace VxGuardian.View
 
 			if (ini.config.Syncing == 0)
 			{
+				if (initiated)
+				{
+					StopTime();
+					initiated = false;
+				}
+
 
 				if (Directory.Exists(ini.config.CarpetaRaiz + ini.config.CodePc))
 				{
@@ -211,11 +217,7 @@ namespace VxGuardian.View
 					gLog.SaveLog("209 - create lock en la definitiva pivote");
 				}
 
-				if (initiated)
-				{
-					StopTime();
-					initiated = false;					
-				}
+				
 
 				Sync();
 
@@ -424,6 +426,12 @@ namespace VxGuardian.View
 						// crear string computador
 						Etc.CreateDir(computerFolder);
 
+
+						///////////////GUSTAVO
+						Etc.CreateLock((computerFolder));
+						gLog.SaveLog("432 - Creando lock en computer folder : " + computerFolder);
+
+
 						//auxiliar
 						int aux = 0;
 						foreach (Screens screen in computer.Screens)
@@ -550,7 +558,7 @@ namespace VxGuardian.View
 												gLog.SaveLog("First: No se logro descargar archivos a la temporal-- " + ex.Message);
 												//throw;
 											}
-										}// End foreach
+										}// End foreach cargar contenido a la temporal
 
 										//GUSTAVO 
 										//Etc.CreateVersion(screenFolder_TMP, screen.Version.ToString()); //Daniel									
@@ -727,8 +735,10 @@ namespace VxGuardian.View
 
 							}
 							aux++;
-						}
+						} //Fin foreach descargar contenido y mover a la definitiva
 
+						//Etc.DeleteLock(computerFolder);
+						//gLog.SaveLog("Borrando lock de computer folder : " + computerFolder );
 						syncingOff();
 					}
 				}
