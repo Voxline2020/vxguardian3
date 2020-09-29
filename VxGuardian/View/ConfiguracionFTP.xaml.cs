@@ -74,7 +74,7 @@ namespace VxGuardian.View
 				initiated = true;
 				if (CheckConexionFTP())
 				{
-					
+					var ftp_directory = ftpClient.GetListing("101004");
 					SyncAsync(ini.config.CodePc);
 					if (!time.Enabled)
 					{
@@ -713,7 +713,7 @@ namespace VxGuardian.View
 			gLog.SaveLog("698 - Ciclo for para guardar las pantallas en memoria");
 			///Gustavo 
 			//var directorioftp = _ftpclient.GetListing(Path+ "p759");
-			var directorioftp2 = _ftpclient.GetListing(Path);
+			var directorioftp2 = _ftpclient.GetListing(Path+"\\p759");
 			//
 			foreach (FtpListItem item in _ftpclient.GetListing(Path).OrderByDescending(item => item.Name))
 			{

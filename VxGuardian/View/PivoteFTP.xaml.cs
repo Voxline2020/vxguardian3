@@ -143,8 +143,8 @@ namespace VxGuardian.View
 				}
 								
 				Sync();
-				Etc.DeleteLock(ini.config.CarpetaRaiz + ini.config.CodePc);
-				gLog.SaveLog("142 - borra el lock de la definitva pivote");
+				//Etc.DeleteLock(ini.config.CarpetaRaiz + ini.config.CodePc);
+				//gLog.SaveLog("142 - borra el lock de la definitva pivote");
 
 				if (!initiated)
 				{
@@ -219,8 +219,8 @@ namespace VxGuardian.View
 
 				Sync();
 
-				Etc.DeleteLock(ini.config.CarpetaRaiz + ini.config.CodePc);
-				gLog.SaveLog("142 - borra el lock de la definitva pivote");
+				//Etc.DeleteLock(ini.config.CarpetaRaiz + ini.config.CodePc);
+				//gLog.SaveLog("142 - borra el lock de la definitva pivote");
 
 				if (!initiated)
 				{

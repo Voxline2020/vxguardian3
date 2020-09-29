@@ -306,7 +306,6 @@ C:\Users\Nuevo\Desktop\proyectos\Nueva carpeta\vxguardian3\VxGuardian\bin\Debug\
 C:\Users\Nuevo\Desktop\proyectos\Nueva carpeta\vxguardian3\VxGuardian\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Nuevo\Desktop\proyectos\Nueva carpeta\vxguardian3\VxGuardian\bin\Debug\System.Threading.Channels.xml
 C:\Users\Nuevo\Desktop\proyectos\Nueva carpeta\vxguardian3\VxGuardian\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Nuevo\Desktop\proyectos\Nueva carpeta\vxguardian3\VxGuardian\obj\Debug\VxGuardian.csprojAssemblyReference.cache
 C:\Users\Nuevo\Desktop\proyectos\Nueva carpeta\vxguardian3\VxGuardian\obj\Debug\MainWindow.g.cs
 C:\Users\Nuevo\Desktop\proyectos\Nueva carpeta\vxguardian3\VxGuardian\obj\Debug\View\PivoteFTP.g.cs
 C:\Users\Nuevo\Desktop\proyectos\Nueva carpeta\vxguardian3\VxGuardian\obj\Debug\View\ConfiguracionFTP.g.cs

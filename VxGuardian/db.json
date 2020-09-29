@@ -4,7 +4,7 @@
 			"serialID": "",
 			"serialKey": "",
 			"selectedMode": "",
-			"codePc": "101004",
+			"codePc": "12345",
 			"carpetaRaiz": "C:\\FTP\\Voxline\\Pivotes\\",
 			"reproductor": "C:\\Program Files (x86)\\VoxLine\\VxPlayer\\VoxPlayer.exe",
 			"tiempoChequeo": "1",
@@ -20,8 +20,8 @@
 				{
 					"ipFTP": "192.168.1.33",
 					"puerto": "21",
-					"usuario": "ripley",
-					"contrasena": "ripley1234"
+					"usuario": "voxPivote",
+					"contrasena": "voxline55"
 				}
 			],
 			"modePivote": [
