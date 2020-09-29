@@ -249,7 +249,8 @@ namespace VxGuardian.EtcClass
             {
                 if (Directory.Exists(pathDes))
                 {
-                    Directory.Delete(pathDes);
+					Etc.ClearDir(pathDes);
+					
                     Directory.Move(path, pathDes); // Daniel
                                                    //Directory.Delete(path, true); // Daniel
                 }

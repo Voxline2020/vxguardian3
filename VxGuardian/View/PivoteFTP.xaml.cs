@@ -436,6 +436,7 @@ namespace VxGuardian.View
 						int aux = 0;
 						foreach (Screens screen in computer.Screens)
 						{
+							
 							//crear carpeta pantalla
 							string screenFolder = computerFolder + "\\p" + screen.Code;
 							string screenFolder_TMP = computerFolder + "\\p" + screen.Code +"_TMP";
@@ -452,7 +453,14 @@ namespace VxGuardian.View
 									//Si el diecotrio principal no existe lo crea
 									Etc.CreateDir(screenFolder);
 									gLog.SaveLog("405 Crea carpetas definitvas " + screenFolder_TMP);
-								}								
+								}
+
+								//CREA lock por pantalla
+								Etc.CreateLock(screenFolder);
+								gLog.SaveLog("LOCK creado por pantalla : " + screenFolder);
+
+
+
 								/*Etc.CreateDir(screenFolder_TMP);
 								gLog.SaveLog("375 - Etc.CreateDir " + screenFolder_TMP); */
 
@@ -489,8 +497,8 @@ namespace VxGuardian.View
 									first = true;
 									ini.config.Screens.Add(_screen);
 									ini.db.Save(ini.config);
-									Etc.ClearDir(screenFolder);
-									gLog.SaveLog("414 - Etc.ClearDir " + screenFolder);
+									//Etc.ClearDir(screenFolder);
+									//gLog.SaveLog("414 - Etc.ClearDir " + screenFolder);
 								}
 
 
@@ -534,7 +542,7 @@ namespace VxGuardian.View
 													  //  string contentName = content.OriginalID + "-"+ content.defOrder + content.Name + "-" + auxI + ".mp4";
 													
 												
-													string contentName = content.OriginalID + "-" + content.Name +".mp4";
+												string contentName = content.OriginalID + "-" + content.Name +".mp4";
 
 													//Daniel
 													//Comparo si el contenName existe en la carpeta de descarga si es asi no lo descargo.
@@ -608,7 +616,8 @@ namespace VxGuardian.View
 									Etc.DeleteLock(screenFolder_TMP); // Daniel
 									gLog.SaveLog("500 - FIRST : Etc.DeleteLock " + screenFolder_TMP);
 									Etc.MoveDir(screenFolder_TMP, screenFolder);
-									gLog.SaveLog("FIRST : Contenido movido de la temporal " + screenFolder_TMP +" a la definitiva " + screenFolder);
+									gLog.SaveLog("620 - FIRST : Borra la carpeta definitiva con el lock antes de moverlo");
+									gLog.SaveLog("620 - FIRST : Contenido movido de la temporal " + screenFolder_TMP +" a la definitiva " + screenFolder);
 
 									first = false;
 								}
@@ -735,7 +744,7 @@ namespace VxGuardian.View
 								///////////////Directory.Delete(screenFolder_TMP, true); // Daniel
 								/////////////gLog.SaveLog("609 - Delete " + screenFolder_TMP);
 
-							}
+						}
 							aux++;
 						} //Fin foreach descargar contenido y mover a la definitiva
 

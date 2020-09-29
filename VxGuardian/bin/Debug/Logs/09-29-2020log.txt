@@ -170,3 +170,291 @@
 09-29-2020 13:23:00 : 500 - FIRST : Etc.DeleteLock C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
 
 09-29-2020 13:23:00 : FIRST : Contenido movido de la temporal C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP a la definitiva C:\FTP\Voxline\Pivotes\10999\101005\p905
+
+09-29-2020 13:33:45 : --- Inicio VxGuardian --- 
+
+09-29-2020 13:34:00 : 141 - crea carpeta  definitiva pivote
+
+09-29-2020 13:34:01 : 141 - create lock en la definitiva pivote
+
+09-29-2020 13:34:02 : 315 - Genera string downloadLink
+
+09-29-2020 13:34:02 : 321 - Se conecta y lee Json CMS
+
+09-29-2020 13:34:02 : Conexion DBCMS Correcta
+
+09-29-2020 13:34:02 : 324 - Genera BD.Json
+
+09-29-2020 13:34:02 : 432 - Creando lock en computer folder : C:\FTP\Voxline\Pivotes\10999\101004
+
+09-29-2020 13:34:02 : 445 - antes del etc.checklock(screenfolder_tmp)
+
+09-29-2020 13:34:02 : 448 - despues del etc.checklock(screenfolder_tmp)
+
+09-29-2020 13:34:02 : 405 Crea carpetas definitvas C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:34:02 : LOCK creado por pantalla : C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 13:34:02 : 414 - Etc.ClearDir C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 13:34:02 : 465 - Crea temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:34:49 : --- Inicio VxGuardian --- 
+
+09-29-2020 13:35:03 : 141 - crea carpeta  definitiva pivote
+
+09-29-2020 13:35:04 : 141 - create lock en la definitiva pivote
+
+09-29-2020 13:35:08 : 315 - Genera string downloadLink
+
+09-29-2020 13:35:09 : 321 - Se conecta y lee Json CMS
+
+09-29-2020 13:35:10 : Conexion DBCMS Correcta
+
+09-29-2020 13:35:10 : 324 - Genera BD.Json
+
+09-29-2020 13:35:19 : 432 - Creando lock en computer folder : C:\FTP\Voxline\Pivotes\10999\101004
+
+09-29-2020 13:35:36 : 445 - antes del etc.checklock(screenfolder_tmp)
+
+09-29-2020 13:35:40 : 448 - despues del etc.checklock(screenfolder_tmp)
+
+09-29-2020 13:35:43 : 405 Crea carpetas definitvas C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:35:54 : LOCK creado por pantalla : C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 13:35:58 : 414 - Etc.ClearDir C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 13:35:58 : 465 - Crea temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:36:00 : First: Se descargo a la temporal1199-precaucion-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:36:08 : First: Se descargo a la temporal1165-index-mujer-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:36:12 : First: Se descargo a la temporal1299-spot-compromiso-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:36:14 : 500 - FIRST : Etc.DeleteLock C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:36:14 : FIRST : Contenido movido de la temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP a la definitiva C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 13:36:15 : 432 - Creando lock en computer folder : C:\FTP\Voxline\Pivotes\10999\101005
+
+09-29-2020 13:36:26 : --- Inicio VxGuardian --- 
+
+09-29-2020 13:36:40 : 141 - crea carpeta  definitiva pivote
+
+09-29-2020 13:36:40 : 141 - create lock en la definitiva pivote
+
+09-29-2020 13:36:43 : 315 - Genera string downloadLink
+
+09-29-2020 13:36:44 : 321 - Se conecta y lee Json CMS
+
+09-29-2020 13:36:44 : Conexion DBCMS Correcta
+
+09-29-2020 13:36:44 : 324 - Genera BD.Json
+
+09-29-2020 13:36:48 : 432 - Creando lock en computer folder : C:\FTP\Voxline\Pivotes\10999\101004
+
+09-29-2020 13:36:49 : 445 - antes del etc.checklock(screenfolder_tmp)
+
+09-29-2020 13:36:50 : 448 - despues del etc.checklock(screenfolder_tmp)
+
+09-29-2020 13:36:55 : 405 Crea carpetas definitvas C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:36:58 : LOCK creado por pantalla : C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 13:37:26 : --- Inicio VxGuardian --- 
+
+09-29-2020 13:37:41 : 134 - create lock en la definitiva pivote
+
+09-29-2020 13:37:42 : 315 - Genera string downloadLink
+
+09-29-2020 13:37:42 : 321 - Se conecta y lee Json CMS
+
+09-29-2020 13:37:43 : 324 - Genera BD.Json
+
+09-29-2020 13:37:43 : Conexion DBCMS Correcta
+
+09-29-2020 13:37:43 : 342 - File.Delete C:\FTP\Voxline\Pivotes\10999\PlayList.json
+
+09-29-2020 13:37:44 : 432 - Creando lock en computer folder : C:\FTP\Voxline\Pivotes\10999\101004
+
+09-29-2020 13:37:44 : 445 - antes del etc.checklock(screenfolder_tmp)
+
+09-29-2020 13:37:44 : 448 - despues del etc.checklock(screenfolder_tmp)
+
+09-29-2020 13:37:44 : 405 Crea carpetas definitvas C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:37:45 : LOCK creado por pantalla : C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 13:37:59 : 465 - Crea temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:38:07 : First: Se descargo a la temporal1199-precaucion-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:38:13 : First: Se descargo a la temporal1165-index-mujer-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:38:21 : First: Se descargo a la temporal1299-spot-compromiso-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:38:33 : 500 - FIRST : Etc.DeleteLock C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:38:45 : FIRST : Contenido movido de la temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP a la definitiva C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 13:39:01 : 432 - Creando lock en computer folder : C:\FTP\Voxline\Pivotes\10999\101005
+
+09-29-2020 13:39:08 : 445 - antes del etc.checklock(screenfolder_tmp)
+
+09-29-2020 13:39:09 : 448 - despues del etc.checklock(screenfolder_tmp)
+
+09-29-2020 13:39:18 : 405 Crea carpetas definitvas C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:39:19 : LOCK creado por pantalla : C:\FTP\Voxline\Pivotes\10999\101005\p905
+
+09-29-2020 13:39:27 : 465 - Crea temporal C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:39:36 : First: Se descargo a la temporal1057-precaucion-384x960.mp4 en C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:39:38 : First: Se descargo a la temporal1149-covid19-384x960.mp4 en C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:39:42 : First: Se descargo a la temporal1170-compromisoled-384x960.mp4 en C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:39:45 : 500 - FIRST : Etc.DeleteLock C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:39:45 : FIRST : Contenido movido de la temporal C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP a la definitiva C:\FTP\Voxline\Pivotes\10999\101005\p905
+
+09-29-2020 13:42:14 : --- Inicio VxGuardian --- 
+
+09-29-2020 13:42:17 : --- Modo FTP ---
+
+09-29-2020 13:42:35 : 141 - crea carpeta  definitiva pivote
+
+09-29-2020 13:42:35 : 141 - create lock en la definitiva pivote
+
+09-29-2020 13:42:45 : --- Inicio VxGuardian --- 
+
+09-29-2020 13:42:58 : 141 - crea carpeta  definitiva pivote
+
+09-29-2020 13:43:01 : 141 - create lock en la definitiva pivote
+
+09-29-2020 13:43:02 : 315 - Genera string downloadLink
+
+09-29-2020 13:43:02 : 321 - Se conecta y lee Json CMS
+
+09-29-2020 13:43:03 : Conexion DBCMS Correcta
+
+09-29-2020 13:43:03 : 324 - Genera BD.Json
+
+09-29-2020 13:43:04 : 432 - Creando lock en computer folder : C:\FTP\Voxline\Pivotes\10999\101004
+
+09-29-2020 13:43:05 : 445 - antes del etc.checklock(screenfolder_tmp)
+
+09-29-2020 13:43:05 : 448 - despues del etc.checklock(screenfolder_tmp)
+
+09-29-2020 13:43:05 : 405 Crea carpetas definitvas C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:43:09 : LOCK creado por pantalla : C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 13:43:15 : 465 - Crea temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:43:18 : First: Se descargo a la temporal1199-precaucion-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:43:22 : First: Se descargo a la temporal1165-index-mujer-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:43:25 : First: Se descargo a la temporal1299-spot-compromiso-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:43:44 : 500 - FIRST : Etc.DeleteLock C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:45:05 : 620 - FIRST : Borra la carpeta definitiva con el lock antes de moverlo
+
+09-29-2020 13:45:05 : 620 - FIRST : Contenido movido de la temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP a la definitiva C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 13:45:05 : 432 - Creando lock en computer folder : C:\FTP\Voxline\Pivotes\10999\101005
+
+09-29-2020 13:45:05 : 445 - antes del etc.checklock(screenfolder_tmp)
+
+09-29-2020 13:45:05 : 448 - despues del etc.checklock(screenfolder_tmp)
+
+09-29-2020 13:45:05 : 405 Crea carpetas definitvas C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:45:05 : LOCK creado por pantalla : C:\FTP\Voxline\Pivotes\10999\101005\p905
+
+09-29-2020 13:45:06 : 465 - Crea temporal C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:45:06 : First: Se descargo a la temporal1057-precaucion-384x960.mp4 en C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:45:07 : First: Se descargo a la temporal1149-covid19-384x960.mp4 en C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:45:07 : First: Se descargo a la temporal1170-compromisoled-384x960.mp4 en C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:45:08 : 500 - FIRST : Etc.DeleteLock C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:45:09 : 620 - FIRST : Borra la carpeta definitiva con el lock antes de moverlo
+
+09-29-2020 13:45:09 : 620 - FIRST : Contenido movido de la temporal C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP a la definitiva C:\FTP\Voxline\Pivotes\10999\101005\p905
+
+09-29-2020 13:45:10 : TIMER :: START 
+
+09-29-2020 13:45:59 : --- Inicio VxGuardian --- 
+
+09-29-2020 13:46:01 : --- Modo FTP ---
+
+09-29-2020 13:46:16 : 141 - crea carpeta  definitiva pivote
+
+09-29-2020 13:46:18 : 141 - create lock en la definitiva pivote
+
+09-29-2020 13:46:25 : 315 - Genera string downloadLink
+
+09-29-2020 13:46:26 : 321 - Se conecta y lee Json CMS
+
+09-29-2020 13:46:26 : 324 - Genera BD.Json
+
+09-29-2020 13:46:26 : Conexion DBCMS Correcta
+
+09-29-2020 13:46:27 : 432 - Creando lock en computer folder : C:\FTP\Voxline\Pivotes\10999\101004
+
+09-29-2020 13:46:28 : 445 - antes del etc.checklock(screenfolder_tmp)
+
+09-29-2020 13:46:28 : 448 - despues del etc.checklock(screenfolder_tmp)
+
+09-29-2020 13:46:28 : 405 Crea carpetas definitvas C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:46:29 : LOCK creado por pantalla : C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 13:46:34 : 465 - Crea temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:46:35 : First: Se descargo a la temporal1199-precaucion-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:46:38 : First: Se descargo a la temporal1165-index-mujer-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:46:41 : First: Se descargo a la temporal1299-spot-compromiso-960x576.mp4 en C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:46:46 : 500 - FIRST : Etc.DeleteLock C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP
+
+09-29-2020 13:46:57 : 620 - FIRST : Borra la carpeta definitiva con el lock antes de moverlo
+
+09-29-2020 13:46:57 : 620 - FIRST : Contenido movido de la temporal C:\FTP\Voxline\Pivotes\10999\101004\p759_TMP a la definitiva C:\FTP\Voxline\Pivotes\10999\101004\p759
+
+09-29-2020 13:46:59 : 432 - Creando lock en computer folder : C:\FTP\Voxline\Pivotes\10999\101005
+
+09-29-2020 13:47:01 : 445 - antes del etc.checklock(screenfolder_tmp)
+
+09-29-2020 13:47:06 : 448 - despues del etc.checklock(screenfolder_tmp)
+
+09-29-2020 13:47:06 : 405 Crea carpetas definitvas C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:47:07 : LOCK creado por pantalla : C:\FTP\Voxline\Pivotes\10999\101005\p905
+
+09-29-2020 13:47:16 : 465 - Crea temporal C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:47:19 : First: Se descargo a la temporal1057-precaucion-384x960.mp4 en C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:47:23 : First: Se descargo a la temporal1149-covid19-384x960.mp4 en C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:47:27 : First: Se descargo a la temporal1170-compromisoled-384x960.mp4 en C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:47:35 : 500 - FIRST : Etc.DeleteLock C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP
+
+09-29-2020 13:47:48 : 620 - FIRST : Borra la carpeta definitiva con el lock antes de moverlo
+
+09-29-2020 13:47:48 : 620 - FIRST : Contenido movido de la temporal C:\FTP\Voxline\Pivotes\10999\101005\p905_TMP a la definitiva C:\FTP\Voxline\Pivotes\10999\101005\p905
+
+09-29-2020 13:47:51 : TIMER :: START 
