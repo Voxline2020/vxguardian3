@@ -781,7 +781,6 @@ namespace VxGuardian.View
 			foreach (ScreensGuardian screen in _screens)
 			{
 				if(!(Etc.CheckRemoteLock(_ftpclient , screen.Path)))
-
 				{
 					gLog.SaveLog("786 - NO existe el lock procede a descargar pantalla : " + screen.Path);
 				

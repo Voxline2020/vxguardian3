@@ -192,7 +192,7 @@ namespace VxGuardian.View
 		}
 
 		private void Timer_Elapsed(object sender, ElapsedEventArgs e)
-		{
+	{
 			
 
 			if (ini.config.Syncing == 0)
@@ -731,7 +731,6 @@ namespace VxGuardian.View
 									gLog.SaveLog("594 - Etc.DeleteLock" + screenFolder_TMP);
 									Etc.DeleteLock(screenFolder);
 									gLog.SaveLog("732 - Borra el lock de la pantalla antes de mover la temporal a la definitiva Etc.DeleteLock" + screenFolder);
-
 
 									Etc.MoveDir(screenFolder_TMP, screenFolder);
 									gLog.SaveLog("597 - Contenido movido de latemporal a la definitiva");
