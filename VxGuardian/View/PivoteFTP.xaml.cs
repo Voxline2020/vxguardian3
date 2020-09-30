@@ -193,6 +193,7 @@ namespace VxGuardian.View
 
 		private void Timer_Elapsed(object sender, ElapsedEventArgs e)
 	{
+	
 			
 
 			if (ini.config.Syncing == 0)
@@ -395,6 +396,7 @@ namespace VxGuardian.View
 					string rootFolder = ini.config.CarpetaRaiz + rootCMS.Code;
 					//crear raiz
 					Etc.CreateDir(rootFolder);
+					gLog.SaveLog(" 398 - Crea la carpeta raiz : " + rootFolder);
 					//------------------------------------------------------------------------------------
 					//Daniel
 					//Crear archivo Json					
@@ -403,6 +405,8 @@ namespace VxGuardian.View
 					//string path2 = @"C:\\FTP\\Voxline\\Pivotes\\35000" +  "/temp6.json";
 					string path = rootFolder + "\\PlayList.json";
 
+
+					gLog.SaveLog("408 - Crea el json en la carpeta raiz");
 					//Gustavo
 					if(File.Exists(path))
 					{
@@ -424,7 +428,13 @@ namespace VxGuardian.View
 						//computador string
 						string computerFolder = rootFolder + "\\" + computer.Code;
 						// crear string computador
-						Etc.CreateDir(computerFolder);
+						gLog.SaveLog("430 - crea carpeta por computador  : " + computer.Code);
+
+						if(!(Directory.Exists(computerFolder)))
+						{
+							Etc.CreateDir(computerFolder);
+						}
+						
 
 
 						///////////////GUSTAVO
@@ -455,7 +465,7 @@ namespace VxGuardian.View
 									{
 										//Si el diecotrio principal no existe lo crea
 										Etc.CreateDir(screenFolder);
-										gLog.SaveLog("405 Crea carpetas definitvas " + screenFolder_TMP);
+										gLog.SaveLog("405 Crea carpeta definitva pantalla :  " + screenFolder);
 									}
 
 									//CREA lock por pantalla
@@ -742,6 +752,14 @@ namespace VxGuardian.View
 
 										//Etc.DeleteLock(screenFolder);
 									}
+									else
+									{
+										gLog.SaveLog("758 - No hay cambio de version");
+										Etc.DeleteLock(screenFolder_TMP); // Daniel
+										gLog.SaveLog("594 - Etc.DeleteLock" + screenFolder_TMP);
+										Etc.DeleteLock(screenFolder);
+										gLog.SaveLog("732 - Borra el lock de la pantalla antes de mover la temporal a la definitiva Etc.DeleteLock" + screenFolder);
+									}//Fin if comprueba version
 
 								}
 
