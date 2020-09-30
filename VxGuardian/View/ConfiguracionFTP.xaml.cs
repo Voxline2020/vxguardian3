@@ -847,6 +847,14 @@ namespace VxGuardian.View
 
 						//Descarga los dentro de la carpeta correspondiendte a la pantalla en el ftp 
 						gLog.SaveLog("785 - Ciclo para descargar los archivos a la temporal");
+						if (Etc.KillApp(ini.config.Reproductor))
+						{
+							gLog.SaveLog("333 - KILL APP TRUE");
+						}
+						else
+						{
+							gLog.SaveLog("333 - KILL APP FALSE");
+						}
 						foreach (FtpListItem item in _ftpclient.GetListing(screen.Path).OrderByDescending(item => item.Name))
 						{ 
 							 if (item.Type == FtpFileSystemObjectType.File)
