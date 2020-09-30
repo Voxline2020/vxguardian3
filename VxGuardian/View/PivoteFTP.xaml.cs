@@ -130,7 +130,7 @@ namespace VxGuardian.View
 
 				//GUstavo 
 				//Crear lock para que nadie mas pueda interactuar.
-				if (Directory.Exists(ini.config.CarpetaRaiz + ini.config.CodePc))
+				/*if (Directory.Exists(ini.config.CarpetaRaiz + ini.config.CodePc))
 				{
 					Etc.CreateLock(ini.config.CarpetaRaiz + ini.config.CodePc);
 					gLog.SaveLog("134 - create lock en la definitiva pivote");
@@ -140,7 +140,7 @@ namespace VxGuardian.View
 					gLog.SaveLog("141 - crea carpeta  definitiva pivote");
 					Etc.CreateLock(ini.config.CarpetaRaiz + ini.config.CodePc);
 					gLog.SaveLog("141 - create lock en la definitiva pivote");
-				}
+				}*/
 								
 				Sync();
 				//Etc.DeleteLock(ini.config.CarpetaRaiz + ini.config.CodePc);
@@ -204,7 +204,7 @@ namespace VxGuardian.View
 				}
 
 
-				if (Directory.Exists(ini.config.CarpetaRaiz + ini.config.CodePc))
+				/*if (Directory.Exists(ini.config.CarpetaRaiz + ini.config.CodePc))
 				{
 					Etc.CreateLock(ini.config.CarpetaRaiz + ini.config.CodePc);
 					gLog.SaveLog("202 - create lock en la definitiva pivote");
@@ -215,7 +215,7 @@ namespace VxGuardian.View
 					gLog.SaveLog("207 - crea carpeta  definitiva pivote");
 					Etc.CreateLock(ini.config.CarpetaRaiz + ini.config.CodePc);
 					gLog.SaveLog("209 - create lock en la definitiva pivote");
-				}
+				}*/
 
 				
 
@@ -428,8 +428,8 @@ namespace VxGuardian.View
 
 
 						///////////////GUSTAVO
-						Etc.CreateLock((computerFolder));
-						gLog.SaveLog("432 - Creando lock en computer folder : " + computerFolder);
+						/*Etc.CreateLock((computerFolder));
+						gLgCreateLock.SaveLog("432 - Creando lock en computer folder : " + computerFolder); */
 
 
 						//auxiliar
@@ -437,324 +437,332 @@ namespace VxGuardian.View
 						foreach (Screens screen in computer.Screens)
 						{
 							
-							//crear carpeta pantalla
+							
+							//URLL carpetas pantalla
 							string screenFolder = computerFolder + "\\p" + screen.Code;
 							string screenFolder_TMP = computerFolder + "\\p" + screen.Code +"_TMP";
 
-
-							//chequear si existe archivo lock
-							gLog.SaveLog("445 - antes del etc.checklock(screenfolder_tmp)");
-							if (!Etc.CheckLock(screenFolder_TMP))
+							if (!(Etc.CheckLock(screenFolder)))
 							{
-								gLog.SaveLog("448 - despues del etc.checklock(screenfolder_tmp)");
-								//crear carpeta pantalla
-								if (!(Directory.Exists(screenFolder)))
+								gLog.SaveLog("447 La pantalla se encuentra disponible siguer su curso");
+								//chequear si existe archivo lock
+								gLog.SaveLog("445 - antes del etc.checklock(screenfolder_tmp)");
+								if (!Etc.CheckLock(screenFolder_TMP))
 								{
-									//Si el diecotrio principal no existe lo crea
-									Etc.CreateDir(screenFolder);
-									gLog.SaveLog("405 Crea carpetas definitvas " + screenFolder_TMP);
-								}
-
-								//CREA lock por pantalla
-								Etc.CreateLock(screenFolder);
-								gLog.SaveLog("LOCK creado por pantalla : " + screenFolder);
-
-
-
-								/*Etc.CreateDir(screenFolder_TMP);
-								gLog.SaveLog("375 - Etc.CreateDir " + screenFolder_TMP); */
-
-								//crear localmente la variable de la pantalla
-								ScreensGuardian _screen = new ScreensGuardian();
-								//primero?
-								bool first = false;
-								
-								
-								_screen = ini.config.Screens.Find(e => e.Code == screen.Code.ToString());
-
-								if (_screen == null)
-								{
-								 //Esto no se ocupa ? 
-									_screen = new ScreensGuardian();
-									_screen.Alto = screen.Height.ToString();
-									_screen.Ancho = screen.Width.ToString();
-									_screen.Code = screen.Code.ToString();
-									_screen.Nombre = screen.Name;
-									_screen.VersionActual = "0";
-									//_screen.VersionActual = (screen.Version-1).ToString();//cambio gonzalo
-									//string versionValidate = screenFolder + "/" + "v" + screen.Version.ToString() + ".txt";//cambio gonzalo
-									//cambio gonzalo
-									//if (File.Exists(versionValidate))
-									//{
-									//	_screen.VersionActual = screen.Version.ToString();
-									//}
-									//cambio gonzalo
-									//if (Etc.CheckEmptyFolder(screenFolder))
-									//{
-									//	first = true;
-									//}
-
-									first = true;
-									ini.config.Screens.Add(_screen);
-									ini.db.Save(ini.config);
-									//Etc.ClearDir(screenFolder);
-									//gLog.SaveLog("414 - Etc.ClearDir " + screenFolder);
-								}
-
-
-								//si se asigno recientemente
-								if (first)
-								{
-									//Etc.ClearDir(screenFolder_TMP);
-									//gLog.SaveLog("421 - Etc.ClearDir " + screenFolder_TMP);
+									gLog.SaveLog("448 - despues del etc.checklock(screenfolder_tmp)");
 									//crear carpeta pantalla
-
-									if (Directory.Exists(screenFolder_TMP))
+									if (!(Directory.Exists(screenFolder)))
 									{
-										//SI existe la carpeta temporal la limpia
-										Etc.ClearDir(screenFolder_TMP);
-										gLog.SaveLog("459 - Limpia temporal " + screenFolder_TMP);
-									}
-									else
-									{
-										//Crear carpeta temporal									
-										Etc.CreateDir(screenFolder_TMP);
-										gLog.SaveLog("465 - Crea temporal " + screenFolder_TMP);
+										//Si el diecotrio principal no existe lo crea
+										Etc.CreateDir(screenFolder);
+										gLog.SaveLog("405 Crea carpetas definitvas " + screenFolder_TMP);
 									}
 
+									//CREA lock por pantalla
+									Etc.CreateLock(screenFolder);
+									gLog.SaveLog("LOCK creado por pantalla : " + screenFolder);
 
 
 
-									Etc.CreateLock(screenFolder_TMP);
-									//Etc.CreateLock(screenFolder);
-									int auxI = 0;
-									if(screen.Playlist != null)
+									/*Etc.CreateDir(screenFolder_TMP);
+									gLog.SaveLog("375 - Etc.CreateDir " + screenFolder_TMP); */
+
+									//crear localmente la variable de la pantalla
+									ScreensGuardian _screen = new ScreensGuardian();
+									//primero?
+									bool first = false;
+
+
+									_screen = ini.config.Screens.Find(e => e.Code == screen.Code.ToString());
+
+									if (_screen == null)
 									{
-										foreach (var content in screen.Playlist)
+										//Esto no se ocupa ? 
+										_screen = new ScreensGuardian();
+										_screen.Alto = screen.Height.ToString();
+										_screen.Ancho = screen.Width.ToString();
+										_screen.Code = screen.Code.ToString();
+										_screen.Nombre = screen.Name;
+										_screen.VersionActual = "0";
+										//_screen.VersionActual = (screen.Version-1).ToString();//cambio gonzalo
+										//string versionValidate = screenFolder + "/" + "v" + screen.Version.ToString() + ".txt";//cambio gonzalo
+										//cambio gonzalo
+										//if (File.Exists(versionValidate))
+										//{
+										//	_screen.VersionActual = screen.Version.ToString();
+										//}
+										//cambio gonzalo
+										//if (Etc.CheckEmptyFolder(screenFolder))
+										//{
+										//	first = true;
+										//}
+
+										first = true;
+										ini.config.Screens.Add(_screen);
+										ini.db.Save(ini.config);
+										//Etc.ClearDir(screenFolder);
+										//gLog.SaveLog("414 - Etc.ClearDir " + screenFolder);
+									}
+
+
+									//si se asigno recientemente
+									if (first)
+									{
+										//Etc.ClearDir(screenFolder_TMP);
+										//gLog.SaveLog("421 - Etc.ClearDir " + screenFolder_TMP);
+										//crear carpeta pantalla
+
+										if (Directory.Exists(screenFolder_TMP))
 										{
-											try
-											{
-												
+											//SI existe la carpeta temporal la limpia
+											Etc.ClearDir(screenFolder_TMP);
+											gLog.SaveLog("459 - Limpia temporal " + screenFolder_TMP);
+										}
+										else
+										{
+											//Crear carpeta temporal									
+											Etc.CreateDir(screenFolder_TMP);
+											gLog.SaveLog("465 - Crea temporal " + screenFolder_TMP);
+										}
 
-												if (!CheckErrorResponse(content.Download.ToString()))
+
+
+
+										Etc.CreateLock(screenFolder_TMP);
+										//Etc.CreateLock(screenFolder);
+										int auxI = 0;
+										if (screen.Playlist != null)
+										{
+											foreach (var content in screen.Playlist)
+											{
+												try
 												{
-													 
-													  //  string contentName = content.OriginalID + "-"+ content.defOrder + content.Name + "-" + auxI + ".mp4";
-													
-												
-												string contentName = content.OriginalID + "-" + content.Name +".mp4";
 
-													//Daniel
-													//Comparo si el contenName existe en la carpeta de descarga si es asi no lo descargo.
-													if (Etc.CheckFile(screenFolder + "\\" + contentName))
+
+													if (!CheckErrorResponse(content.Download.ToString()))
 													{
-														File.Copy(screenFolder + "\\" + contentName, screenFolder_TMP + "\\" + contentName);
-														gLog.SaveLog("First: Se copio a la temporal " + contentName + " en " + screenFolder_TMP);
-													}
-													else
-													{ 
-														Etc.CreateDir(screenFolder_TMP);  // Daniel
-														DownloadFile(content.Download.ToString(), screenFolder_TMP + "\\" + contentName);// Daniel
-														//DownloadFile(content.Download.ToString(), screenFolder + "/" + contentName);
-														gLog.SaveLog("First: Se descargo a la temporal" + contentName + " en " + screenFolder_TMP);
-														auxI++;
-													}
-													
 
+														//  string contentName = content.OriginalID + "-"+ content.defOrder + content.Name + "-" + auxI + ".mp4";
+
+
+														string contentName = content.OriginalID + "-" + content.Name + ".mp4";
+
+														//Daniel
+														//Comparo si el contenName existe en la carpeta de descarga si es asi no lo descargo.
+														if (Etc.CheckFile(screenFolder + "\\" + contentName))
+														{
+															File.Copy(screenFolder + "\\" + contentName, screenFolder_TMP + "\\" + contentName);
+															gLog.SaveLog("First: Se copio a la temporal " + contentName + " en " + screenFolder_TMP);
+														}
+														else
+														{
+															Etc.CreateDir(screenFolder_TMP);  // Daniel
+															DownloadFile(content.Download.ToString(), screenFolder_TMP + "\\" + contentName);// Daniel
+																																			 //DownloadFile(content.Download.ToString(), screenFolder + "/" + contentName);
+															gLog.SaveLog("First: Se descargo a la temporal" + contentName + " en " + screenFolder_TMP);
+															auxI++;
+														}
+
+
+													}
 												}
-											}
-											catch (Exception ex)
-											{
-												gLog.SaveLog("First: No se logro descargar archivos a la temporal-- " + ex.Message);
-												//throw;
-											}
-										}// End foreach cargar contenido a la temporal
+												catch (Exception ex)
+												{
+													gLog.SaveLog("First: No se logro descargar archivos a la temporal-- " + ex.Message);
+													//throw;
+												}
+											}// End foreach cargar contenido a la temporal
 
-										//GUSTAVO 
-										//Etc.CreateVersion(screenFolder_TMP, screen.Version.ToString()); //Daniel									
-										//Etc.DeleteLock(screenFolder_TMP); // Daniel
-										//Etc.MoveDir(screenFolder_TMP, screenFolder);
-										/////////////Directory.Delete(screenFolder, true); // Daniel
-										/////////////gLog.SaveLog("468 - FIRST : Directory.Delete " + screenFolder); 
+											//GUSTAVO 
+											//Etc.CreateVersion(screenFolder_TMP, screen.Version.ToString()); //Daniel									
+											//Etc.DeleteLock(screenFolder_TMP); // Daniel
+											//Etc.MoveDir(screenFolder_TMP, screenFolder);
+											/////////////Directory.Delete(screenFolder, true); // Daniel
+											/////////////gLog.SaveLog("468 - FIRST : Directory.Delete " + screenFolder); 
 
 
-									}
-									else
-									{
-										gLog.SaveLog("First: Sin Contenido asignado");
-										//Etc.DeleteLock(screenFolder_TMP);
-										//////////////Directory.Delete(screenFolder_TMP, true);
-										//////////gLog.SaveLog("474 - FIRST : Directory.Delete " + screenFolder_TMP);
-
-										if (Etc.CheckDir(screenFolder))
+										}
+										else
 										{
-											Etc.DeleteFiles(screenFolder);
-											gLog.SaveLog("477 - FIRST : Etc.DeleteFile " + screenFolder_TMP);
+											gLog.SaveLog("First: Sin Contenido asignado");
+											//Etc.DeleteLock(screenFolder_TMP);
+											//////////////Directory.Delete(screenFolder_TMP, true);
+											//////////gLog.SaveLog("474 - FIRST : Directory.Delete " + screenFolder_TMP);
 
-
-										}
-									}
-
-									/* CAIDA
-									Etc.CreateVersion(screenFolder_TMP, screen.Version.ToString()); //Daniel
-									Directory.Delete(screenFolder,true); // Daniel
-								    Etc.DeleteLock(screenFolder_TMP); // Daniel
-									Etc.MoveDir(screenFolder_TMP, screenFolder); */
-
-
-									//Etc.CreateVersion(screenFolder, screen.Version.ToString());
-									//Etc.DeleteLock(screenFolder);
-
-									//Etc.DeleteVersion(screenFolder, _screen.VersionActual);
-									//Etc.CreateVersion(screenFolder, screen.Version.ToString());
-
-
-									_screen.VersionActual = screen.Version.ToString();
-									ini.config.Screens[aux] = _screen;
-									ini.db.Save(ini.config);
-									Etc.CreateVersion(screenFolder_TMP, screen.Version.ToString()); //Daniel								
-									Etc.DeleteLock(screenFolder_TMP); // Daniel
-									gLog.SaveLog("500 - FIRST : Etc.DeleteLock " + screenFolder_TMP);
-									Etc.DeleteLock(screenFolder);
-									gLog.SaveLog("619 - FIRST Borra el lock de la pantalla antes de mover la temporal a la definitiva Etc.DeleteLock" + screenFolder);
-									Etc.MoveDir(screenFolder_TMP, screenFolder);
-									gLog.SaveLog("620 - FIRST : Contenido movido de la temporal " + screenFolder_TMP +" a la definitiva " + screenFolder);
-
-									first = false;
-								}
-								//si la version
-								else if(screen.Version > Int32.Parse(_screen.VersionActual))
-								{
-									//gustavo
-									//_screen.VersionActual = screen.Version.ToString();
-									////------------------------------------------------------------------------------------
-									////Daniel
-									////Crear archivo Json
-									//string json = JsonConvert.SerializeObject(rootCMS);
-									//string path = computerFolder + "/PlayList.json";
-									//System.IO.File.WriteAllText(path, json);
-									////------------------------------------------------------------------------------------
-									gLog.SaveLog("Version Actual " + _screen.VersionActual + " -- Version Remota " + screen.Version);
-									//Etc.DeleteFiles(screenFolder);//cambio gonzalo
-									//Etc.ClearDir(screenFolder);
-									//Etc.CreateLock(screenFolder_TMP);
-									// Daniel
-									if (Directory.Exists(screenFolder_TMP))
-									{
-										//SI existe la carpeta temporal la limpia
-										Etc.ClearDir(screenFolder_TMP);
-										gLog.SaveLog("585 - Limpia temporal " + screenFolder_TMP);
-									}
-									else
-									{
-										//Crear carpeta temporal									
-										Etc.CreateDir(screenFolder_TMP);
-										gLog.SaveLog("590 - Crea temporal " + screenFolder_TMP);
-									}
-
-
-
-						//	Etc.ClearDir(screenFolder_TMP);
-									gLog.SaveLog("523 - Etc.ClearDir" + screenFolder_TMP);
-									Etc.CreateLock(screenFolder_TMP);
-									gLog.SaveLog("525 - CreateLock" + screenFolder_TMP);
-									//
-
-									int auxI = 0;
-									if(screen.Playlist != null)
-									{
-										foreach (var content  in screen.Playlist)
-										 {
-											try
-											 {
-												 if (!CheckErrorResponse(content.Download.ToString()))
-												 {
-													//string contentName = content.defOrder + content.Name + "-" + auxI + ".mp4";
-													//Daniel  
-													string contentName = content.OriginalID + "-" + content.Name + ".mp4";
-													//Daniel
-
-
-													if (Etc.CheckFile(screenFolder + "\\" + contentName))
-													 {
-														 File.Copy(screenFolder + "\\" + contentName, screenFolder_TMP + "\\" + contentName);
-														gLog.SaveLog("Se copio a la temporal " + contentName + " en " + screenFolder);
-													}
-													else
-													{
-														DownloadFile(content.Download.ToString(), screenFolder_TMP + "\\" + contentName);
-														gLog.SaveLog("Se descargo a la temporal " + contentName + " en " + screenFolder);
-														auxI++;
-													}
-
-
-												}
-											}
-											catch (Exception ex)
+											if (Etc.CheckDir(screenFolder))
 											{
-												gLog.SaveLog("No se logro descargar archivos a la temporal -- " + ex.Message);
-												//throw;
+												Etc.DeleteFiles(screenFolder);
+												gLog.SaveLog("477 - FIRST : Etc.DeleteFile " + screenFolder_TMP);
+
+
 											}
-										}//end foreach
-										Directory.Delete(screenFolder, true); // Daniel
-									}
-									else
-									{
-										gLog.SaveLog("Sin Contenido asignado");
-										//Daniel
-
-										Etc.DeleteLock(screenFolder_TMP);
-										gLog.SaveLog("522 - Etc.DeleteLock" + screenFolder_TMP);
-										Directory.Delete(screenFolder_TMP, true);
-									    gLog.SaveLog("573 - Etc.ClearDir" + screenFolder_TMP);
-
-										if (Etc.CheckDir(screenFolder))
-                                        {
-											Etc.DeleteFiles(screenFolder);
-											gLog.SaveLog("Contenido borrado de la carpeta definitiva");
 										}
-										//-------------------
 
+										/* CAIDA
+										Etc.CreateVersion(screenFolder_TMP, screen.Version.ToString()); //Daniel
+										Directory.Delete(screenFolder,true); // Daniel
+										Etc.DeleteLock(screenFolder_TMP); // Daniel
+										Etc.MoveDir(screenFolder_TMP, screenFolder); */
+
+
+										//Etc.CreateVersion(screenFolder, screen.Version.ToString());
+										//Etc.DeleteLock(screenFolder);
+
+										//Etc.DeleteVersion(screenFolder, _screen.VersionActual);
+										//Etc.CreateVersion(screenFolder, screen.Version.ToString());
+
+
+										_screen.VersionActual = screen.Version.ToString();
+										ini.config.Screens[aux] = _screen;
+										ini.db.Save(ini.config);
+										Etc.CreateVersion(screenFolder_TMP, screen.Version.ToString()); //Daniel								
+										Etc.DeleteLock(screenFolder_TMP); // Daniel
+										gLog.SaveLog("500 - FIRST : Etc.DeleteLock " + screenFolder_TMP);
+										Etc.DeleteLock(screenFolder);
+										gLog.SaveLog("619 - FIRST Borra el lock de la pantalla antes de mover la temporal a la definitiva Etc.DeleteLock" + screenFolder);
+										Etc.MoveDir(screenFolder_TMP, screenFolder);
+										gLog.SaveLog("620 - FIRST : Contenido movido de la temporal " + screenFolder_TMP + " a la definitiva " + screenFolder);
+
+										first = false;
+									}
+									//si la version
+									else if (screen.Version > Int32.Parse(_screen.VersionActual))
+									{
+										//gustavo
+										//_screen.VersionActual = screen.Version.ToString();
+										////------------------------------------------------------------------------------------
+										////Daniel
+										////Crear archivo Json
+										//string json = JsonConvert.SerializeObject(rootCMS);
+										//string path = computerFolder + "/PlayList.json";
+										//System.IO.File.WriteAllText(path, json);
+										////------------------------------------------------------------------------------------
+										gLog.SaveLog("Version Actual " + _screen.VersionActual + " -- Version Remota " + screen.Version);
+										//Etc.DeleteFiles(screenFolder);//cambio gonzalo
+										//Etc.ClearDir(screenFolder);
+										//Etc.CreateLock(screenFolder_TMP);
+										// Daniel
+										if (Directory.Exists(screenFolder_TMP))
+										{
+											//SI existe la carpeta temporal la limpia
+											Etc.ClearDir(screenFolder_TMP);
+											gLog.SaveLog("585 - Limpia temporal " + screenFolder_TMP);
+										}
+										else
+										{
+											//Crear carpeta temporal									
+											Etc.CreateDir(screenFolder_TMP);
+											gLog.SaveLog("590 - Crea temporal " + screenFolder_TMP);
+										}
+
+
+
+										//	Etc.ClearDir(screenFolder_TMP);
+										gLog.SaveLog("523 - Etc.ClearDir" + screenFolder_TMP);
+										Etc.CreateLock(screenFolder_TMP);
+										gLog.SaveLog("525 - CreateLock" + screenFolder_TMP);
+										//
+
+										int auxI = 0;
+										if (screen.Playlist != null)
+										{
+											foreach (var content in screen.Playlist)
+											{
+												try
+												{
+													if (!CheckErrorResponse(content.Download.ToString()))
+													{
+														//string contentName = content.defOrder + content.Name + "-" + auxI + ".mp4";
+														//Daniel  
+														string contentName = content.OriginalID + "-" + content.Name + ".mp4";
+														//Daniel
+
+
+														if (Etc.CheckFile(screenFolder + "\\" + contentName))
+														{
+															File.Copy(screenFolder + "\\" + contentName, screenFolder_TMP + "\\" + contentName);
+															gLog.SaveLog("Se copio a la temporal " + contentName + " en " + screenFolder);
+														}
+														else
+														{
+															DownloadFile(content.Download.ToString(), screenFolder_TMP + "\\" + contentName);
+															gLog.SaveLog("Se descargo a la temporal " + contentName + " en " + screenFolder);
+															auxI++;
+														}
+
+
+													}
+												}
+												catch (Exception ex)
+												{
+													gLog.SaveLog("No se logro descargar archivos a la temporal -- " + ex.Message);
+													//throw;
+												}
+											}//end foreach
+											Directory.Delete(screenFolder, true); // Daniel
+										}
+										else
+										{
+											gLog.SaveLog("Sin Contenido asignado");
+											//Daniel
+
+											Etc.DeleteLock(screenFolder_TMP);
+											gLog.SaveLog("522 - Etc.DeleteLock" + screenFolder_TMP);
+											Directory.Delete(screenFolder_TMP, true);
+											gLog.SaveLog("573 - Etc.ClearDir" + screenFolder_TMP);
+
+											if (Etc.CheckDir(screenFolder))
+											{
+												Etc.DeleteFiles(screenFolder);
+												gLog.SaveLog("Contenido borrado de la carpeta definitiva");
+											}
+											//-------------------
+
+										}
+
+
+										//Etc.DeleteVersion(screenFolder, _screen.VersionActual);
+										//Etc.CreateVersion(screenFolder, screen.Version.ToString());
+										_screen.VersionActual = screen.Version.ToString();
+										ini.config.Screens[aux] = _screen;
+										ini.db.Save(ini.config);
+
+										//GUSTAVO
+										Etc.CreateVersion(screenFolder_TMP, screen.Version.ToString()); //Daniel								
+										gLog.SaveLog("592 - Etc.CreateVersion" + screenFolder_TMP + " " + screen.Version.ToString());
+										Etc.DeleteLock(screenFolder_TMP); // Daniel
+										gLog.SaveLog("594 - Etc.DeleteLock" + screenFolder_TMP);
+										Etc.DeleteLock(screenFolder);
+										gLog.SaveLog("732 - Borra el lock de la pantalla antes de mover la temporal a la definitiva Etc.DeleteLock" + screenFolder);
+
+										Etc.MoveDir(screenFolder_TMP, screenFolder);
+										gLog.SaveLog("597 - Contenido movido de latemporal a la definitiva");
+										///////////////////
+
+
+										//Etc.DeleteLock(screenFolder);
 									}
 
-
-									//Etc.DeleteVersion(screenFolder, _screen.VersionActual);
-									//Etc.CreateVersion(screenFolder, screen.Version.ToString());
-									_screen.VersionActual = screen.Version.ToString();
-									ini.config.Screens[aux] = _screen;
-									ini.db.Save(ini.config);
-
-									//GUSTAVO
-									Etc.CreateVersion(screenFolder_TMP, screen.Version.ToString()); //Daniel								
-									gLog.SaveLog("592 - Etc.CreateVersion" + screenFolder_TMP + " " + screen.Version.ToString());
-									Etc.DeleteLock(screenFolder_TMP); // Daniel
-									gLog.SaveLog("594 - Etc.DeleteLock" + screenFolder_TMP);
-									Etc.DeleteLock(screenFolder);
-									gLog.SaveLog("732 - Borra el lock de la pantalla antes de mover la temporal a la definitiva Etc.DeleteLock" + screenFolder);
-
-									Etc.MoveDir(screenFolder_TMP, screenFolder);
-									gLog.SaveLog("597 - Contenido movido de latemporal a la definitiva");
-									///////////////////
-
-
-									//Etc.DeleteLock(screenFolder);
 								}
 
-							}
+								//Posible falla
+								if (Etc.CheckDir(screenFolder_TMP))
+								{
+									///////////////Directory.Delete(screenFolder_TMP, true); // Daniel
+									/////////////gLog.SaveLog("609 - Delete " + screenFolder_TMP);
 
-							//Posible falla
-							if (Etc.CheckDir(screenFolder_TMP))
+								}
+								aux++;
+							}else
 							{
-								///////////////Directory.Delete(screenFolder_TMP, true); // Daniel
-								/////////////gLog.SaveLog("609 - Delete " + screenFolder_TMP);
-
-						}
-							aux++;
+								gLog.SaveLog(" 761 - la carpeta se encuentra ocupada , se encontro LOCK.TXT  pantalla : "+ screenFolder);
+							}
 						} //Fin foreach descargar contenido y mover a la definitiva
 
 						//Etc.DeleteLock(computerFolder);
 						//gLog.SaveLog("Borrando lock de computer folder : " + computerFolder );
 						syncingOff();
+
 					}
 				}
 				catch (Exception ex)

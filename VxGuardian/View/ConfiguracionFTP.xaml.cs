@@ -293,39 +293,22 @@ namespace VxGuardian.View
 		{
 			if(ini.config.Syncing == 0)
 			{
-				//var ftp_directory = ftpClient.FileExists("lock.txt");
-				//if (!(ftpClient.FileExists("lock.txt")))
-				//{
-					//gLog.SaveLog("80 - lock no existe , procede a sincronisar ");
-					SyncAsync(ini.config.CodePc);
-
-				//}
-				//else
-				//{
-					//gLog.SaveLog("85 - lock encontrado ");
-				//}
+					SyncAsync(ini.config.CodePc);				
 			}
-			//Application.Current.Dispatcher.Invoke(delegate
-			//{
-			//	//btn_sync.RaiseEvent(new RoutedEventArgs(ButtonBase.ClickEvent));
-			//});
+		
 		}
 
 
 
-		//Verificar directorio, si no existe lo crea.
-
-
+		//Sincronizacion asyncrona
 		public void SyncAsync(string _remotePath)
 		{
 			string Path = _remotePath;
 			int Qty = 0;
 
+			//Chequea que exista la carpeta en el ftp 
 			if (checkRemoteFolder(Path, ftpClient))
 			{
-				//if(!(Etc.CheckRemoteLock(ftpClient , Path)))
-				//{
-					gLog.SaveLog("325 - LOCK No existe procede a descargar : " + Path);
 				
 					try
 					{
@@ -335,6 +318,8 @@ namespace VxGuardian.View
 
 						gLog.SaveLog(" 313 - DOWNLOAD FILE ASYNC");
 						gLog.SaveLog(" 313 - REMOTE PAD = "+ Path);
+
+						//Descarga Contenido.
 						DownloadFilesAsync(ftpClient, Path);
 
 
@@ -348,7 +333,6 @@ namespace VxGuardian.View
 					}
 
 					//si hubo descargas
-					//Falta descargar JSON
 					if (Downloaded)
 					{
 						try
@@ -365,12 +349,14 @@ namespace VxGuardian.View
 							}
 								 //Cierra el reproductor 
 							gLog.SaveLog("333 - Cierra el reproductor");
-							gLog.SaveLog("334 - Pausa por 3000");
+							//gLog.SaveLog("334 - Pausa por 3000");
 							//System.Threading.Thread.Sleep(3000);
-							gLog.SaveLog("336 - Fin pausa");
+							//gLog.SaveLog("336 - Fin pausa");
 
 							//CopyTemporalToDirAsync(TemporalStorage, ini.config.CarpetaRaiz); //Copia el directorio temporal a la carpeta raiz
 
+
+							//Copia la carpeta temporal a la definitva
 							//GUSTAVO
 							gLog.SaveLog("341 - Entra al metodo copiar  directorio temporal " + TemporalStorage + " a la carpeta raiz " + ini.config.CarpetaRaiz);
 							CopyTemporalToDirAsync2(TemporalStorage, ini.config.CarpetaRaiz); //Copia el directorio temporal a la carpeta raiz 
@@ -419,15 +405,9 @@ namespace VxGuardian.View
 
 					gLog.SaveLog("394 - Open App ");
 					Etc.OpenApp(ini.config.Reproductor);
-				//}				
-				//else
-				//{
-					//gLog.SaveLog("422 - LOCK encontrado : " + Path);
-				//}
+				
 			} // fin check remote folder
 
-
-			
 		}
 
 		private void CreateBS()
@@ -715,7 +695,7 @@ namespace VxGuardian.View
 			//Process.Start(@_dir);
 		}
 
-		//DESCARGA
+		//DESCARGA el contenido del ftp a la carpeta temporal
 		private void DownloadFilesAsync(FtpClient _ftpclient, string _remotePath)
 		{
 
@@ -809,6 +789,14 @@ namespace VxGuardian.View
 			{
 				if(!(Etc.CheckRemoteLock(_ftpclient , screen.Path)))
 				{
+					//ACA crea un lock remoto por pantalla y al terminar lo borra
+
+					//GUSTAVO
+					var locktxt =  Etc.CreateRemoteLock(_ftpclient, screen.Path , screen.LocalPath);
+					gLog.SaveLog("795 - Creo lock en LOCAL Y FTP , pantalla : "+ screen.Path)	;
+					var subiolock = ftpClient.GetListing(screen.Path);
+					//////////////////////////////////
+
 					gLog.SaveLog("786 - NO existe el lock procede a descargar pantalla : " + screen.Path);
 				
 					gLog.SaveLog(" 740 GETREmote version antes");
@@ -989,16 +977,10 @@ namespace VxGuardian.View
 								}
 							}
 							//Gustavo
-							if (existlist)
-							{
-								if(screenlist.Contains(screen))
-								{
-									screenlist.Remove(screen);
-								}
-							}
+							
 
 						}//Fin del foreach comprueba version
-						gLog.SaveLog("918 -  Fin del cliclo que comprueba version");
+						
 
 					}
 					else
@@ -1006,6 +988,14 @@ namespace VxGuardian.View
 						gLog.SaveLog(" 921 no hay version nueva");
 					}
 					aux++;
+					
+					var checklock = Etc.DeleteRemoteLock(_ftpclient, screen.Path);
+					gLog.SaveLog("1000 - Borro lock en  FTP , pantalla : " + screen.Path);
+
+					Etc.DeleteLock(screen.LocalPath);
+					gLog.SaveLog("1003 - Borro lock en  Local ,  pantalla : " + screen.LocalPath);
+
+
 				}
 				else
 				{
@@ -1024,6 +1014,14 @@ namespace VxGuardian.View
 					//Guardar pantallas en un arreglo.
 
 				}
+				if (existlist)
+				{
+					if (screenlist.Contains(screen))
+					{
+						screenlist.Remove(screen);
+					}
+				}
+				gLog.SaveLog("918 -  Fin del cliclo que comprueba version");
 			} //Fin foreach descarga contenido de pantallas
 
 

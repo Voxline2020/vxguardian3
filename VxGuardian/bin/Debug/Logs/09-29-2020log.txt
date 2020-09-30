@@ -2832,3 +2832,5 @@ p759
 09-29-2020 17:13:29 : Se sincronizo archivos
 
 09-29-2020 17:13:29 : 394 - Open App 
+
+09-29-2020 17:31:54 : --- Inicio VxGuardian --- 

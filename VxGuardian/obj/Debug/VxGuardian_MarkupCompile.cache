@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-\\192.168.1.33\compartido\Programas\Voxline\vxguardian3\VxGuardian\obj\Debug\
+C:\Users\Nuevo\Desktop\proyectos\vxguardian3\VxGuardian\obj\Debug\
 VxGuardian
 none
 false
 DEBUG;TRACE
-\\192.168.1.33\compartido\Programas\Voxline\vxguardian3\VxGuardian\App.xaml
+C:\Users\Nuevo\Desktop\proyectos\vxguardian3\VxGuardian\App.xaml
 5923191345
 
 13335774978
-148255939483
+1481703976150
 MainWindow.xaml;View\PivoteFTP.xaml;View\ConfiguracionFTP.xaml;View\Inicio.xaml;View\BlackScreen.xaml;
 
 False

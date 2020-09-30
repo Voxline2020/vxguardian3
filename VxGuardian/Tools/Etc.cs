@@ -30,7 +30,52 @@ namespace VxGuardian.EtcClass
 		}
 
 
-	public static void DeleteLock(string _root)
+		//GUSTAVO
+		//CREA UN DIRECTORIO MIENTRAS
+		public static bool CreateRemoteLock(FtpClient _ftp, string _path, string _root)
+		{
+			if(_ftp.DirectoryExists(_path))
+			{
+				if(File.Exists(_root + "\\lock.txt"))
+				{					
+					_ftp.UploadFile(_root + "\\lock.txt", _path + "\\lock.txt");
+
+					return true;
+				}
+				else
+				{
+					File.Create(_root + "\\lock.txt").Close(); ;
+					_ftp.UploadFile(_root + "\\lock.txt", _path);
+					return true;
+				}
+				
+				
+			}else
+			{
+				return false;
+			}
+			
+		}
+
+
+		public static bool DeleteRemoteLock(FtpClient _ftp ,string _path)
+		{
+			if(_ftp.FileExists(_path + "\\lock.txt"))
+			{
+				_ftp.DeleteFile(_path + "\\lock.txt");
+				return true;
+			}
+
+			return false;
+			
+		}
+
+
+		/// ////////////////////////////////////////
+
+
+
+		public static void DeleteLock(string _root)
 		{
 			if (File.Exists(_root + "/" + "lock.txt"))
 			{
