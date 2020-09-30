@@ -16,5 +16,5 @@ DEBUG;TRACE
 148255939483
 MainWindow.xaml;View\PivoteFTP.xaml;View\ConfiguracionFTP.xaml;View\Inicio.xaml;View\BlackScreen.xaml;
 
-True
+False
 

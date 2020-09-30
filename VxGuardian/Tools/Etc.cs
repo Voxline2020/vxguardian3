@@ -44,9 +44,20 @@ namespace VxGuardian.EtcClass
 				}
 				else
 				{
-					File.Create(_root + "\\lock.txt").Close(); ;
-					_ftp.UploadFile(_root + "\\lock.txt", _path);
-					return true;
+					if(Directory.Exists(_root))
+					{
+						File.Create(_root + "\\lock.txt").Close(); ;
+						_ftp.UploadFile(_root + "\\lock.txt", _path + "\\lock.txt");
+						return true;
+					}
+					else
+					{
+						Directory.CreateDirectory(_root);
+						File.Create(_root + "\\lock.txt").Close(); ;
+						_ftp.UploadFile(_root + "\\lock.txt", _path + "\\lock.txt");
+						return true;
+					}
+					
 				}
 				
 				
