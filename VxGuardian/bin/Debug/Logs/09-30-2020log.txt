@@ -2763,3 +2763,118 @@ ar los archivos a la temporal
 09-30-2020 13:51:39 : 928 - Cierra Coneccion con BD ya termino de descargar a las temporales
 
 09-30-2020 13:51:39 : 394 - Open App 
+
+09-30-2020 13:57:46 : --- Inicio VxGuardian --- 
+
+09-30-2020 13:57:52 : --- Modo FTP ---
+
+09-30-2020 13:58:08 : Directorio temporal creado Documentos/Voxline/numerComputador
+
+09-30-2020 13:58:09 :  313 - DOWNLOAD FILE ASYNC
+
+09-30-2020 13:58:09 :  313 - REMOTE PAD = 101004
+
+09-30-2020 13:58:13 :  676 download asinc PATH :  101004
+
+09-30-2020 13:58:13 : 740 - PLAYLIST. Antes de descargar el JSON 
+
+09-30-2020 13:58:14 : 698 - Ciclo for para guardar las pantallas en memoria
+
+09-30-2020 13:58:15 : 736 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-30-2020 13:58:16 : 795 - Creo lock en LOCAL Y FTP , pantalla : /101004/p759
+
+09-30-2020 13:58:16 : 786 - NO existe el lock procede a descargar pantalla : /101004/p759
+
+09-30-2020 13:58:19 :  742 GETREmote version despues 
+
+09-30-2020 13:58:26 :  753 ANTES del if de comprueva version 
+
+09-30-2020 13:58:27 :  756 En el if de comprueva version 
+
+09-30-2020 13:58:30 : 772 - CLEARDIR (Limpia EL DIRECTORIO) : p759
+
+09-30-2020 13:58:31 : 785 - Ciclo para descargar los archivos a la temporal
+
+09-30-2020 13:58:35 : 875 - DESCARGADO v95.txt
+
+09-30-2020 13:58:38 : 867 - COPIADO lock.txt
+
+09-30-2020 13:58:59 : 875 - DESCARGADO 1299-spot-compromiso-960x576.mp4
+
+09-30-2020 13:59:07 : 875 - DESCARGADO 1199-precaucion-960x576.mp4
+
+09-30-2020 13:59:15 : 875 - DESCARGADO 1165-index-mujer-960x576.mp4
+
+09-30-2020 13:59:45 : 1000 - Borro lock en  FTP , pantalla : /101004/p759
+
+09-30-2020 13:59:50 : 1003 - Borro lock en  Local ,  pantalla : C:\FTP\Voxline\Pivotes\\p759
+
+09-30-2020 13:59:51 : 918 -  Fin del cliclo que comprueba version
+
+09-30-2020 13:59:54 : 928 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+09-30-2020 13:59:56 : Se sincronizo archivos
+
+09-30-2020 14:00:01 : 333 - KILL APP FALSE
+
+09-30-2020 14:00:01 : 333 - Cierra el reproductor
+
+09-30-2020 14:00:02 : 341 - Entra al metodo copiar  directorio temporal C:\Users\Nuevo\Documents\VoxLine\101004 a la carpeta raiz C:\FTP\Voxline\Pivotes\
+
+09-30-2020 14:00:07 : 464 Lee el json 
+
+09-30-2020 14:00:10 : 473 - Ciclo Pantallas por computador 
+
+09-30-2020 14:00:13 : 482 - Crea el directorio definitivo :  p759
+
+09-30-2020 14:00:37 : 498 -Copia la version de la temporal a la definitiva
+
+09-30-2020 14:00:37 : 501 - Ciclo Playlist , copia el cotenido de la temporal a la definitiva siguiendo el playlist.json 
+
+09-30-2020 14:00:51 : 520 - Copia el contenido temporal a la carpeta definitiva
+
+09-30-2020 14:01:13 : 520 - Copia el contenido temporal a la carpeta definitiva
+
+09-30-2020 14:01:55 : 520 - Copia el contenido temporal a la carpeta definitiva
+
+09-30-2020 14:02:03 : 528 - Cierra el textreader de playlist.json
+
+09-30-2020 14:02:43 : 358 - Copia el json de la carpeta temporal a la definitiva
+
+09-30-2020 14:02:54 : 374 - Borra archivos de la carpeta temporal.
+
+09-30-2020 14:03:02 : 394 - Open App 
+
+09-30-2020 14:03:06 : 278 - TIME START
+
+09-30-2020 14:04:12 :  313 - REMOTE PAD = 101004
+
+09-30-2020 14:04:12 :  676 download asinc PATH :  101004
+
+09-30-2020 14:04:12 : 740 - PLAYLIST. Antes de descargar el JSON 
+
+09-30-2020 14:04:13 : 742 - PLAYLIST. JSON descargado
+
+09-30-2020 14:04:13 : 698 - Ciclo for para guardar las pantallas en memoria
+
+09-30-2020 14:04:13 : 736 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+09-30-2020 14:04:15 : 795 - Creo lock en LOCAL Y FTP , pantalla : /101004/p759
+
+09-30-2020 14:04:15 :  740 GETREmote version antes
+
+09-30-2020 14:04:15 : 786 - NO existe el lock procede a descargar pantalla : /101004/p759
+
+09-30-2020 14:04:16 :  742 GETREmote version despues 
+
+09-30-2020 14:04:18 :  753 ANTES del if de comprueva version 
+
+09-30-2020 14:04:19 : 1000 - Borro lock en  FTP , pantalla : /101004/p759
+
+09-30-2020 14:04:20 : 1003 - Borro lock en  Local ,  pantalla : C:\FTP\Voxline\Pivotes\\p759
+
+09-30-2020 14:04:20 : 918 -  Fin del cliclo que comprueba version
+
+09-30-2020 14:04:20 : Se sincronizo archivos
+on BD ya termino de descargar a las temporales
