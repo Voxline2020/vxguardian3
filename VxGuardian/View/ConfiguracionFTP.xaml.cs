@@ -460,6 +460,7 @@ namespace VxGuardian.View
 			 if(Directory.Exists(_destinyFolder))
 			{
 				Etc.DeleteFiles(_destinyFolder);
+				gLog.SaveLog("463 - Limpiop el directorio de destino");
 			}
 			
 			try
