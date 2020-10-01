@@ -33,7 +33,7 @@ namespace VxGuardian.EtcClass
 		//GUSTAVO
 		//CREA UN DIRECTORIO MIENTRAS
 		public static bool CreateRemoteLock(FtpClient _ftp, string _path, string _root)
-		{
+		 {
 			if(_ftp.DirectoryExists(_path))
 			{
 				if(File.Exists(_root + "\\lock.txt"))
@@ -320,12 +320,8 @@ namespace VxGuardian.EtcClass
 		//Gustavo 
 		public static void CopyFile(string path, string pathDes)
 		{
-			try
-			{
 				File.Copy(path, pathDes); // Daniel
-			}
-			catch
-			{ }
+		
 		}
 
 		//Read json file

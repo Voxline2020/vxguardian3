@@ -16,6 +16,7 @@ using VxGuardian.Models;
 using VxGuardian.EtcClass;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
+using System.Collections;
 
 namespace VxGuardian.View
 {
@@ -39,6 +40,7 @@ namespace VxGuardian.View
 
 		//GUSTAVO
 		private List<ScreensGuardian> screenlist = new List<ScreensGuardian>();
+		List<string[]> pendientes = new List<string[]>();
 
 
 		public ConfiguracionFTP(Inicio _inicio)
@@ -290,10 +292,18 @@ namespace VxGuardian.View
 		
 		//Gustavo modificacion antes : != 0 Desactivado , ahora == 0  activado
 		private void Timer_Elapsed(object sender, ElapsedEventArgs e)
-		{
+		{ 
 			if(ini.config.Syncing == 0)
 			{
-					SyncAsync(ini.config.CodePc);				
+				/*if (time.Enabled)
+				{
+					StopTime();
+				}*/
+				SyncAsync(ini.config.CodePc);
+				/*if (!time.Enabled)
+				{
+					InitTime();
+				}*/
 			}
 		
 		}
@@ -349,17 +359,43 @@ namespace VxGuardian.View
 							}
 								 //Cierra el reproductor 
 							gLog.SaveLog("333 - Cierra el reproductor");
-							//gLog.SaveLog("334 - Pausa por 3000");
-							//System.Threading.Thread.Sleep(3000);
-							//gLog.SaveLog("336 - Fin pausa");
+						//gLog.SaveLog("334 - Pausa por 3000");
+						//System.Threading.Thread.Sleep(3000);
+						//gLog.SaveLog("336 - Fin pausa");
 
-							//CopyTemporalToDirAsync(TemporalStorage, ini.config.CarpetaRaiz); //Copia el directorio temporal a la carpeta raiz
+						//CopyTemporalToDirAsync(TemporalStorage, ini.config.CarpetaRaiz); //Copia el directorio temporal a la carpeta raiz
 
 
-							//Copia la carpeta temporal a la definitva
-							//GUSTAVO
-							gLog.SaveLog("341 - Entra al metodo copiar  directorio temporal " + TemporalStorage + " a la carpeta raiz " + ini.config.CarpetaRaiz);
-							CopyTemporalToDirAsync2(TemporalStorage, ini.config.CarpetaRaiz); //Copia el directorio temporal a la carpeta raiz 
+
+						//Copiar videos de la definitva a la temporal
+						/* --------------------------------- */
+						///
+						//Copia la carpeta temporal a la definitva
+						//GUSTAVO
+
+						gLog.SaveLog("368 - Antes de copiar archivos pendientes");
+						foreach (var archivo in  pendientes)
+							{							
+								if(archivo[2] != "lock.txt")
+								{
+								if (!(Directory.Exists(archivo[1])))
+								{
+									Directory.CreateDirectory(archivo[1]);
+								}
+									Etc.CopyFile(archivo[0], archivo[1] + "\\" + archivo[2]);
+									gLog.SaveLog("373 = archivo copiado : " + archivo[2]);
+									var directorio = ftpClient.GetListing(Path);
+									var asd = ini.config.CodePc;
+									//Etc.CopyFile(rutaarchivoftp , ScreenTemporal + "\\" + video);
+								}
+							}
+						gLog.SaveLog("383 - Copio archivos pendientes");
+						pendientes.Clear();
+						gLog.SaveLog("385 - limpio lista de pendientes");
+
+
+						gLog.SaveLog("341 - Entra al metodo copiar  directorio temporal " + TemporalStorage + " a la carpeta raiz " + ini.config.CarpetaRaiz);
+						CopyTemporalToDirAsync2(TemporalStorage, ini.config.CarpetaRaiz); //Copia el directorio temporal a la carpeta raiz 
 						
 
 							//OpenApp(ini.config.Reproductor);
@@ -456,12 +492,6 @@ namespace VxGuardian.View
 		//Gustavo
 		private void CopyTemporalToDirAsync2(string _temporalFolder, string _destinyFolder)
 		{
-			//Borrar directiorio actual
-			 if(Directory.Exists(_destinyFolder))
-			{
-				Etc.DeleteFiles(_destinyFolder);
-				gLog.SaveLog("463 - Limpiop el directorio de destino");
-			}
 			
 			try
 			{
@@ -470,18 +500,7 @@ namespace VxGuardian.View
 					//comprueba que exista el json 
 					if (File.Exists(_temporalFolder + "\\" + "PlayList.json"))
 					{
-						//Crear directorio definitivo
-
-						// leer json desde un archivo
-						//StreamReader file = File.OpenText(_temporalFolder + "\\" + "PlayList.json");
-						//JsonTextReader reader = new JsonTextReader(file);
-
-
-						//json object para trabajar
-						//JObject jsondata = (JObject)JToken.ReadFrom(reader);
-
-						//var computers = jsondata["computers"];
-
+						
 						//////////////Funcio leer json 
 						///Lee un archivo json 
 						gLog.SaveLog("464 Lee el json ");
@@ -498,14 +517,29 @@ namespace VxGuardian.View
 							{
 								//Recorre la lista de pantallas por computador en el JSON
 								gLog.SaveLog("473 - Ciclo Pantallas por computador ");
+								
 								foreach (var screen in computer["screens"])
 								{
 
 									//nombre de la carpetas
 									string screen_folder_name = "p" + screen["code"];
-									//crea el directorio definitivo
-									Directory.CreateDirectory(_destinyFolder + "\\" + screen_folder_name);
-									gLog.SaveLog("482 - Crea el directorio definitivo :  " + screen_folder_name);
+
+									//Borrar directiorio definitvo existente actual
+									if (Directory.Exists(_destinyFolder + "\\" + screen_folder_name))
+									{
+										Etc.DeleteFiles(_destinyFolder + "\\" + screen_folder_name);
+										gLog.SaveLog("499 - Limpiop el directorio de destino : " + _destinyFolder);
+										Etc.CreateLock(_destinyFolder + "\\" + screen_folder_name);
+										gLog.SaveLog("501 - Crea lock en :" + _destinyFolder + "\\" + screen_folder_name);
+									}else
+									{
+										//crea el directorio definitivo
+										Directory.CreateDirectory(_destinyFolder + "\\" + screen_folder_name);
+										gLog.SaveLog("545 - Crea el directorio definitivo :  " + screen_folder_name);
+										Etc.CreateLock(_destinyFolder + "\\" + screen_folder_name);
+										gLog.SaveLog("547 - Crea lock en :" + _destinyFolder + "\\" + screen_folder_name);
+									}
+
 
 									//extrae la version de la pantalla
 									var screen_version = screen["version"];
@@ -544,21 +578,29 @@ namespace VxGuardian.View
 											{
 												//Copia el contenido temporal a la carpeta definitiva
 												File.Copy(content_temp_path, content_destiny_path);
-												gLog.SaveLog("520 - Copia el contenido temporal a la carpeta definitiva");
+												gLog.SaveLog("579 - Copia el contenido temporal a la carpeta definitiva : "+ content_name);
 											}
 										}//end foreach playlist
 
 										//GUSTAVO 
 										//Cierra el text reader
 										//file.Close();
-										gLog.SaveLog("528 - Cierra el textreader de playlist.json");
+										//gLog.SaveLog("528 - Cierra el textreader de playlist.json");
 									}
 									else
 									{
 										gLog.SaveLog("531 - No se encontro el archvio (Version).txt : "+ version_temp_path);
 									}
 
+									Etc.DeleteLock(_destinyFolder + "\\" + screen_folder_name);
+									gLog.SaveLog("595 - Borra el lock de la carpeta definitva : " + _destinyFolder + "\\" + screen_folder_name);
+									Etc.DeleteLock(_temporalFolder + "\\" + screen_folder_name);
+									gLog.SaveLog("597 - Borra el lock de la carpeta temporal : " + _temporalFolder + "\\" + screen_folder_name);
+
+
 								}//end foreach screens
+								
+
 							}
 						}//end foreach computers
 
@@ -715,20 +757,20 @@ namespace VxGuardian.View
 
 			//GUSTAVO
 			var existlist = false;
-			if (screenlist.Count() == 0)
-			{
+			//if (screenlist.Count() == 0)
+			//{
 				//Descargar el json 
 				gLog.SaveLog("740 - PLAYLIST. Antes de descargar el JSON ");
 				ftpClient.DownloadFile(TemporalLocalFolder + "\\PLayList.json", "PlayList.json", FtpLocalExists.Overwrite, FtpVerify.Retry);
 				gLog.SaveLog("742 - PLAYLIST. JSON descargado");
 				existlist = false;
 
-			}
-			else
-			{
-				gLog.SaveLog("746 no descarga el json ");
-				existlist = true;
-			}
+			//}
+			//else
+			//{
+				//gLog.SaveLog("746 no descarga el json ");
+				//existlist = true;
+			//}
 			
 
 			//Etc.CreateDir(TemporalLocalFolder);
@@ -775,7 +817,7 @@ namespace VxGuardian.View
 
 			var _screens = ini.config.Screens.ToArray();
 			//GUSTAVO
-			if(existlist)
+			if(screenlist.Count()>0)
 			{
 				gLog.SaveLog("797 - Descarga pantallas resagadas");
 				_screens = screenlist.ToArray();
@@ -788,17 +830,21 @@ namespace VxGuardian.View
 
 			foreach (ScreensGuardian screen in _screens)
 			{
-				if(!(Etc.CheckRemoteLock(_ftpclient , screen.Path)))
+				
+
+				if ( (!(Etc.CheckRemoteLock(_ftpclient , screen.Path))) && (!(Etc.CheckLock(screen.LocalPath))) ) 
 				{
+					gLog.SaveLog("821 - NO existe el lock procede a descargar pantalla : " + screen.Path);
 					//ACA crea un lock remoto por pantalla y al terminar lo borra
 
 					//GUSTAVO
 					var locktxt =  Etc.CreateRemoteLock(_ftpclient, screen.Path , screen.LocalPath);
-					gLog.SaveLog("795 - Creo lock en LOCAL Y FTP , pantalla : "+ screen.Path)	;
-					var subiolock = ftpClient.GetListing(screen.Path);
+					Etc.CreateLock(screen.LocalPath);
+					gLog.SaveLog("826 - Creo lock en FTP , Local definitiva pantalla : "+ screen.Path)	;
+					//var subiolock = ftpClient.GetListing(screen.Path);
 					//////////////////////////////////
 
-					gLog.SaveLog("786 - NO existe el lock procede a descargar pantalla : " + screen.Path);
+					
 				
 					gLog.SaveLog(" 740 GETREmote version antes");
 					int _versionRemota = GetRemoteVersion(_ftpclient, screen.Path);
@@ -825,18 +871,22 @@ namespace VxGuardian.View
 
 						try
 						{
+							
 							if (!Directory.Exists(ScreenTemporal))
 							{
 								Etc.CreateDir(ScreenTemporal);
 								gLog.SaveLog("767 - CREA DIRECTORIO TEMPORAL : " + screen.Nombre);
+								Etc.CreateLock(ScreenTemporal);
 							}
 							else
 							{
 									Etc.ClearDir(ScreenTemporal);
-									gLog.SaveLog("772 - CLEARDIR (Limpia EL DIRECTORIO) : " + screen.Nombre);							
+									gLog.SaveLog("772 - CLEARDIR (Limpia EL DIRECTORIO) : " + screen.Nombre);
+									Etc.CreateLock(ScreenTemporal);
 							}
+							
 						}
-						catch (Exception ex)
+						 catch (Exception ex)
 						{
 
 							gLog.SaveLog("778 - ERROR Create or Clear Directory " + ex.Message);
@@ -847,14 +897,7 @@ namespace VxGuardian.View
 
 						//Descarga los dentro de la carpeta correspondiendte a la pantalla en el ftp 
 						gLog.SaveLog("785 - Ciclo para descargar los archivos a la temporal");
-						if (Etc.KillApp(ini.config.Reproductor))
-						{
-							gLog.SaveLog("333 - KILL APP TRUE");
-						}
-						else
-						{
-							gLog.SaveLog("333 - KILL APP FALSE");
-						}
+						
 						foreach (FtpListItem item in _ftpclient.GetListing(screen.Path).OrderByDescending(item => item.Name))
 						{ 
 							 if (item.Type == FtpFileSystemObjectType.File)
@@ -895,7 +938,7 @@ namespace VxGuardian.View
 												var separated_video_name = new_video_name.Split('-');
 											
 												new_video_name = "";
-												for (int i = 0; i < separated_video_name.Length; i++)
+												for (int i = 0; i < separated_video_name.Length;  i++)
 												{
 													//omite la primera posicion
 													if(i==0)
@@ -934,9 +977,18 @@ namespace VxGuardian.View
 
 
 										if (File.Exists(rutaarchivoftp))
-										{										
-											Etc.CopyFile(rutaarchivoftp , ScreenTemporal + "\\" + item.Name);
-											gLog.SaveLog("867 - COPIADO " + item.Name);
+										{
+											//Crear un array con los videos que tienen que ser copiados
+
+											
+											string[] pendiente = new string[3];
+											pendiente[0] = rutaarchivoftp;
+											pendiente[1] = ScreenTemporal;
+											pendiente[2] = item.Name;
+
+											pendientes.Add(pendiente);
+											gLog.SaveLog("954 - Agrego a la lista para copiar luego " + item.Name);
+											//Etc.CopyFile(rutaarchivoftp , ScreenTemporal + "\\" + item.Name);
 											Downloaded = true;
 										}
 										else
@@ -988,23 +1040,30 @@ namespace VxGuardian.View
 							//Gustavo
 							
 
-						}//Fin del foreach comprueba version
+						}//Fin del foreach descarga archivos a la temporal
+						var checklock = Etc.DeleteRemoteLock(_ftpclient, screen.Path);						
+						gLog.SaveLog("1051 - Borro lock en  FTP  : " + screen.Path);
 						
 
 					}
 					else
 					{
 						gLog.SaveLog(" 921 no hay version nueva");
+						var checklock = Etc.DeleteRemoteLock(_ftpclient, screen.Path);
+						Etc.DeleteLock(screen.LocalPath);
+						gLog.SaveLog("1051 - Borro lock en  FTP  : " + screen.Path);
+						gLog.SaveLog("1052 - Borro lock en carpeta definitiva    : " + screen.LocalPath);
 					}
 					aux++;
+					if(screenlist.Count > 0 )
+					{
+						if (screenlist.Contains(screen))
+						{
+							screenlist.Remove(screen);
+						}
+					}
+						
 					
-					var checklock = Etc.DeleteRemoteLock(_ftpclient, screen.Path);
-					gLog.SaveLog("1000 - Borro lock en  FTP , pantalla : " + screen.Path);
-
-					Etc.DeleteLock(screen.LocalPath);
-					gLog.SaveLog("1003 - Borro lock en  Local ,  pantalla : " + screen.LocalPath);
-
-
 				}
 				else
 				{
@@ -1023,13 +1082,7 @@ namespace VxGuardian.View
 					//Guardar pantallas en un arreglo.
 
 				}
-				if (existlist)
-				{
-					if (screenlist.Contains(screen))
-					{
-						screenlist.Remove(screen);
-					}
-				}
+				
 				gLog.SaveLog("918 -  Fin del cliclo que comprueba version");
 			} //Fin foreach descarga contenido de pantallas
 
