@@ -297,15 +297,15 @@ namespace VxGuardian.View
 		{ 
 			if(ini.config.Syncing == 0)
 			{
-				/*if (time.Enabled)
+				if (time.Enabled)
 				{
 					StopTime();
-				}*/
+				}
 				SyncAsync(ini.config.CodePc);
-				/*if (!time.Enabled)
+				if (!time.Enabled)
 				{
 					InitTime();
-				}*/
+				}
 			}
 		
 		}
@@ -800,36 +800,48 @@ namespace VxGuardian.View
 			//
 			foreach (FtpListItem item in _ftpclient.GetListing(Path).OrderByDescending(item => item.Name))
 			{
-				//if the folder is the player folder, enter and download
-				if (item.Type == FtpFileSystemObjectType.Directory && item.Name.Substring(0, 1) == "p")
+				var pantallaname = item.FullName;
+				var pname = pantallaname.Split('_');
+				int largosplit = pname.Count();
+				if(!( pname[largosplit - 1].ToString().ToLower().Equals("tmp")))
 				{
-					string code = item.Name.Substring(1, item.Name.Length - 1);
-					if(ini.config.Screens.Exists(x => x.Code == code))
+					//if the folder is the player folder, enter and download
+					if (item.Type == FtpFileSystemObjectType.Directory && item.Name.Substring(0, 1) == "p")
 					{
-						first = false;
-						int idx = ini.config.Screens.FindIndex(x => x.Code == code);
-						ini.config.Screens[idx].Nombre = item.Name;
-						ini.config.Screens[idx].Path = item.FullName;
-						ini.config.Screens[idx].Code = code;
-						ini.config.Screens[idx].LocalPath = ini.config.CarpetaRaiz + "\\p" + code;						
-					}
-					else
-					{
-						first = true;
-						ScreensGuardian _screen = new ScreensGuardian();
-						 _screen.Nombre = item.Name;
-						_screen.Path = item.FullName;
-						_screen.Code = code;
-						_screen.LocalPath = ini.config.CarpetaRaiz + "\\p" + code;
-						 _screen.VersionActual = "0";
-						ini.config.Screens.Add(_screen);
+						string code = item.Name.Substring(1, item.Name.Length - 1);
+						if (ini.config.Screens.Exists(x => x.Code == code))
+						{
+							first = false;
+							int idx = ini.config.Screens.FindIndex(x => x.Code == code);
+							ini.config.Screens[idx].Nombre = item.Name;
+							ini.config.Screens[idx].Path = item.FullName;
+							ini.config.Screens[idx].Code = code;
+							ini.config.Screens[idx].LocalPath = ini.config.CarpetaRaiz + "\\p" + code;
+						}
+						else
+						{
+							first = true;
+							ScreensGuardian _screen = new ScreensGuardian();
+							_screen.Nombre = item.Name;
+							_screen.Path = item.FullName;
+							_screen.Code = code;
+							_screen.LocalPath = ini.config.CarpetaRaiz + "\\p" + code;
+							_screen.VersionActual = "0";
+							ini.config.Screens.Add(_screen);
 
-					}
+						}
 
-					ini.db.Save(ini.config);
-					auxI++;
+						ini.db.Save(ini.config);
+						auxI++;
+					}
+				}
+				else
+				{
+					gLog.SaveLog("840 - Se salto la pantalla temporal");
 				}
 			}
+
+				
 
 			var _screens = ini.config.Screens.ToArray();
 			//GUSTAVO
@@ -848,7 +860,7 @@ namespace VxGuardian.View
 			foreach (ScreensGuardian screen in _screens)
 			{
 				
-
+				
 				if ( (!(Etc.CheckRemoteLock(_ftpclient , screen.Path))) && (!(Etc.CheckLock(screen.LocalPath))) ) 
 				{
 					
