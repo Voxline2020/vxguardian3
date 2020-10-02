@@ -41,8 +41,7 @@ namespace VxGuardian.View
 		//GUSTAVO
 		private List<ScreensGuardian> screenlist = new List<ScreensGuardian>();
 		private List<string[]> pendientes = new List<string[]>();
-		private string lastversion;
-		private List<string[]> vesiones_anterior = new List<string[]>();
+		private List<string[]> versiones_anterior = new List<string[]>();
 		private bool first ;
 
 
@@ -525,7 +524,7 @@ namespace VxGuardian.View
 								{
 									string code = screen["code"].ToString();
 									var jsonversion = screen["version"].ToString();
-									string actualversion = vesiones_anterior.Find(x => x[0].ToString().Equals(code))[1].ToString();
+									string actualversion = versiones_anterior.Find(x => x[0].ToString().Equals(code))[1].ToString();
 									/*if (first)
 									{
 										actualversion = "0";
@@ -533,10 +532,8 @@ namespace VxGuardian.View
 
 									if((!(actualversion.Equals(jsonversion))) )
 									{ 
-										if(first)
-										{
-											vesiones_anterior.Find(x => x[0].ToString().Equals(code))[1] = jsonversion;
-										}
+										versiones_anterior.Find(x => x[0].ToString().Equals(code))[1] = jsonversion;
+										
 										//nombre de la carpetas
 										string screen_folder_name = "p" + screen["code"];
 
@@ -846,16 +843,15 @@ namespace VxGuardian.View
 			int aux = 0;
 
 
-			//vesiones_anterior.Clear();
-			int auxlastversion = 0;
-			bool changueversion = false;
+			//versiones_anterior.Clear();
+			
 			foreach (ScreensGuardian screen in _screens)
 			{
 				
 
 				if ( (!(Etc.CheckRemoteLock(_ftpclient , screen.Path))) && (!(Etc.CheckLock(screen.LocalPath))) ) 
 				{
-					changueversion = true;
+					
 					gLog.SaveLog("821 - NO existe el lock procede a descargar pantalla : " + screen.Path);
 					//ACA crea un lock remoto por pantalla y al terminar lo borra
 
@@ -879,37 +875,49 @@ namespace VxGuardian.View
 
 					//----------------------------------------------------------
 					//
+					
+						//crea un array con el codigo de la pantalla y la version
+						
+						//en la primera vuelta agrega el codigo pantalla y la  version anterior al array
+						if (first)
+						{
+							string[] versionanterior = new string[2];
+							versionanterior[0] = screen.Code.ToString();
+							versionanterior[1] = screen.VersionActual.ToString();
+							versiones_anterior.Add(versionanterior);						
+						}
+						else						
+						{
+							//busca la pantalla en la lista y le asigna la version actual 
+							var pantalla = versiones_anterior.Find(p => Int32.Parse(p[0]) == Int32.Parse(screen.Code));
+							if(pantalla != null)
+							{
+								versiones_anterior.Find(p => Int32.Parse(p[0]) == Int32.Parse(screen.Code))[1] = screen.VersionActual.ToString();
+							}else
+							{
+								string[] versionanterior = new string[2];
+								versionanterior[0] = screen.Code.ToString();
+								versionanterior[1] = screen.VersionActual.ToString();
+								versiones_anterior.Add(versionanterior);
+							}
+							
+						}
+						
+
+
 
 					//Si No existe el directorio  o la version remota es mayor a la actual
 					gLog.SaveLog(" 753 ANTES del if de comprueva version ");
 					if (!Etc.CheckDir(screen.LocalPath) || screen.VersionRemota > Int32.Parse(screen.VersionActual))
 					{
 						gLog.SaveLog(" 756 En el if de comprueva version ");
-						//Gustavo guarda en memoria la version actual de la pantalla
-						lastversion = screen.VersionActual.ToString();
-
-
-						 
-						string[] versionanterior = new string[2];
-						versionanterior[0] = screen.Code.ToString();
-						versionanterior[1] = lastversion;
-						if(first)
-						{
-						vesiones_anterior.Add(versionanterior);
-						}else
-						{
-							vesiones_anterior[auxlastversion][1] = lastversion;
-						}
 						
 						
-
-
+						
+						//le cambia la version actual a la pantalla.
 						screen.VersionActual = screen.VersionRemota.ToString();
 
-
-
 						string ScreenTemporal = TemporalLocalFolder + '\\' + screen.Nombre;
-
 						try
 						{
 							
@@ -1094,6 +1102,10 @@ namespace VxGuardian.View
 						gLog.SaveLog("1051 - Borro lock en  FTP  : " + screen.Path);
 						Etc.DeleteLock(screen.LocalPath);						
 						gLog.SaveLog("1052 - Borro lock en carpeta definitiva    : " + screen.LocalPath);
+
+						//busca la pantalla en la lista y le asigna la version actual 
+						//versiones_anterior.Find(p => Int32.Parse(p[0]) == Int32.Parse(screen.Code))[1] = screen.VersionActual.ToString();
+
 						//Etc.DeleteFiles(TemporalLocalFolder);
 						//gLog.SaveLog("1052 - Borro archivos temporales  : " + screen.LocalPath);
 					}
@@ -1127,7 +1139,7 @@ namespace VxGuardian.View
 				}
 				
 				gLog.SaveLog("918 -  Fin del cliclo que comprueba version");
-				auxlastversion++;
+				
 			} //Fin foreach descarga contenido de pantallas
 
 
