@@ -40,7 +40,10 @@ namespace VxGuardian.View
 
 		//GUSTAVO
 		private List<ScreensGuardian> screenlist = new List<ScreensGuardian>();
-		List<string[]> pendientes = new List<string[]>();
+		private List<string[]> pendientes = new List<string[]>();
+		private string lastversion;
+		private List<string[]> vesiones_anterior = new List<string[]>();
+		private bool first ;
 
 
 		public ConfiguracionFTP(Inicio _inicio)
@@ -295,15 +298,15 @@ namespace VxGuardian.View
 		{ 
 			if(ini.config.Syncing == 0)
 			{
-				/*if (time.Enabled)
+				if (time.Enabled)
 				{
 					StopTime();
-				}*/
+				}
 				SyncAsync(ini.config.CodePc);
-				/*if (!time.Enabled)
+				if (!time.Enabled)
 				{
 					InitTime();
-				}*/
+				}
 			}
 		
 		}
@@ -504,8 +507,8 @@ namespace VxGuardian.View
 						//////////////Funcio leer json 
 						///Lee un archivo json 
 						gLog.SaveLog("464 Lee el json ");
-						var computers = Etc.ReadJson(_temporalFolder);
-						
+						var json = Etc.ReadJson(_temporalFolder);
+						var computers = json["computers"];
 
 						//recorre la lista de computadores en el JSON
 						//gLog.SaveLog("466 - LEE EL JSON  - Computadores ");
@@ -520,83 +523,96 @@ namespace VxGuardian.View
 								
 								foreach (var screen in computer["screens"])
 								{
-
-									//nombre de la carpetas
-									string screen_folder_name = "p" + screen["code"];
-
-									//Borrar directiorio definitvo existente actual
-									if (Directory.Exists(_destinyFolder + "\\" + screen_folder_name))
+									string code = screen["code"].ToString();
+									var jsonversion = screen["version"].ToString();
+									string actualversion = vesiones_anterior.Find(x => x[0].ToString().Equals(code))[1].ToString();
+									/*if (first)
 									{
-										Etc.DeleteFiles(_destinyFolder + "\\" + screen_folder_name);
-										gLog.SaveLog("499 - Limpiop el directorio de destino : " + _destinyFolder);
-										Etc.CreateLock(_destinyFolder + "\\" + screen_folder_name);
-										gLog.SaveLog("501 - Crea lock en :" + _destinyFolder + "\\" + screen_folder_name);
-									}else
-									{
-										//crea el directorio definitivo
-										Directory.CreateDirectory(_destinyFolder + "\\" + screen_folder_name);
-										gLog.SaveLog("545 - Crea el directorio definitivo :  " + screen_folder_name);
-										Etc.CreateLock(_destinyFolder + "\\" + screen_folder_name);
-										gLog.SaveLog("547 - Crea lock en :" + _destinyFolder + "\\" + screen_folder_name);
-									}
+										actualversion = "0";
+									}*/
 
-
-									//extrae la version de la pantalla
-									var screen_version = screen["version"];
-
-									//url del archivo de version temporal
-									string version_temp_path = _temporalFolder + "\\" + screen_folder_name + "\\" + "v" + screen_version + ".txt";
-
-									//url del archivo de version definitivo
-									string version_destiny_path = _destinyFolder + "\\" + screen_folder_name + "\\" + "v" + screen_version + ".txt";
-
-									//comprueba si existe el archivo de version temporal
-									if (File.Exists(version_temp_path))
-									{
-										//copia el archivo de version temporal a la carpeta definitiva
-										File.Copy(version_temp_path, version_destiny_path);
-										gLog.SaveLog("498 -Copia la version de la temporal a la definitiva");
-
-										//recorre los contenido de la playlist en el json 
-										gLog.SaveLog("501 - Ciclo Playlist , copia el cotenido de la temporal a la definitiva siguiendo el playlist.json ");
-										foreach (var content in screen["playlist"])
+									if((!(actualversion.Equals(jsonversion))) )
+									{ 
+										if(first)
 										{
-											//nombre del contenido
-											string content_name = content["name"].ToString();
-											//id del contenido
-											string content_original_id = content["originalID"].ToString();
-											//posicion del contenido
-											string content_position = content["defOrder"].ToString();
+											vesiones_anterior.Find(x => x[0].ToString().Equals(code))[1] = jsonversion;
+										}
+										//nombre de la carpetas
+										string screen_folder_name = "p" + screen["code"];
 
-											//url del contenido temporal id-nombre-nombre.mp4
-											string content_temp_path = _temporalFolder + "\\" + screen_folder_name + "\\" + content_original_id + "-" + content_name + ".mp4";
-											//url del contenido definitivo orden-id-nombre.mp4
-											string content_destiny_path = _destinyFolder + "\\" + screen_folder_name + "\\" + content_position + "-" + content_original_id + "-" + content_name + ".mp4";
+										//Borrar directiorio definitvo existente actual
+										if (Directory.Exists(_destinyFolder + "\\" + screen_folder_name))
+										{
+											Etc.DeleteFiles(_destinyFolder + "\\" + screen_folder_name);
+											gLog.SaveLog("499 - Limpiop el directorio de destino : " + _destinyFolder);
+											Etc.CreateLock(_destinyFolder + "\\" + screen_folder_name);
+											gLog.SaveLog("501 - Crea lock en :" + _destinyFolder + "\\" + screen_folder_name);
+										}else
+										{
+											//crea el directorio definitivo
+											Directory.CreateDirectory(_destinyFolder + "\\" + screen_folder_name);
+											gLog.SaveLog("545 - Crea el directorio definitivo :  " + screen_folder_name);
+											Etc.CreateLock(_destinyFolder + "\\" + screen_folder_name);
+											gLog.SaveLog("547 - Crea lock en :" + _destinyFolder + "\\" + screen_folder_name);
+										}
 
-											//Comprueba si existe el contenido temporal
-											if (File.Exists(content_temp_path))
+
+										//extrae la version de la pantalla
+										var screen_version = screen["version"];
+
+										//url del archivo de version temporal
+										string version_temp_path = _temporalFolder + "\\" + screen_folder_name + "\\" + "v" + screen_version + ".txt";
+
+										//url del archivo de version definitivo
+										string version_destiny_path = _destinyFolder + "\\" + screen_folder_name + "\\" + "v" + screen_version + ".txt";
+
+										//comprueba si existe el archivo de version temporal
+										if (File.Exists(version_temp_path))
+										{
+											//copia el archivo de version temporal a la carpeta definitiva
+											File.Copy(version_temp_path, version_destiny_path);
+											gLog.SaveLog("498 -Copia la version de la temporal a la definitiva");
+
+											//recorre los contenido de la playlist en el json 
+											gLog.SaveLog("501 - Ciclo Playlist , copia el cotenido de la temporal a la definitiva siguiendo el playlist.json ");
+											foreach (var content in screen["playlist"])
 											{
-												//Copia el contenido temporal a la carpeta definitiva
-												File.Copy(content_temp_path, content_destiny_path);
-												gLog.SaveLog("579 - Copia el contenido temporal a la carpeta definitiva : "+ content_name);
-											}
-										}//end foreach playlist
+												//nombre del contenido
+												string content_name = content["name"].ToString();
+												//id del contenido
+												string content_original_id = content["originalID"].ToString();
+												//posicion del contenido
+												string content_position = content["defOrder"].ToString();
 
-										//GUSTAVO 
-										//Cierra el text reader
-										//file.Close();
-										//gLog.SaveLog("528 - Cierra el textreader de playlist.json");
+												//url del contenido temporal id-nombre-nombre.mp4
+												string content_temp_path = _temporalFolder + "\\" + screen_folder_name + "\\" + content_original_id + "-" + content_name + ".mp4";
+												//url del contenido definitivo orden-id-nombre.mp4
+												string content_destiny_path = _destinyFolder + "\\" + screen_folder_name + "\\" + content_position + "-" + content_original_id + "-" + content_name + ".mp4";
+
+												//Comprueba si existe el contenido temporal
+												if (File.Exists(content_temp_path))
+												{
+													//Copia el contenido temporal a la carpeta definitiva
+													File.Copy(content_temp_path, content_destiny_path);
+													gLog.SaveLog("579 - Copia el contenido temporal a la carpeta definitiva : "+ content_name);
+												}
+											}//end foreach playlist
+
+											//GUSTAVO 
+											//Cierra el text reader
+											//file.Close();
+											//gLog.SaveLog("528 - Cierra el textreader de playlist.json");
+										}
+										else
+										{
+											gLog.SaveLog("531 - No se encontro el archvio (Version).txt : "+ version_temp_path);
+										}
+
+										Etc.DeleteLock(_destinyFolder + "\\" + screen_folder_name);
+										gLog.SaveLog("595 - Borra el lock de la carpeta definitva : " + _destinyFolder + "\\" + screen_folder_name);
+										Etc.DeleteLock(_temporalFolder + "\\" + screen_folder_name);
+										gLog.SaveLog("597 - Borra el lock de la carpeta temporal : " + _temporalFolder + "\\" + screen_folder_name);
 									}
-									else
-									{
-										gLog.SaveLog("531 - No se encontro el archvio (Version).txt : "+ version_temp_path);
-									}
-
-									Etc.DeleteLock(_destinyFolder + "\\" + screen_folder_name);
-									gLog.SaveLog("595 - Borra el lock de la carpeta definitva : " + _destinyFolder + "\\" + screen_folder_name);
-									Etc.DeleteLock(_temporalFolder + "\\" + screen_folder_name);
-									gLog.SaveLog("597 - Borra el lock de la carpeta temporal : " + _temporalFolder + "\\" + screen_folder_name);
-
 
 								}//end foreach screens
 								
@@ -760,6 +776,7 @@ namespace VxGuardian.View
 			//if (screenlist.Count() == 0)
 			//{
 				//Descargar el json 
+				////////////////////////////////////////////////////////////////////////////////Si existe no descargar?
 				gLog.SaveLog("740 - PLAYLIST. Antes de descargar el JSON ");
 				ftpClient.DownloadFile(TemporalLocalFolder + "\\PLayList.json", "PlayList.json", FtpLocalExists.Overwrite, FtpVerify.Retry);
 				gLog.SaveLog("742 - PLAYLIST. JSON descargado");
@@ -792,14 +809,16 @@ namespace VxGuardian.View
 					string code = item.Name.Substring(1, item.Name.Length - 1);
 					if(ini.config.Screens.Exists(x => x.Code == code))
 					{
+						first = false;
 						int idx = ini.config.Screens.FindIndex(x => x.Code == code);
 						ini.config.Screens[idx].Nombre = item.Name;
 						ini.config.Screens[idx].Path = item.FullName;
 						ini.config.Screens[idx].Code = code;
-						ini.config.Screens[idx].LocalPath = ini.config.CarpetaRaiz + "\\p" + code;
+						ini.config.Screens[idx].LocalPath = ini.config.CarpetaRaiz + "\\p" + code;						
 					}
 					else
 					{
+						first = true;
 						ScreensGuardian _screen = new ScreensGuardian();
 						 _screen.Nombre = item.Name;
 						_screen.Path = item.FullName;
@@ -826,14 +845,17 @@ namespace VxGuardian.View
 			gLog.SaveLog("736 - Ciclo for para recorrer las pantallas guardadas en memoria");
 			int aux = 0;
 
-			
 
+			//vesiones_anterior.Clear();
+			int auxlastversion = 0;
+			bool changueversion = false;
 			foreach (ScreensGuardian screen in _screens)
 			{
 				
 
 				if ( (!(Etc.CheckRemoteLock(_ftpclient , screen.Path))) && (!(Etc.CheckLock(screen.LocalPath))) ) 
 				{
+					changueversion = true;
 					gLog.SaveLog("821 - NO existe el lock procede a descargar pantalla : " + screen.Path);
 					//ACA crea un lock remoto por pantalla y al terminar lo borra
 
@@ -864,7 +886,26 @@ namespace VxGuardian.View
 					{
 						gLog.SaveLog(" 756 En el if de comprueva version ");
 						//Gustavo guarda en memoria la version actual de la pantalla
+						lastversion = screen.VersionActual.ToString();
+
+
+						 
+						string[] versionanterior = new string[2];
+						versionanterior[0] = screen.Code.ToString();
+						versionanterior[1] = lastversion;
+						if(first)
+						{
+						vesiones_anterior.Add(versionanterior);
+						}else
+						{
+							vesiones_anterior[auxlastversion][1] = lastversion;
+						}
+						
+						
+
+
 						screen.VersionActual = screen.VersionRemota.ToString();
+
 
 
 						string ScreenTemporal = TemporalLocalFolder + '\\' + screen.Nombre;
@@ -1050,9 +1091,11 @@ namespace VxGuardian.View
 					{
 						gLog.SaveLog(" 921 no hay version nueva");
 						var checklock = Etc.DeleteRemoteLock(_ftpclient, screen.Path);
-						Etc.DeleteLock(screen.LocalPath);
 						gLog.SaveLog("1051 - Borro lock en  FTP  : " + screen.Path);
+						Etc.DeleteLock(screen.LocalPath);						
 						gLog.SaveLog("1052 - Borro lock en carpeta definitiva    : " + screen.LocalPath);
+						//Etc.DeleteFiles(TemporalLocalFolder);
+						//gLog.SaveLog("1052 - Borro archivos temporales  : " + screen.LocalPath);
 					}
 					aux++;
 					if(screenlist.Count > 0 )
@@ -1084,6 +1127,7 @@ namespace VxGuardian.View
 				}
 				
 				gLog.SaveLog("918 -  Fin del cliclo que comprueba version");
+				auxlastversion++;
 			} //Fin foreach descarga contenido de pantallas
 
 

@@ -325,7 +325,7 @@ namespace VxGuardian.EtcClass
 		}
 
 		//Read json file
-		public static JToken ReadJson(string _temporalFolder)
+		public static JToken ReadJson(string _temporalFolder )
 		{
 			StreamReader file = File.OpenText(_temporalFolder + "\\" + "PlayList.json");
 			JsonTextReader reader = new JsonTextReader(file);
@@ -337,7 +337,7 @@ namespace VxGuardian.EtcClass
 			file.Close();			
 
 			//GUSTAVO ARREGLAR
-			var json = jsondata["computers"];
+			var json = jsondata;
 
 			return json;
 		}
