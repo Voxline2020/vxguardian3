@@ -67,8 +67,8 @@ namespace VxGuardian.View
 		}
 
 		public void Init()
-		{
-			if (CheckFieldsINICIAR())
+		   {
+			    if (CheckFieldsINICIAR())
 			{
 				this.Hide();
 				ini.Minimize();
@@ -297,15 +297,15 @@ namespace VxGuardian.View
 		{ 
 			if(ini.config.Syncing == 0)
 			{
-				if (time.Enabled)
+				/*if (time.Enabled)
 				{
 					StopTime();
-				}
+				}*/
 				SyncAsync(ini.config.CodePc);
-				if (!time.Enabled)
+				/*if (!time.Enabled)
 				{
 					InitTime();
-				}
+				}*/
 			}
 		
 		}
@@ -821,7 +821,7 @@ namespace VxGuardian.View
 						_screen.Path = item.FullName;
 						_screen.Code = code;
 						_screen.LocalPath = ini.config.CarpetaRaiz + "\\p" + code;
-						_screen.VersionActual = "0";
+						 _screen.VersionActual = "0";
 						ini.config.Screens.Add(_screen);
 
 					}

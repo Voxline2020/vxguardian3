@@ -3063,3 +3063,754 @@ x768.mp4
 10-02-2020 10:45:56 : 278 - TIME START
 
 10-02-2020 10:46:16 : 285 - TIME STOP
+
+10-02-2020 10:59:37 : --- Inicio VxGuardian --- 
+
+10-02-2020 10:59:38 : --- Modo FTP ---
+
+10-02-2020 10:59:56 : Directorio temporal creado Documentos/Voxline/numerComputador
+
+10-02-2020 10:59:59 :  313 - REMOTE PAD = 101004
+
+10-02-2020 10:59:59 :  313 - DOWNLOAD FILE ASYNC
+
+10-02-2020 11:00:00 :  676 download asinc PATH :  101004
+
+10-02-2020 11:00:00 : 740 - PLAYLIST. Antes de descargar el JSON 
+
+10-02-2020 11:00:00 : 742 - PLAYLIST. JSON descargado
+
+10-02-2020 11:00:01 : 698 - Ciclo for para guardar las pantallas en memoria
+
+10-02-2020 11:00:45 : 736 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+10-02-2020 11:01:01 :  976 - Existe el lock por pantalla : /101004/p911
+
+10-02-2020 11:01:02 :  977 - Guarda la pantalla en un arreglo y pasa a la siguiente : /101004/p911
+
+10-02-2020 11:01:05 : 918 -  Fin del cliclo que comprueba version
+
+10-02-2020 11:01:11 : 821 - NO existe el lock procede a descargar pantalla : /101004/p909
+
+10-02-2020 11:01:15 : 826 - Creo lock en FTP , Local definitiva pantalla : /101004/p909
+
+10-02-2020 11:01:16 :  740 GETREmote version antes
+
+10-02-2020 11:01:17 :  742 GETREmote version despues 
+
+10-02-2020 11:01:20 :  753 ANTES del if de comprueva version 
+
+10-02-2020 11:01:21 :  756 En el if de comprueva version 
+
+10-02-2020 11:01:21 : 772 - CLEARDIR (Limpia EL DIRECTORIO) : p909
+
+10-02-2020 11:01:22 : 785 - Ciclo para descargar los archivos a la temporal
+
+10-02-2020 11:01:23 : 954 - Agrego a la lista para copiar luego v49.txt
+
+10-02-2020 11:01:23 : 954 - Agrego a la lista para copiar luego lock.txt
+
+10-02-2020 11:01:23 : 954 - Agrego a la lista para copiar luego 1363-pepe-jeans-21julio-1214x1080mp4-1214x1080.mp4
+
+10-02-2020 11:01:24 : 1051 - Borro lock en  FTP  : /101004/p909
+
+10-02-2020 11:01:24 : 918 -  Fin del cliclo que comprueba version
+
+10-02-2020 11:01:24 : 821 - NO existe el lock procede a descargar pantalla : /101004/p759
+
+10-02-2020 11:01:24 : 826 - Creo lock en FTP , Local definitiva pantalla : /101004/p759
+
+10-02-2020 11:01:24 :  740 GETREmote version antes
+
+10-02-2020 11:01:24 :  742 GETREmote version despues 
+
+10-02-2020 11:01:24 :  753 ANTES del if de comprueva version 
+
+10-02-2020 11:01:24 :  756 En el if de comprueva version 
+
+10-02-2020 11:01:24 : 772 - CLEARDIR (Limpia EL DIRECTORIO) : p759
+
+10-02-2020 11:01:25 : 785 - Ciclo para descargar los archivos a la temporal
+
+10-02-2020 11:01:25 : 954 - Agrego a la lista para copiar luego v208.txt
+
+10-02-2020 11:01:25 : 954 - Agrego a la lista para copiar luego lock.txt
+
+10-02-2020 11:01:25 : 954 - Agrego a la lista para copiar luego 1199-precaucion-960x576.mp4
+
+10-02-2020 11:01:26 : 954 - Agrego a la lista para copiar luego 1165-index-mujer-960x576.mp4
+
+10-02-2020 11:01:26 : 1051 - Borro lock en  FTP  : /101004/p759
+
+10-02-2020 11:01:26 : 918 -  Fin del cliclo que comprueba version
+
+10-02-2020 11:01:26 : 928 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+10-02-2020 11:01:26 : Se sincronizo archivos
+
+10-02-2020 11:01:26 : 333 - Cierra el reproductor
+
+10-02-2020 11:01:26 : 368 - Antes de copiar archivos pendientes
+
+10-02-2020 11:01:26 : 333 - KILL APP FALSE
+
+10-02-2020 11:01:27 : 373 = archivo copiado : v49.txt
+
+10-02-2020 11:01:27 : 373 = archivo copiado : 1363-pepe-jeans-21julio-1214x1080mp4-1214x1080.mp4
+
+10-02-2020 11:01:28 : 373 = archivo copiado : v208.txt
+
+10-02-2020 11:01:28 : 373 = archivo copiado : 1199-precaucion-960x576.mp4
+
+10-02-2020 11:01:29 : 373 = archivo copiado : 1165-index-mujer-960x576.mp4
+
+10-02-2020 11:01:29 : 383 - Copio archivos pendientes
+
+10-02-2020 11:01:29 : 341 - Entra al metodo copiar  directorio temporal C:\Users\Nuevo\Documents\VoxLine\101004 a la carpeta raiz C:\FTP\Voxline\Pivotes\
+
+10-02-2020 11:01:29 : 464 Lee el json 
+
+10-02-2020 11:01:30 : 473 - Ciclo Pantallas por computador 
+
+10-02-2020 11:01:30 : 499 - Limpiop el directorio de destino : C:\FTP\Voxline\Pivotes\
+
+10-02-2020 11:01:30 : 501 - Crea lock en :C:\FTP\Voxline\Pivotes\\p759
+
+10-02-2020 11:01:30 : 498 -Copia la version de la temporal a la definitiva
+
+10-02-2020 11:01:30 : 501 - Ciclo Playlist , copia el cotenido de la temporal a la definitiva siguiendo el playlist.json 
+
+10-02-2020 11:01:30 : 579 - Copia el contenido temporal a la carpeta definitiva : index-mujer-960x576
+
+10-02-2020 11:01:30 : 579 - Copia el contenido temporal a la carpeta definitiva : precaucion-960x576
+
+10-02-2020 11:01:30 : 595 - Borra el lock de la carpeta definitva : C:\FTP\Voxline\Pivotes\\p759
+
+10-02-2020 11:01:30 : 597 - Borra el lock de la carpeta temporal : C:\Users\Nuevo\Documents\VoxLine\101004\p759
+
+10-02-2020 11:01:30 : 499 - Limpiop el directorio de destino : C:\FTP\Voxline\Pivotes\
+
+10-02-2020 11:01:30 : 501 - Crea lock en :C:\FTP\Voxline\Pivotes\\p909
+
+10-02-2020 11:01:30 : 498 -Copia la version de la temporal a la definitiva
+
+10-02-2020 11:01:31 : 501 - Ciclo Playlist , copia el cotenido de la temporal a la definitiva siguiendo el playlist.json 
+
+10-02-2020 11:01:31 : 579 - Copia el contenido temporal a la carpeta definitiva : pepe-jeans-21julio-1214x1080mp4-1214x1080
+
+10-02-2020 11:01:31 : 595 - Borra el lock de la carpeta definitva : C:\FTP\Voxline\Pivotes\\p909
+
+10-02-2020 11:01:31 : 597 - Borra el lock de la carpeta temporal : C:\Users\Nuevo\Documents\VoxLine\101004\p909
+
+10-02-2020 11:01:31 : 554 - No se logro copiar archivos -- Referencia a objeto no establecida como instancia de un objeto.
+
+10-02-2020 11:01:31 : 358 - Copia el json de la carpeta temporal a la definitiva
+
+10-02-2020 11:01:31 : 374 - Borra archivos de la carpeta temporal.
+
+10-02-2020 11:01:31 : 394 - Open App 
+
+10-02-2020 11:01:31 : 278 - TIME START
+
+10-02-2020 11:02:36 : 285 - TIME STOP
+
+10-02-2020 11:02:40 :  313 - DOWNLOAD FILE ASYNC
+
+10-02-2020 11:02:40 :  313 - REMOTE PAD = 101004
+
+10-02-2020 11:02:41 :  676 download asinc PATH :  101004
+
+10-02-2020 11:02:42 : 740 - PLAYLIST. Antes de descargar el JSON 
+
+10-02-2020 11:02:42 : 742 - PLAYLIST. JSON descargado
+
+10-02-2020 11:02:44 : 698 - Ciclo for para guardar las pantallas en memoria
+
+10-02-2020 11:03:08 : 797 - Descarga pantallas resagadas
+
+10-02-2020 11:03:09 : 736 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+10-02-2020 11:03:14 :  976 - Existe el lock por pantalla : /101004/p911
+
+10-02-2020 11:03:16 :  977 - Guarda la pantalla en un arreglo y pasa a la siguiente : /101004/p911
+
+10-02-2020 11:03:19 :  1010 -La pantalla ya se encuentra agregada a lista de pantallas faltantes : /101004/p911
+
+10-02-2020 11:03:20 : 918 -  Fin del cliclo que comprueba version
+
+10-02-2020 11:03:21 : 928 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+10-02-2020 11:03:21 : Se sincronizo archivos
+
+10-02-2020 11:03:21 : 394 - Open App 
+
+10-02-2020 11:03:22 : 278 - TIME START
+
+10-02-2020 11:04:40 : 285 - TIME STOP
+
+10-02-2020 11:04:42 :  313 - DOWNLOAD FILE ASYNC
+
+10-02-2020 11:04:42 :  313 - REMOTE PAD = 101004
+
+10-02-2020 11:04:44 :  676 download asinc PATH :  101004
+
+10-02-2020 11:04:44 : 740 - PLAYLIST. Antes de descargar el JSON 
+
+10-02-2020 11:04:45 : 742 - PLAYLIST. JSON descargado
+
+10-02-2020 11:04:46 : 698 - Ciclo for para guardar las pantallas en memoria
+
+10-02-2020 11:05:09 : 797 - Descarga pantallas resagadas
+
+10-02-2020 11:05:10 : 736 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+10-02-2020 11:06:52 : --- Inicio VxGuardian --- 
+
+10-02-2020 11:07:06 : --- Modo FTP ---
+
+10-02-2020 11:07:22 : Directorio temporal creado Documentos/Voxline/numerComputador
+
+10-02-2020 11:07:39 :  313 - DOWNLOAD FILE ASYNC
+
+10-02-2020 11:07:40 :  313 - REMOTE PAD = 101004
+
+10-02-2020 11:07:40 :  676 download asinc PATH :  101004
+
+10-02-2020 11:07:41 : 740 - PLAYLIST. Antes de descargar el JSON 
+
+10-02-2020 11:07:42 : 742 - PLAYLIST. JSON descargado
+
+10-02-2020 11:07:42 : 698 - Ciclo for para guardar las pantallas en memoria
+
+10-02-2020 11:07:55 : 736 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+10-02-2020 11:07:59 : 821 - NO existe el lock procede a descargar pantalla : /101004/p911
+
+10-02-2020 11:07:59 : 826 - Creo lock en FTP , Local definitiva pantalla : /101004/p911
+
+10-02-2020 11:07:59 :  740 GETREmote version antes
+
+10-02-2020 11:08:31 :  742 GETREmote version despues 
+
+10-02-2020 11:08:35 :  753 ANTES del if de comprueva version 
+
+10-02-2020 11:08:35 :  756 En el if de comprueva version 
+
+10-02-2020 11:08:36 : 772 - CLEARDIR (Limpia EL DIRECTORIO) : p911
+
+10-02-2020 11:08:37 : 785 - Ciclo para descargar los archivos a la temporal
+
+10-02-2020 11:08:38 : 954 - Agrego a la lista para copiar luego v8.txt
+
+10-02-2020 11:08:42 : 954 - Agrego a la lista para copiar luego lock.txt
+
+10-02-2020 11:08:43 : 954 - Agrego a la lista para copiar luego 1364-evnto3-960x768-1mp4-960x768.mp4
+
+10-02-2020 11:08:43 : 1051 - Borro lock en  FTP  : /101004/p911
+
+10-02-2020 11:08:45 : 918 -  Fin del cliclo que comprueba version
+
+10-02-2020 11:08:59 : 821 - NO existe el lock procede a descargar pantalla : /101004/p909
+
+10-02-2020 11:09:00 : 826 - Creo lock en FTP , Local definitiva pantalla : /101004/p909
+
+10-02-2020 11:09:00 :  740 GETREmote version antes
+
+10-02-2020 11:09:01 :  742 GETREmote version despues 
+
+10-02-2020 11:09:03 :  753 ANTES del if de comprueva version 
+
+10-02-2020 11:09:04 :  756 En el if de comprueva version 
+
+10-02-2020 11:09:19 : 772 - CLEARDIR (Limpia EL DIRECTORIO) : p909
+
+10-02-2020 11:09:24 : 785 - Ciclo para descargar los archivos a la temporal
+
+10-02-2020 11:09:32 : 954 - Agrego a la lista para copiar luego v49.txt
+
+10-02-2020 11:09:36 : 954 - Agrego a la lista para copiar luego lock.txt
+
+10-02-2020 11:09:41 : 954 - Agrego a la lista para copiar luego 1363-pepe-jeans-21julio-1214x1080mp4-1214x1080.mp4
+
+10-02-2020 11:09:41 : 1051 - Borro lock en  FTP  : /101004/p909
+
+
+10-02-2020 11:09:42 : 821 - NO existe el lock procede a descargar pantalla : /101004/p759
+
+10-02-2020 11:09:43 : 826 - Creo lock en FTP , Local definitiva pantalla : /101004/p759
+
+10-02-2020 11:09:43 :  740 GETREmote version antes
+
+10-02-2020 11:09:43 :  742 GETREmote version despues 
+
+10-02-2020 11:09:44 :  753 ANTES del if de comprueva version 
+
+10-02-2020 11:09:44 :  756 En el if de comprueva version 
+
+10-02-2020 11:09:44 : 772 - CLEARDIR (Limpia EL DIRECTORIO) : p759
+
+10-02-2020 11:09:45 : 785 - Ciclo para descargar los archivos a la temporal
+
+10-02-2020 11:09:46 : 954 - Agrego a la lista para copiar luego v208.txt
+
+10-02-2020 11:09:49 : 954 - Agrego a la lista para copiar luego lock.txt
+
+10-02-2020 11:09:54 : 954 - Agrego a la lista para copiar luego 1199-precaucion-960x576.mp4
+
+10-02-2020 11:10:04 : 954 - Agrego a la lista para copiar luego 1165-index-mujer-960x576.mp4
+
+10-02-2020 11:10:05 : 1051 - Borro lock en  FTP  : /101004/p759
+
+10-02-2020 11:10:05 : 918 -  Fin del cliclo que comprueba version
+
+10-02-2020 11:10:07 : Se sincronizo archivos
+
+10-02-2020 11:10:07 : 928 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+10-02-2020 11:10:07 : 333 - KILL APP FALSE
+
+10-02-2020 11:10:08 : 368 - Antes de copiar archivos pendientes
+
+10-02-2020 11:10:08 : 333 - Cierra el reproductor
+
+10-02-2020 11:10:13 : 373 = archivo copiado : v8.txt
+
+10-02-2020 11:10:15 : 373 = archivo copiado : 1364-evnto3-960x768-1mp4-960x768.mp4
+
+10-02-2020 11:10:18 : 373 = archivo copiado : v49.txt
+
+10-02-2020 11:10:19 : 373 = archivo copiado : 1363-pepe-jeans-21julio-1214x1080mp4-1214x1080.mp4
+
+10-02-2020 11:10:20 : 373 = archivo copiado : v208.txt
+
+10-02-2020 11:10:22 : 373 = archivo copiado : 1199-precaucion-960x576.mp4
+
+10-02-2020 11:10:23 : 373 = archivo copiado : 1165-index-mujer-960x576.mp4
+
+10-02-2020 11:10:23 : 383 - Copio archivos pendientes
+
+10-02-2020 11:10:23 : 385 - limpio lista de pendientes
+
+10-02-2020 11:10:24 : 341 - Entra al metodo copiar  directorio temporal C:\Users\Nuevo\Documents\VoxLine\101004 a la carpeta raiz C:\FTP\Voxline\Pivotes\
+
+10-02-2020 11:10:25 : 464 Lee el json 
+
+10-02-2020 11:10:25 : 473 - Ciclo Pantallas por computador 
+
+10-02-2020 11:10:26 : 499 - Limpiop el directorio de destino : C:\FTP\Voxline\Pivotes\
+
+10-02-2020 11:10:26 : 501 - Crea lock en :C:\FTP\Voxline\Pivotes\\p759
+
+10-02-2020 11:10:27 : 501 - Ciclo Playlist , copia el cotenido de la temporal a la definitiva siguiendo el playlist.json 
+
+10-02-2020 11:10:27 : 498 -Copia la version de la temporal a la definitiva
+
+10-02-2020 11:10:27 : 579 - Copia el contenido temporal a la carpeta definitiva : index-mujer-960x576
+
+10-02-2020 11:10:27 : 579 - Copia el contenido temporal a la carpeta definitiva : precaucion-960x576
+
+10-02-2020 11:10:27 : 595 - Borra el lock de la carpeta definitva : C:\FTP\Voxline\Pivotes\\p759
+
+10-02-2020 11:10:28 : 597 - Borra el lock de la carpeta temporal : C:\Users\Nuevo\Documents\VoxLine\101004\p759
+
+10-02-2020 11:10:28 : 499 - Limpiop el directorio de destino : C:\FTP\Voxline\Pivotes\
+
+10-02-2020 11:10:28 : 501 - Crea lock en :C:\FTP\Voxline\Pivotes\\p909
+
+10-02-2020 11:10:29 : 501 - Ciclo Playlist , copia el cotenido de la temporal a la definitiva siguiendo el playlist.json 
+
+10-02-2020 11:10:29 : 579 - Copia el contenido temporal a la carpeta definitiva : pepe-jeans-21julio-1214x1080mp4-1214x1080
+
+10-02-2020 11:10:29 : 595 - Borra el lock de la carpeta definitva : C:\FTP\Voxline\Pivotes\\p909
+
+10-02-2020 11:10:30 : 597 - Borra el lock de la carpeta temporal : C:\Users\Nuevo\Documents\VoxLine\101004\p909
+
+10-02-2020 11:10:30 : 499 - Limpiop el directorio de destino : C:\FTP\Voxline\Pivotes\
+
+10-02-2020 11:10:30 : 501 - Crea lock en :C:\FTP\Voxline\Pivotes\\p911
+
+10-02-2020 11:10:31 : 498 -Copia la version de la temporal a la definitiva
+l a la definitiva siguiendo el playlist.json 
+
+10-02-2020 11:10:31 : 579 - Copia el contenido temporal a la carpeta definitiva : evnto3-960x768-1mp4-960x768
+
+10-02-2020 11:10:31 : 579 - Copia el contenido temporal a la carpeta definitiva : evnto3-960x768-1mp4-960x768
+
+10-02-2020 11:10:31 : 595 - Borra el lock de la carpeta definitva : C:\FTP\Voxline\Pivotes\\p911
+
+10-02-2020 11:10:32 : 597 - Borra el lock de la carpeta temporal : C:\Users\Nuevo\Documents\VoxLine\101004\p911
+
+10-02-2020 11:10:32 : 358 - Copia el json de la carpeta temporal a la definitiva
+
+10-02-2020 11:10:32 : 374 - Borra archivos de la carpeta temporal.
+
+10-02-2020 11:10:32 : 394 - Open App 
+
+10-02-2020 11:10:32 : 278 - TIME START
+
+10-02-2020 11:24:25 : 285 - TIME STOP
+
+10-02-2020 11:24:25 : 285 - TIME STOP
+
+10-02-2020 11:24:27 :  313 - DOWNLOAD FILE ASYNC
+
+10-02-2020 11:24:27 :  313 - REMOTE PAD = 101004
+
+10-02-2020 11:24:27 :  313 - DOWNLOAD FILE ASYNC
+
+10-02-2020 11:24:28 :  313 - REMOTE PAD = 101004
+101004
+
+10-02-2020 11:24:29 :  676 download asinc PATH :  101004
+
+10-02-2020 11:24:29 : 740 - PLAYLIST. Antes de descargar el JSON 
+
+10-02-2020 11:24:29 : 740 - PLAYLIST. Antes de descargar el JSON 
+
+10-02-2020 11:24:30 : 320 No se logro sincronizar --El proceso no puede obtener acceso al archivo 'C:\Users\Nuevo\Documents\VoxLine\101004\PLayList.json' porque está siendo utilizado en otro proceso.
+
+10-02-2020 11:24:31 : 394 - Open App 
+
+10-02-2020 11:24:32 : 742 - PLAYLIST. JSON descargado
+
+10-02-2020 11:24:34 : 698 - Ciclo for para guardar las pantallas en memoria
+
+10-02-2020 11:24:36 : 278 - TIME START
+
+10-02-2020 11:24:38 : 736 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+10-02-2020 11:24:38 :  977 - Guarda la pantalla en un arreglo y pasa a la siguiente : /101004/p911
+
+10-02-2020 11:24:38 :  976 - Existe el lock por pantalla : /101004/p911
+
+10-02-2020 11:24:38 : 918 -  Fin del cliclo que comprueba version
+
+10-02-2020 11:24:40 : 821 - NO existe el lock procede a descargar pantalla : /101004/p909
+
+10-02-2020 11:24:49 : 826 - Creo lock en FTP , Local definitiva pantalla : /101004/p909
+
+10-02-2020 11:24:49 :  740 GETREmote version antes
+
+10-02-2020 11:24:49 :  742 GETREmote version despues 
+
+10-02-2020 11:24:50 :  753 ANTES del if de comprueva version 
+
+10-02-2020 11:24:50 :  921 no hay version nueva
+
+10-02-2020 11:24:50 : 1051 - Borro lock en  FTP  : /101004/p909
+
+10-02-2020 11:24:50 : 1052 - Borro lock en carpeta definitiva    : C:\FTP\Voxline\Pivotes\\p909
+
+10-02-2020 11:24:50 : 918 -  Fin del cliclo que comprueba version
+
+10-02-2020 11:24:52 : 821 - NO existe el lock procede a descargar pantalla : /101004/p759
+
+10-02-2020 11:24:52 : 826 - Creo lock en FTP , Local definitiva pantalla : /101004/p759
+
+10-02-2020 11:24:52 :  740 GETREmote version antes
+
+10-02-2020 11:24:52 :  742 GETREmote version despues 
+
+10-02-2020 11:24:53 :  753 ANTES del if de comprueva version 
+
+10-02-2020 11:24:54 :  921 no hay version nueva
+
+10-02-2020 11:24:54 : 1051 - Borro lock en  FTP  : /101004/p759
+
+10-02-2020 11:24:54 : 1052 - Borro lock en carpeta definitiva    : C:\FTP\Voxline\Pivotes\\p759
+
+10-02-2020 11:24:54 : 918 -  Fin del cliclo que comprueba version
+
+10-02-2020 11:24:54 : 928 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+10-02-2020 11:24:54 : Se sincronizo archivos
+
+10-02-2020 11:24:54 : 394 - Open App 
+
+10-02-2020 11:25:40 : 285 - TIME STOP
+
+10-02-2020 11:25:47 :  313 - DOWNLOAD FILE ASYNC
+
+10-02-2020 11:25:47 :  313 - REMOTE PAD = 101004
+
+10-02-2020 11:25:48 :  676 download asinc PATH :  101004
+
+10-02-2020 11:25:50 : 740 - PLAYLIST. Antes de descargar el JSON 
+
+10-02-2020 11:25:51 : 742 - PLAYLIST. JSON descargado
+
+10-02-2020 11:25:53 : 698 - Ciclo for para guardar las pantallas en memoria
+
+10-02-2020 11:26:07 : 797 - Descarga pantallas resagadas
+
+10-02-2020 11:26:08 : 736 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+10-02-2020 11:26:55 : 320 No se logro sincronizar --Referencia a objeto no establecida como instancia de un objeto.
+
+10-02-2020 11:26:55 : 278 - TIME START
+
+10-02-2020 11:27:59 : 285 - TIME STOP
+
+10-02-2020 11:28:02 :  313 - DOWNLOAD FILE ASYNC
+
+10-02-2020 11:28:02 :  313 - REMOTE PAD = 101004
+
+10-02-2020 11:28:03 :  676 download asinc PATH :  101004
+
+10-02-2020 11:28:04 : 740 - PLAYLIST. Antes de descargar el JSON 
+
+10-02-2020 11:28:05 : 742 - PLAYLIST. JSON descargado
+
+10-02-2020 11:28:06 : 698 - Ciclo for para guardar las pantallas en memoria
+
+10-02-2020 11:28:22 : 797 - Descarga pantallas resagadas
+
+10-02-2020 11:28:23 : 736 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+10-02-2020 11:28:27 : 821 - NO existe el lock procede a descargar pantalla : /101004/p911
+
+10-02-2020 11:28:29 : 826 - Creo lock en FTP , Local definitiva pantalla : /101004/p911
+
+10-02-2020 11:28:29 :  740 GETREmote version antes
+
+10-02-2020 11:28:30 :  742 GETREmote version despues 
+
+10-02-2020 11:29:09 :  753 ANTES del if de comprueva version 
+
+10-02-2020 11:29:15 :  921 no hay version nueva
+
+10-02-2020 11:29:16 : 1051 - Borro lock en  FTP  : /101004/p911
+
+10-02-2020 11:29:18 : 1052 - Borro lock en carpeta definitiva    : C:\FTP\Voxline\Pivotes\\p911
+
+10-02-2020 11:29:28 : 918 -  Fin del cliclo que comprueba version
+
+10-02-2020 11:29:29 : 928 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+10-02-2020 11:29:30 : Se sincronizo archivos
+
+10-02-2020 11:29:30 : 394 - Open App 
+
+10-02-2020 11:29:30 : 278 - TIME START
+
+10-02-2020 11:30:38 : 285 - TIME STOP
+
+10-02-2020 11:30:49 :  313 - DOWNLOAD FILE ASYNC
+
+10-02-2020 11:30:49 :  313 - REMOTE PAD = 101004
+
+10-02-2020 11:30:50 :  676 download asinc PATH :  101004
+
+10-02-2020 11:30:51 : 740 - PLAYLIST. Antes de descargar el JSON 
+
+10-02-2020 11:30:51 : 742 - PLAYLIST. JSON descargado
+
+10-02-2020 11:30:51 : 698 - Ciclo for para guardar las pantallas en memoria
+
+10-02-2020 11:30:52 : 736 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+10-02-2020 11:30:58 :  976 - Existe el lock por pantalla : /101004/p911
+
+10-02-2020 11:30:58 :  977 - Guarda la pantalla en un arreglo y pasa a la siguiente : /101004/p911
+
+10-02-2020 11:31:01 : 918 -  Fin del cliclo que comprueba version
+
+10-02-2020 11:31:13 : 821 - NO existe el lock procede a descargar pantalla : /101004/p759
+
+10-02-2020 11:31:15 : 826 - Creo lock en FTP , Local definitiva pantalla : /101004/p759
+
+10-02-2020 11:32:01 :  740 GETREmote version antes
+
+10-02-2020 11:32:02 :  742 GETREmote version despues 
+
+10-02-2020 11:32:03 :  753 ANTES del if de comprueva version 
+
+10-02-2020 11:32:04 :  921 no hay version nueva
+
+10-02-2020 11:32:04 : 1052 - Borro lock en carpeta definitiva    : C:\FTP\Voxline\Pivotes\\p759
+
+10-02-2020 11:32:04 : 1051 - Borro lock en  FTP  : /101004/p759
+
+10-02-2020 11:32:04 : 918 -  Fin del cliclo que comprueba version
+
+10-02-2020 11:32:04 : 821 - NO existe el lock procede a descargar pantalla : /101004/p759
+
+10-02-2020 11:32:04 : 826 - Creo lock en FTP , Local definitiva pantalla : /101004/p759
+
+10-02-2020 11:32:04 :  740 GETREmote version antes
+
+10-02-2020 11:32:04 :  742 GETREmote version despues 
+
+10-02-2020 11:32:05 :  753 ANTES del if de comprueva version 
+
+10-02-2020 11:32:05 :  921 no hay version nueva
+
+10-02-2020 11:32:05 : 1052 - Borro lock en carpeta definitiva    : C:\FTP\Voxline\Pivotes\\p759
+
+10-02-2020 11:32:05 : 1051 - Borro lock en  FTP  : /101004/p759
+
+10-02-2020 11:32:05 : 918 -  Fin del cliclo que comprueba version
+
+10-02-2020 11:32:05 : 821 - NO existe el lock procede a descargar pantalla : /101004/p911
+
+10-02-2020 11:32:06 : 826 - Creo lock en FTP , Local definitiva pantalla : /101004/p911
+
+10-02-2020 11:32:06 :  740 GETREmote version antes
+
+10-02-2020 11:32:06 :  742 GETREmote version despues 
+
+10-02-2020 11:32:06 :  753 ANTES del if de comprueva version 
+
+10-02-2020 11:32:06 :  756 En el if de comprueva version 
+
+10-02-2020 11:32:06 : 772 - CLEARDIR (Limpia EL DIRECTORIO) : p911
+
+10-02-2020 11:32:06 : 785 - Ciclo para descargar los archivos a la temporal
+
+10-02-2020 11:32:06 : 954 - Agrego a la lista para copiar luego 1364-evnto3-960x768-1mp4-960x768.mp4
+
+10-02-2020 11:32:06 : 954 - Agrego a la lista para copiar luego v8.txt
+
+10-02-2020 11:32:06 : 954 - Agrego a la lista para copiar luego lock.txt
+
+10-02-2020 11:32:07 : 1051 - Borro lock en  FTP  : /101004/p911
+
+10-02-2020 11:32:07 : 918 -  Fin del cliclo que comprueba version
+
+10-02-2020 11:32:07 : 821 - NO existe el lock procede a descargar pantalla : /101004/p909
+
+10-02-2020 11:32:07 : 826 - Creo lock en FTP , Local definitiva pantalla : /101004/p909
+
+10-02-2020 11:32:07 :  740 GETREmote version antes
+
+10-02-2020 11:32:07 :  742 GETREmote version despues 
+
+10-02-2020 11:32:07 :  753 ANTES del if de comprueva version 
+
+10-02-2020 11:32:08 :  756 En el if de comprueva version 
+
+10-02-2020 11:32:08 : 772 - CLEARDIR (Limpia EL DIRECTORIO) : p909
+
+10-02-2020 11:32:08 : 785 - Ciclo para descargar los archivos a la temporal
+
+10-02-2020 11:32:08 : 954 - Agrego a la lista para copiar luego v49.txt
+
+10-02-2020 11:32:08 : 954 - Agrego a la lista para copiar luego 1363-pepe-jeans-21julio-1214x1080mp4-1214x1080.mp4
+
+10-02-2020 11:32:08 : 954 - Agrego a la lista para copiar luego lock.txt
+
+10-02-2020 11:32:08 : 1051 - Borro lock en  FTP  : /101004/p909
+
+10-02-2020 11:32:08 : 918 -  Fin del cliclo que comprueba version
+
+10-02-2020 11:32:08 : 928 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+10-02-2020 11:32:08 : Se sincronizo archivos
+
+10-02-2020 11:32:08 : 368 - Antes de copiar archivos pendientes
+
+10-02-2020 11:32:08 : 333 - KILL APP FALSE
+
+10-02-2020 11:32:08 : 333 - Cierra el reproductor
+
+10-02-2020 11:32:09 : 373 = archivo copiado : v8.txt
+
+10-02-2020 11:32:09 : 373 = archivo copiado : 1364-evnto3-960x768-1mp4-960x768.mp4
+
+10-02-2020 11:32:10 : 373 = archivo copiado : v49.txt
+
+10-02-2020 11:32:11 : 373 = archivo copiado : 1363-pepe-jeans-21julio-1214x1080mp4-1214x1080.mp4
+
+10-02-2020 11:32:11 : 341 - Entra al metodo copiar  directorio temporal C:\Users\Nuevo\Documents\VoxLine\101004 a la carpeta raiz C:\FTP\Voxline\Pivotes\
+
+10-02-2020 11:32:11 : 383 - Copio archivos pendientes
+
+10-02-2020 11:32:11 : 385 - limpio lista de pendientes
+
+10-02-2020 11:32:11 : 464 Lee el json 
+
+10-02-2020 11:32:11 : 473 - Ciclo Pantallas por computador 
+
+10-02-2020 11:32:12 : 499 - Limpiop el directorio de destino : C:\FTP\Voxline\Pivotes\
+
+10-02-2020 11:32:12 : 498 -Copia la version de la temporal a la definitiva
+
+10-02-2020 11:32:12 : 501 - Crea lock en :C:\FTP\Voxline\Pivotes\\p909
+
+10-02-2020 11:32:12 : 501 - Ciclo Playlist , copia el cotenido de la temporal a la definitiva siguiendo el playlist.json 
+
+10-02-2020 11:32:12 : 579 - Copia el contenido temporal a la carpeta definitiva : pepe-jeans-21julio-1214x1080mp4-1214x1080
+
+10-02-2020 11:32:12 : 597 - Borra el lock de la carpeta temporal : C:\Users\Nuevo\Documents\VoxLine\101004\p909
+
+10-02-2020 11:32:12 : 595 - Borra el lock de la carpeta definitva : C:\FTP\Voxline\Pivotes\\p909
+
+10-02-2020 11:32:12 : 498 -Copia la version de la temporal a la definitiva
+
+10-02-2020 11:32:12 : 499 - Limpiop el directorio de destino : C:\FTP\Voxline\Pivotes\
+
+10-02-2020 11:32:12 : 501 - Crea lock en :C:\FTP\Voxline\Pivotes\\p911
+
+10-02-2020 11:32:13 : 501 - Ciclo Playlist , copia el cotenido de la temporal a la definitiva siguiendo el playlist.json 
+
+10-02-2020 11:32:13 : 579 - Copia el contenido temporal a la carpeta definitiva : evnto3-960x768-1mp4-960x768
+
+10-02-2020 11:32:13 : 579 - Copia el contenido temporal a la carpeta definitiva : evnto3-960x768-1mp4-960x768
+
+10-02-2020 11:32:13 : 595 - Borra el lock de la carpeta definitva : C:\FTP\Voxline\Pivotes\\p911
+
+10-02-2020 11:32:13 : 597 - Borra el lock de la carpeta temporal : C:\Users\Nuevo\Documents\VoxLine\101004\p911
+
+10-02-2020 11:32:13 : 358 - Copia el json de la carpeta temporal a la definitiva
+
+10-02-2020 11:32:13 : 374 - Borra archivos de la carpeta temporal.
+
+10-02-2020 11:32:13 : 394 - Open App 
+
+10-02-2020 11:32:13 : 278 - TIME START
+
+10-02-2020 11:33:23 : 285 - TIME STOP
+
+10-02-2020 11:33:40 :  313 - DOWNLOAD FILE ASYNC
+
+10-02-2020 11:33:40 :  313 - REMOTE PAD = 101004
+
+10-02-2020 11:33:42 :  676 download asinc PATH :  101004
+
+10-02-2020 11:33:43 : 740 - PLAYLIST. Antes de descargar el JSON 
+
+10-02-2020 11:33:44 : 742 - PLAYLIST. JSON descargado
+
+10-02-2020 11:33:45 : 698 - Ciclo for para guardar las pantallas en memoria
+
+10-02-2020 11:34:01 : 797 - Descarga pantallas resagadas
+
+10-02-2020 11:34:03 : 736 - Ciclo for para recorrer las pantallas guardadas en memoria
+
+10-02-2020 11:34:09 : 821 - NO existe el lock procede a descargar pantalla : /101004/p911
+
+10-02-2020 11:35:03 : 826 - Creo lock en FTP , Local definitiva pantalla : /101004/p911
+
+10-02-2020 11:35:04 :  740 GETREmote version antes
+
+10-02-2020 11:35:05 :  742 GETREmote version despues 
+
+10-02-2020 11:35:07 :  753 ANTES del if de comprueva version 
+
+10-02-2020 11:35:07 :  921 no hay version nueva
+
+10-02-2020 11:35:07 : 1051 - Borro lock en  FTP  : /101004/p911
+
+10-02-2020 11:35:07 : 1052 - Borro lock en carpeta definitiva    : C:\FTP\Voxline\Pivotes\\p911
+
+10-02-2020 11:35:08 : 918 -  Fin del cliclo que comprueba version
+
+10-02-2020 11:35:11 : 928 - Cierra Coneccion con BD ya termino de descargar a las temporales
+
+10-02-2020 11:35:13 : Se sincronizo archivos
+
+10-02-2020 11:35:13 : 394 - Open App 
+
+10-02-2020 11:35:16 : 278 - TIME START
+
+10-02-2020 11:54:14 : --- Inicio VxGuardian --- 
