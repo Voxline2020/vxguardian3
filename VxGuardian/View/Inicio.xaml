@@ -11,7 +11,7 @@
       <Label Content="Elige el Modo del VxGuardian" HorizontalAlignment="Center" Margin="0,0,0,10"/>
       <RadioButton HorizontalAlignment="Center" Margin="5" Content="VoxCms"  Name="RBtnVoxCMS"/>
       <RadioButton HorizontalAlignment="Center" Margin="5" Content="Local" Name="RBtnLocal" />
-      <RadioButton HorizontalAlignment="Center" Margin="5" Content="FTP" Name="RBtnFTP"/>
+      <RadioButton HorizontalAlignment="Center" Margin="5" Content="Guardian" Name="RBtnFTP" Checked="RBtnFTP_Checked"/>
       <RadioButton HorizontalAlignment="Center" Margin="5" Content="Pivote" Name="RBtnPivote" />
       <Button Height="50" Content="Siguiente" Margin="10" Name="BtnSiguiente" Click="BtnSiguiente_Click"/>
     </StackPanel>

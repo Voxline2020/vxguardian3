@@ -146,7 +146,7 @@ namespace VxGuardian.Models
 
 		public VoxContext()
 		{
-			fileJsonDir = path + "\\db.json";
+		fileJsonDir = path + "\\db.json";
 			
 		}
 

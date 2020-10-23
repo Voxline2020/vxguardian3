@@ -201,5 +201,10 @@ namespace VxGuardian.View
 		{
 			ShowSelected();
 		}
+
+		private void RBtnFTP_Checked(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }

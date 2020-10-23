@@ -1,0 +1,8 @@
+
+10-21-2020 10:15:39 : --- Inicio VxGuardian --- 
+
+10-21-2020 10:16:21 : 315 - Genera string downloadLink
+
+10-21-2020 10:16:26 : 634 - No se logro sincronizar archivos -- Error en el servidor remoto: (404) No se encontró.
+
+10-21-2020 10:16:26 : TIMER :: START 
